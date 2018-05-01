@@ -1,0 +1,264 @@
+
+// Global Variables
+
+$yellow1:        #FFC324    // Hustler Yellow
+$l1:             #FFFFFF    // for cards/boxes that'll stand off the l2
+$l2:             #F8F8F8    // Site background color
+$l3:             #EAEAEA    // For inputs and such that sit over the l2 color
+$border:         #DDDDDD    // For borders over white
+$d1:             #AAAAAA    // Light or inactive text - also on footer
+$d2:             #888888    // Nav text
+$d3:             #555555    // Primarily for body copy
+$d4:             #303030    // Main headline and btn color
+
+$gradientX:      linear-gradient(to right, #FFB714 0%, #FFE579 100%)
+$gradientY:      linear-gradient(to bottom, #FFB714 0%, #FFE579 100%)
+$shadow:         0 6px 30px hsla(204, 46%, 53%, 0.18)
+$btnShadow:      0 6px 30px -2px hsla(196.2, 100%, 60%, 0.34)
+
+
+// Mixins
+
+=size($x, $y)
+  width: $x
+  height: $y
+
+
+// *************
+// Global Styles
+// *************
+
+html
+  box-sizing: border-box
+
+*, *:before, *:after
+  box-sizing: inherit
+
+body
+  margin: 0
+  padding: 0
+  font-family: sans-serif
+  font-size: 16px
+
+h2, h3, h4, h5, p, li, a, .btn, span, label, input, select, textarea
+  font-family: 'Roboto', sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+h1
+  color: $d4
+  font-family: "bebas-neue", 'Roboto', sans-serif
+  font-size: 3.125rem
+  font-weight: normal
+  margin-top: 0 
+  margin-bottom: 30px
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+h2
+  color: $d4
+
+h3
+  margin: 0
+  font-size: 1.5rem
+  font-weight: 900
+
+h4
+  color: $d4
+  font-size: 1.25rem
+  font-weight: 400
+  line-height: 28px
+
+h5
+  margin: 0
+  font-size: 1rem
+  font-weight: 900
+
+p, input, select, textarea
+  margin: 0
+  color: $d4
+  font-size: 1rem
+  line-height: 1.5rem
+
+a
+  margin: 0
+  padding: 0
+  color: $d4
+  text-decoration: none
+
+// Makes it so text isn't selectable
+a, li, label, .btn
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+ul
+  list-style: none
+  margin: 0
+  padding: 0
+
+hr
+  border: 0
+  margin: 0
+  padding: 0
+
+input, select, textarea, a
+  outline: none
+  box-shadow: none
+
+.bodyCopy
+  margin-bottom: 1rem
+
+.linkInBodyCopy
+  padding: 3px 8px
+  background-color: $l2
+  border-radius: 3px
+  border: 1px solid $border
+  transition: 0.1s ease-in-out
+  &:hover
+    background-color: #fff
+    border: 1px solid #fff
+    color: $yellow1
+
+.bold
+  font-weight: 900
+
+.italic
+  font-style: italic
+
+
+
+
+// ********************************
+// Global Styles — Project Specific
+// ********************************
+
+// This allows the footer to stick to the bottom
+.pageWrap
+  min-height: 100vh
+  min-height: calc(100vh - 500px)
+
+section
+  position: relative
+
+.wrap
+  max-width: 1200px
+  margin: 0 auto
+  padding: 8rem 30px 0
+
+.accentBar
+  width: 5rem
+  height: 0.25rem
+  margin-bottom: 1rem
+  background-color: $yellow1
+  background-image: $gradientX
+
+button
+  border: none
+
+.btn
+  padding: 1.2rem 3rem
+  color: $d4
+  cursor: pointer
+  font-weight: 700
+  text-transform: uppercase
+  transition: 0.2s
+
+.btn-gold
+  background-color: $yellow1
+  background-image: $gradientX
+.btn-lg
+  font-size: 1rem
+.btn-sm
+  font-size: 0.8rem
+
+.btn:hover, .btn:focus
+  transform: translateY(2px)
+
+.card
+  background-color: $l1
+  border-radius: 3px
+  box-shadow: 0 6px 30px hsla(204, 46%, 53%, 0.18)
+
+
+
+.caption
+  font-size: 0.8rem
+  line-height: 1.1rem
+  margin: 0
+  padding: 0
+
+.row
+  display: flex
+  flex-wrap: wrap
+  margin: 0 -0.5rem
+
+// .linedList li
+//   padding: 22px 0
+//   color: $d2
+//   border-bottom: 2px solid $l2
+//   font-size: 1.5rem
+//   font-weight: 300
+//   font-style: italic
+
+//   &:last-of-type
+//     border-bottom: none
+
+
+
+
+
+// ********** 
+// Animations 
+// ********** 
+
+.pageTransition-enter
+  z-index: 1
+  opacity: 0
+  transform: perspective(1000px) translate3d(0, 0, 20px)
+  transform-origin: top
+  transition: all 600ms ease-in-out
+
+.pageTransition-enter.pageTransition-enter-active
+  opacity: 1
+  transform: perspective(1000px) translate3d(0, 0, 0)
+  transform-origin: top
+  transition: all 600ms ease-in-out
+
+
+
+// Global Transition 
+
+.globalFadeInTransition-enter
+  opacity: 0
+.globalFadeInTransition-enter-active
+  opacity: 1
+  transition: 300ms ease-in-out
+.globalFadeInTransition-exit
+  opacity: 1
+  transition: 300ms ease-in-out
+.globalFadeInTransition-exit-active
+  opacity: 0
+
+
+
+
+
+// ************* 
+// Media Queries 
+// ************* 
+
+@media (max-width: 960px)
+  section:first-of-type
+    margin-top: -40px
+
+
+@media (max-width: 420px)
+  .wrap
+    padding: 6rem 20px 0
+
+  
+  h1
+    margin-bottom: 1.4rem
+    font-size: 2.8rem

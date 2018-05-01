@@ -1,0 +1,204 @@
+
+nav
+  top: 0
+  width: 100%
+  height: 70px
+  background-color: hsla(0,0%,100%,0.97)
+  box-shadow: 0 6px 30px hsla(204, 46%, 53%, 0.18)
+  z-index: 99
+
+  .wrap-nav
+    position: relative
+    display: flex
+    justify-content: space-between
+    height: 100%
+    margin: 0 auto
+    max-width: 1200px
+    padding: 0 1rem
+
+
+  // Left
+  .ctr-logo
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 207px
+    height: 100%
+    cursor: pointer
+
+    img
+      width: 207px
+      height: 36px
+
+
+  // Right
+  .menuBtn
+    display: none
+    justify-content: center
+    align-items: center
+    width: 68px
+    height: calc(100% - 12px)
+    margin: 6px
+    cursor: pointer
+    transition: 0.3s
+
+  .menuBtn:hover
+    background-color: #EFF3F5
+
+
+
+
+
+
+
+// Below needs cleanup ↓
+
+
+// *****************
+// NavMenu - Desktop
+// *****************
+
+.navMenu-desktop
+  display: flex
+
+  .navItem
+    position: relative
+    display: flex
+    align-items: center
+    height: 100%
+    padding: 0 14px
+    color: $d2
+    cursor: pointer
+    font-weight: 700
+    font-size: 0.8rem
+    text-transform: uppercase
+    transition: 0.3s
+
+  .navItem:hover
+    background-color: $l3
+
+  svg
+    +size(18px, 18px)
+    fill: $d2
+    margin: 0 -4px -1px 3px
+    transition: 0.3s
+
+  .dropdown
+    position: absolute
+    top: 80px
+    right: 0
+    padding: 20px
+    background-color: $l1
+
+  // a
+  //   display: block
+  //   // +size(100%, 100%)
+  //   // margin: 0 14px
+
+  // .ctr-ourBrands-desktop
+  //   position: relative
+
+
+  // .ourBrands-desktop
+  //   position: absolute
+  //   bottom: -113px
+  //   left: -62px
+  //   width: 250px
+  //   display: flex
+  //   flex-direction: column
+  //   align-items: center
+  //   background-color: #FFFFFF
+  //   border-radius: 3px
+  //   box-shadow: 0 6px 30px hsla(204, 46%, 53%, 0.18)
+
+  //   li
+  //     height: 50px
+
+  //   li:hover:before
+  //     opacity: 0
+
+  //   a:first-of-type
+  //     border-bottom: 1px solid #DEE2E8
+
+  //   .dropdownPoint
+  //     position: absolute
+  //     top: -6px
+  //     display: block
+  //     width: 12px
+  //     height: 12px
+  //     background-color: #FFFFFF
+  //     border-radius: 3px 0 10px 0
+  //     transform: rotate(45deg)
+
+
+
+
+
+
+
+
+
+// **********
+// Animations
+// **********
+
+.dropdownTransition-enter
+  transform: translateY(16px)
+  opacity: 0
+.dropdownTransition-enter-active
+  transform: translateY(0px)
+  opacity: 1
+  transition: 300ms ease-in-out
+.dropdownTransition-exit
+  transform: translateY(0px)
+  opacity: 1
+  transition: 300ms ease-in-out
+.dropdownTransition-exit-active
+  transform: translateY(16px)
+  opacity: 0
+
+
+
+
+
+
+/* ************* */
+/* Media Queries */
+/* ************* */
+
+@media (max-width: 1200px)
+  // .navMenu-desktop li
+  //   padding: 0 10px
+
+@media (max-width: 960px)
+  .navMenu-desktop
+    display: none
+
+
+
+
+// *************
+// Media Queries
+// *************
+
+@media (max-width: 960px)
+  nav
+    .wrap-nav
+      padding-right: 0
+    
+    .menuBtn
+      display: flex
+
+@media (max-width: 640px)
+  nav
+    height: 60px
+
+    .ctr-logo
+      width: 170px
+
+      img
+        width: 170px
+        height: 30px
+
+    .menuBtn
+      width: 48px
