@@ -5,6 +5,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import DropdownArrow from './../../img/DropdownArrow';
+import denmark from './../../img/flags/denmark.svg';
+import netherlands from './../../img/flags/netherlands.svg';
+import uk from './../../img/flags/uk.svg';
+import belgium from './../../img/flags/belgium.svg';
+import france from './../../img/flags/france.svg';
+import germany from './../../img/flags/germany.svg';
+import portugal from './../../img/flags/portugal.svg';
+import spain from './../../img/flags/spain.svg';
+import sweden from './../../img/flags/sweden.svg';
 
 
 export default class NavMenuDesktop extends Component {
@@ -57,9 +66,15 @@ export default class NavMenuDesktop extends Component {
           <span>Language</span>
           <DropdownArrow toggleArrow={this.state.menu_aboutVisible} />
           <ul className="dropdown">
-            <li>Danish</li>
-            <li>Dutch</li>
-            <li>English</li>
+            <li><img src={denmark} alt="denmark" /><span>Danish</span></li>
+            <li><img src={netherlands} alt="netherlands" /><span>Dutch</span></li>
+            <li><img src={uk} alt="uk" /><span>English</span></li>
+            <li><img src={belgium} alt="belgium" /><span>Flemish</span></li>
+            <li><img src={france} alt="france" /><span>French</span></li>
+            <li><img src={germany} alt="germany" /><span>German</span></li>
+            <li><img src={portugal} alt="portugal" /><span>Portugese</span></li>
+            <li><img src={spain} alt="spain" /><span>Spanish</span></li>
+            <li><img src={sweden} alt="sweden" /><span>Swedish</span></li>
           </ul>
         </li>
 

@@ -256,8 +256,25 @@ nav {
     position: absolute;
     top: 80px;
     right: 0;
-    padding: 20px;
-    background-color: #FFFFFF; }
+    padding: 6px;
+    background-color: #FFFFFF;
+    white-space: nowrap; }
+    .navMenu-desktop .dropdown li {
+      display: flex;
+      align-items: center;
+      padding: 0.8rem 1.8rem;
+      border-radius: 3px; }
+      .navMenu-desktop .dropdown li:first-of-type {
+        padding-top: 1.4rem; }
+      .navMenu-desktop .dropdown li:last-of-type {
+        padding-bottom: 1.4rem; }
+      .navMenu-desktop .dropdown li:hover {
+        background-color: #EAEAEA; }
+    .navMenu-desktop .dropdown img {
+      width: 21px;
+      height: 15px; }
+    .navMenu-desktop .dropdown span {
+      margin: 2px 0 0 8px; }
 
 .dropdownTransition-enter {
   transform: translateY(16px);
