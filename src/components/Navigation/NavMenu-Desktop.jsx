@@ -23,13 +23,14 @@ export default class NavMenuDesktop extends Component {
     super(props);
 
     this.state = {
+
       aboutVisible: false,
       supportVisible: false,
       languageVisible: false,
       backgroundVisible: false,
       bgWidth: '',
       bgHeight: '',
-      currentTarget: '',
+      target: '',
     };
   }
 
@@ -37,12 +38,19 @@ export default class NavMenuDesktop extends Component {
   //
 
 
-  componentDidMount() {
-    this.myfunct();
+  componentDidUpdate() {
+    if (this.state.backgroundVisible && !this.state.bgWidth) {
+      this.handleDropdown();
+    }
   }
 
-  async myfunct() {
-    console.log(this.state.currentTarget);
+  handleDropdown() {
+    console.log('hi');
+    const dropdownCoords = this.state.target.children[2].getBoundingClientRect(); // there's a problem here with array [2]
+    this.setState({
+      bgWidth: dropdownCoords.width,
+      bgHeight: dropdownCoords.height,
+    });
   }
 
 
@@ -50,22 +58,12 @@ export default class NavMenuDesktop extends Component {
 
 
   handleEnterAbout = (e) => {
-    // console.log(e.target.children[2].getBoundingClientRect());
-
-    const dropdownCoords = e.target.getBoundingClientRect();
-    // console.log(dropdownCoords);
-
-    const { target } = e;
-
-    // console.log(target);
-
+    const currentTarget = e.target;
 
     this.setState({
       aboutVisible: true,
       backgroundVisible: true,
-      bgWidth: dropdownCoords.width,
-      bgHeight: dropdownCoords.height,
-      currentTarget: target,
+      target: currentTarget,
     });
   }
 
@@ -73,6 +71,7 @@ export default class NavMenuDesktop extends Component {
     this.setState({
       aboutVisible: false,
       backgroundVisible: false,
+      bgWidth: '',
     });
   }
 
@@ -81,12 +80,12 @@ export default class NavMenuDesktop extends Component {
 
 
   handleEnterSupport = (e) => {
-    const dropdownCoords = e.target.getBoundingClientRect();
-    console.log(dropdownCoords);
+    const currentTarget = e.target;
 
     this.setState({
-      supportVisible: true,
+      aboutVisible: true,
       backgroundVisible: true,
+      target: currentTarget,
     });
   }
 
@@ -94,6 +93,7 @@ export default class NavMenuDesktop extends Component {
     this.setState({
       supportVisible: false,
       backgroundVisible: false,
+      bgWidth: '',
     });
   }
 
