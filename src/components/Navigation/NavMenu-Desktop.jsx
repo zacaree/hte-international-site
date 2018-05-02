@@ -14,6 +14,7 @@ import germany from './../../img/flags/germany.svg';
 import portugal from './../../img/flags/portugal.svg';
 import spain from './../../img/flags/spain.svg';
 import sweden from './../../img/flags/sweden.svg';
+import usa from './../../img/flags/usa.svg';
 
 
 export default class NavMenuDesktop extends Component {
@@ -26,59 +27,99 @@ export default class NavMenuDesktop extends Component {
   }
 
 
+  handleEnterAbout = () => {
+    console.log('EnterAbout');
+  }
+  handleEnterSupport = () => {
+    console.log('EnterSup');
+  }
+  handleEnterLanguage = () => {
+    console.log('EnterLang');
+  }
+  handleLeaveAbout = () => {
+    console.log('LeaveAbout');
+  }
+  handleLeaveSupport = () => {
+    console.log('LeaveSup');
+  }
+  handleLeaveLanguage = () => {
+    console.log('LeaveLang');
+  }
+
+
   render() {
     return (
-      <ul className="navMenu-desktop navigation">
+      <div className="navMenu-desktop">
 
-        <li>
-          <Link to="/products" className="navItem">Products</Link>
-        </li>
+        <div className="dropdownBackground">
+          <span className="arrow" />
+        </div>
 
-
-        <li className="navItem">
-          <span>About Us</span>
-          <DropdownArrow toggleArrow={this.state.menu_aboutVisible} />
-          <ul className="dropdown">
-            <li>Hustler’s Story</li>
-            <li>Why Hustler’s a Better Mower</li>
-            <li>European Distribution</li>
-          </ul>
-        </li>
+        <ul className="navItems">
+          <li>
+            <Link to="/products" className="navItem">Products</Link>
+          </li>
 
 
-        <li>
-          <Link to="/find-a-distributor" className="navItem">Find A Distributor</Link>
-        </li>
+          <li
+            className="navItem"
+            onMouseEnter={this.handleEnterAbout}
+            onMouseLeave={this.handleLeaveAbout}
+          >
+            <span>About Us</span>
+            <DropdownArrow toggleArrow={this.state.menu_aboutVisible} />
+            <ul className="dropdown">
+              <li>Hustler’s Story</li>
+              <li>Why Hustler’s a Better Mower</li>
+              <li>European Distribution</li>
+            </ul>
+          </li>
 
 
-        <li className="navItem">
-          <span>Support</span>
-          <DropdownArrow toggleArrow={this.state.menu_aboutVisible} />
-          <ul className="dropdown">
-            <li>FAQ</li>
-            <li>Manuals</li>
-            <li>Contact Us</li>
-          </ul>
-        </li>
+          <li>
+            <Link to="/find-a-distributor" className="navItem">Find A Distributor</Link>
+          </li>
 
 
-        <li className="navItem">
-          <span>Language</span>
-          <DropdownArrow toggleArrow={this.state.menu_aboutVisible} />
-          <ul className="dropdown">
-            <li><img src={denmark} alt="denmark" /><span>Danish</span></li>
-            <li><img src={netherlands} alt="netherlands" /><span>Dutch</span></li>
-            <li><img src={uk} alt="uk" /><span>English</span></li>
-            <li><img src={belgium} alt="belgium" /><span>Flemish</span></li>
-            <li><img src={france} alt="france" /><span>French</span></li>
-            <li><img src={germany} alt="germany" /><span>German</span></li>
-            <li><img src={portugal} alt="portugal" /><span>Portugese</span></li>
-            <li><img src={spain} alt="spain" /><span>Spanish</span></li>
-            <li><img src={sweden} alt="sweden" /><span>Swedish</span></li>
-          </ul>
-        </li>
+          <li
+            className="navItem"
+            onMouseEnter={this.handleEnterSupport}
+            onMouseLeave={this.handleLeaveSupport}
+          >
+            <span>Support</span>
+            <DropdownArrow toggleArrow={this.state.menu_aboutVisible} />
+            <ul className="dropdown">
+              <li>FAQ</li>
+              <li>Manuals</li>
+              <li>Contact Us</li>
+            </ul>
+          </li>
 
-      </ul>
+
+          <li
+            className="navItem"
+            onMouseEnter={this.handleEnterLanguage}
+            onMouseLeave={this.handleLeaveLanguage}
+          >
+            <span>Language</span>
+            <DropdownArrow toggleArrow={this.state.menu_aboutVisible} />
+            <ul className="dropdown">
+              <li><img src={denmark} alt="denmark" /><span>Danish</span></li>
+              <li><img src={netherlands} alt="netherlands" /><span>Dutch</span></li>
+              <li><img src={uk} alt="uk" /><span>English</span></li>
+              <li><img src={belgium} alt="belgium" /><span>Flemish</span></li>
+              <li><img src={france} alt="france" /><span>French</span></li>
+              <li><img src={germany} alt="germany" /><span>German</span></li>
+              <li><img src={portugal} alt="portugal" /><span>Portugese</span></li>
+              <li><img src={spain} alt="spain" /><span>Spanish</span></li>
+              <li><img src={sweden} alt="sweden" /><span>Swedish</span></li>
+              <hr />
+              <a href="https://www.hustlerturf.com/"><li><img src={usa} alt="USA" /><span>HustlerTurf.com</span></li></a>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
     );
   }
 }

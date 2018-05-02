@@ -51,15 +51,16 @@ nav
 
 
 
-// Below needs cleanup ↓
 
 
 // *****************
 // NavMenu - Desktop
 // *****************
 
-.navMenu-desktop
+.navItems
+  position: relative
   display: flex
+  height: 100%
 
   .navItem
     position: relative
@@ -74,8 +75,8 @@ nav
     text-transform: uppercase
     transition: 0.3s
 
-  .navItem:hover
-    background-color: $l3
+    &:hover
+      background-color: $l3
 
   svg
     +size(18px, 18px)
@@ -85,8 +86,12 @@ nav
 
   .dropdown
     position: absolute
-    top: 80px
+    top: 70px
     right: 0
+    border-top: 6px solid hsla(0,0%,0%,0)
+    -moz-background-clip: padding
+    -webkit-background-clip: padding
+    background-clip: padding-box
     padding: 6px
     background-color: $l1
     white-space: nowrap
@@ -95,7 +100,6 @@ nav
       display: flex
       align-items: center
       padding: 0.8rem 1.8rem
-      border-radius: 3px
 
       &:first-of-type
         padding-top: 1.4rem
@@ -108,7 +112,18 @@ nav
       +size(21px, 15px)
 
     span
-      margin: 2px 0 0 8px
+      margin: 1px 0 0 8px
+
+    hr
+      margin: 6px 0
+
+
+// Below needs cleanup ↓
+
+
+
+
+  
 
   // a
   //   display: block

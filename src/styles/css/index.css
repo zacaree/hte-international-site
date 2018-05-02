@@ -53,7 +53,7 @@ p, input, select, textarea {
 a {
   margin: 0;
   padding: 0;
-  color: #303030;
+  color: inherit;
   text-decoration: none; }
 
 a, li, label, .btn {
@@ -70,7 +70,8 @@ ul {
 hr {
   border: 0;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  border-top: 1px solid #DDDDDD; }
 
 input, select, textarea, a {
   outline: none;
@@ -230,9 +231,11 @@ nav {
   nav .menuBtn:hover {
     background-color: #EFF3F5; }
 
-.navMenu-desktop {
-  display: flex; }
-  .navMenu-desktop .navItem {
+.navItems {
+  position: relative;
+  display: flex;
+  height: 100%; }
+  .navItems .navItem {
     position: relative;
     display: flex;
     align-items: center;
@@ -244,37 +247,42 @@ nav {
     font-size: 0.8rem;
     text-transform: uppercase;
     transition: 0.3s; }
-  .navMenu-desktop .navItem:hover {
-    background-color: #EAEAEA; }
-  .navMenu-desktop svg {
+    .navItems .navItem:hover {
+      background-color: #EAEAEA; }
+  .navItems svg {
     width: 18px;
     height: 18px;
     fill: #888888;
     margin: 0 -4px -1px 3px;
     transition: 0.3s; }
-  .navMenu-desktop .dropdown {
+  .navItems .dropdown {
     position: absolute;
-    top: 80px;
+    top: 70px;
     right: 0;
+    border-top: 6px solid rgba(0, 0, 0, 0);
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
     padding: 6px;
     background-color: #FFFFFF;
     white-space: nowrap; }
-    .navMenu-desktop .dropdown li {
+    .navItems .dropdown li {
       display: flex;
       align-items: center;
-      padding: 0.8rem 1.8rem;
-      border-radius: 3px; }
-      .navMenu-desktop .dropdown li:first-of-type {
+      padding: 0.8rem 1.8rem; }
+      .navItems .dropdown li:first-of-type {
         padding-top: 1.4rem; }
-      .navMenu-desktop .dropdown li:last-of-type {
+      .navItems .dropdown li:last-of-type {
         padding-bottom: 1.4rem; }
-      .navMenu-desktop .dropdown li:hover {
+      .navItems .dropdown li:hover {
         background-color: #EAEAEA; }
-    .navMenu-desktop .dropdown img {
+    .navItems .dropdown img {
       width: 21px;
       height: 15px; }
-    .navMenu-desktop .dropdown span {
-      margin: 2px 0 0 8px; }
+    .navItems .dropdown span {
+      margin: 1px 0 0 8px; }
+    .navItems .dropdown hr {
+      margin: 6px 0; }
 
 .dropdownTransition-enter {
   transform: translateY(16px);
