@@ -27,16 +27,48 @@ export default class NavMenuDesktop extends Component {
       supportVisible: false,
       languageVisible: false,
       backgroundVisible: false,
+      bgWidth: '',
+      bgHeight: '',
+      currentTarget: '',
     };
   }
 
 
-  handleEnterAbout = () => {
+  //
+
+
+  componentDidMount() {
+    this.myfunct();
+  }
+
+  async myfunct() {
+    console.log(this.state.currentTarget);
+  }
+
+
+  //
+
+
+  handleEnterAbout = (e) => {
+    // console.log(e.target.children[2].getBoundingClientRect());
+
+    const dropdownCoords = e.target.getBoundingClientRect();
+    // console.log(dropdownCoords);
+
+    const { target } = e;
+
+    // console.log(target);
+
+
     this.setState({
       aboutVisible: true,
       backgroundVisible: true,
+      bgWidth: dropdownCoords.width,
+      bgHeight: dropdownCoords.height,
+      currentTarget: target,
     });
   }
+
   handleLeaveAbout = () => {
     this.setState({
       aboutVisible: false,
@@ -44,12 +76,20 @@ export default class NavMenuDesktop extends Component {
     });
   }
 
-  handleEnterSupport = () => {
+
+  //
+
+
+  handleEnterSupport = (e) => {
+    const dropdownCoords = e.target.getBoundingClientRect();
+    console.log(dropdownCoords);
+
     this.setState({
       supportVisible: true,
       backgroundVisible: true,
     });
   }
+
   handleLeaveSupport = () => {
     this.setState({
       supportVisible: false,
@@ -57,12 +97,17 @@ export default class NavMenuDesktop extends Component {
     });
   }
 
+
+  //
+
+
   handleEnterLanguage = () => {
     this.setState({
       languageVisible: true,
       backgroundVisible: true,
     });
   }
+
   handleLeaveLanguage = () => {
     this.setState({
       languageVisible: false,
@@ -71,9 +116,13 @@ export default class NavMenuDesktop extends Component {
   }
 
 
+  //
+
+
   render() {
     return (
       <div className="navMenu-desktop">
+
 
         <CSSTransition
           in={this.state.backgroundVisible}
@@ -81,10 +130,18 @@ export default class NavMenuDesktop extends Component {
           classNames="menuTransition"
           unmountOnExit
         >
-          <div className="dropdownBackground">
+          <div
+            className="dropdownBackground"
+            style={{
+              transition: '0.3s ease-in-out',
+              width: this.state.bgWidth,
+              height: this.state.bgHeight,
+            }}
+          >
             <span className="arrow" />
           </div>
         </CSSTransition>
+
 
         <ul className="navItems">
           <li>
