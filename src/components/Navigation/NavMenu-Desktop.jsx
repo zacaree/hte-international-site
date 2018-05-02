@@ -4,6 +4,7 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
 import DropdownArrow from './../../img/DropdownArrow';
 import denmark from './../../img/flags/denmark.svg';
 import netherlands from './../../img/flags/netherlands.svg';
@@ -22,28 +23,51 @@ export default class NavMenuDesktop extends Component {
     super(props);
 
     this.state = {
-
+      aboutVisible: false,
+      supportVisible: false,
+      languageVisible: false,
+      backgroundVisible: false,
     };
   }
 
 
   handleEnterAbout = () => {
-    console.log('EnterAbout');
-  }
-  handleEnterSupport = () => {
-    console.log('EnterSup');
-  }
-  handleEnterLanguage = () => {
-    console.log('EnterLang');
+    this.setState({
+      aboutVisible: true,
+      backgroundVisible: true,
+    });
   }
   handleLeaveAbout = () => {
-    console.log('LeaveAbout');
+    this.setState({
+      aboutVisible: false,
+      backgroundVisible: false,
+    });
+  }
+
+  handleEnterSupport = () => {
+    this.setState({
+      supportVisible: true,
+      backgroundVisible: true,
+    });
   }
   handleLeaveSupport = () => {
-    console.log('LeaveSup');
+    this.setState({
+      supportVisible: false,
+      backgroundVisible: false,
+    });
+  }
+
+  handleEnterLanguage = () => {
+    this.setState({
+      languageVisible: true,
+      backgroundVisible: true,
+    });
   }
   handleLeaveLanguage = () => {
-    console.log('LeaveLang');
+    this.setState({
+      languageVisible: false,
+      backgroundVisible: false,
+    });
   }
 
 
@@ -51,9 +75,16 @@ export default class NavMenuDesktop extends Component {
     return (
       <div className="navMenu-desktop">
 
-        <div className="dropdownBackground">
-          <span className="arrow" />
-        </div>
+        <CSSTransition
+          in={this.state.backgroundVisible}
+          timeout={300}
+          classNames="menuTransition"
+          unmountOnExit
+        >
+          <div className="dropdownBackground">
+            <span className="arrow" />
+          </div>
+        </CSSTransition>
 
         <ul className="navItems">
           <li>
@@ -68,11 +99,18 @@ export default class NavMenuDesktop extends Component {
           >
             <span>About Us</span>
             <DropdownArrow toggleArrow={this.state.menu_aboutVisible} />
-            <ul className="dropdown">
-              <li>Hustler’s Story</li>
-              <li>Why Hustler’s a Better Mower</li>
-              <li>European Distribution</li>
-            </ul>
+            <CSSTransition
+              in={this.state.aboutVisible}
+              timeout={300}
+              classNames="menuTransition"
+              unmountOnExit
+            >
+              <ul className="dropdown">
+                <li>Hustler’s Story</li>
+                <li>Why Hustler’s a Better Mower</li>
+                <li>European Distribution</li>
+              </ul>
+            </CSSTransition>
           </li>
 
 
@@ -88,11 +126,17 @@ export default class NavMenuDesktop extends Component {
           >
             <span>Support</span>
             <DropdownArrow toggleArrow={this.state.menu_aboutVisible} />
-            <ul className="dropdown">
-              <li>FAQ</li>
-              <li>Manuals</li>
-              <li>Contact Us</li>
-            </ul>
+            <CSSTransition
+              in={this.state.supportVisible}
+              timeout={300}
+              classNames="menuTransition"
+              unmountOnExit
+            >
+              <ul className="dropdown">
+                <li>FAQ</li>
+                <li>Contact Us</li>
+              </ul>
+            </CSSTransition>
           </li>
 
 
@@ -103,19 +147,26 @@ export default class NavMenuDesktop extends Component {
           >
             <span>Language</span>
             <DropdownArrow toggleArrow={this.state.menu_aboutVisible} />
-            <ul className="dropdown">
-              <li><img src={denmark} alt="denmark" /><span>Danish</span></li>
-              <li><img src={netherlands} alt="netherlands" /><span>Dutch</span></li>
-              <li><img src={uk} alt="uk" /><span>English</span></li>
-              <li><img src={belgium} alt="belgium" /><span>Flemish</span></li>
-              <li><img src={france} alt="france" /><span>French</span></li>
-              <li><img src={germany} alt="germany" /><span>German</span></li>
-              <li><img src={portugal} alt="portugal" /><span>Portugese</span></li>
-              <li><img src={spain} alt="spain" /><span>Spanish</span></li>
-              <li><img src={sweden} alt="sweden" /><span>Swedish</span></li>
-              <hr />
-              <a href="https://www.hustlerturf.com/"><li><img src={usa} alt="USA" /><span>HustlerTurf.com</span></li></a>
-            </ul>
+            <CSSTransition
+              in={this.state.languageVisible}
+              timeout={300}
+              classNames="menuTransition"
+              unmountOnExit
+            >
+              <ul className="dropdown">
+                <li><img src={denmark} alt="denmark" /><span>Danish</span></li>
+                <li><img src={netherlands} alt="netherlands" /><span>Dutch</span></li>
+                <li><img src={uk} alt="uk" /><span>English</span></li>
+                <li><img src={belgium} alt="belgium" /><span>Flemish</span></li>
+                <li><img src={france} alt="france" /><span>French</span></li>
+                <li><img src={germany} alt="germany" /><span>German</span></li>
+                <li><img src={portugal} alt="portugal" /><span>Portugese</span></li>
+                <li><img src={spain} alt="spain" /><span>Spanish</span></li>
+                <li><img src={sweden} alt="sweden" /><span>Swedish</span></li>
+                <hr />
+                <a href="https://www.hustlerturf.com/"><li><img src={usa} alt="USA" /><span>HustlerTurf.com</span></li></a>
+              </ul>
+            </CSSTransition>
           </li>
 
         </ul>

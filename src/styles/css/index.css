@@ -231,6 +231,23 @@ nav {
   nav .menuBtn:hover {
     background-color: #EFF3F5; }
 
+.dropdownBackground {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: #FFFFFF;
+  box-shadow: 0 6px 30px rgba(80, 146, 190, 0.18); }
+  .dropdownBackground .arrow {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    transform: translateY(-50%) rotate(45deg); }
+
 .navItems {
   position: relative;
   display: flex;
@@ -264,8 +281,8 @@ nav {
     -webkit-background-clip: padding;
     background-clip: padding-box;
     padding: 6px;
-    background-color: #FFFFFF;
-    white-space: nowrap; }
+    white-space: nowrap;
+    transition: 0.3s ease-in-out; }
     .navItems .dropdown li {
       display: flex;
       align-items: center;
@@ -284,21 +301,21 @@ nav {
     .navItems .dropdown hr {
       margin: 6px 0; }
 
-.dropdownTransition-enter {
+.menuTransition-enter {
   transform: translateY(16px);
   opacity: 0; }
 
-.dropdownTransition-enter-active {
+.menuTransition-enter-active {
   transform: translateY(0px);
   opacity: 1;
   transition: 300ms ease-in-out; }
 
-.dropdownTransition-exit {
+.menuTransition-exit {
   transform: translateY(0px);
   opacity: 1;
   transition: 300ms ease-in-out; }
 
-.dropdownTransition-exit-active {
+.menuTransition-exit-active {
   transform: translateY(16px);
   opacity: 0; }
 
