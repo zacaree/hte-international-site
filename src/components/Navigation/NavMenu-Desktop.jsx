@@ -22,9 +22,14 @@ export default class NavMenuDesktop extends Component {
   constructor(props) {
     super(props);
 
-    this.toggleAbout = this.toggleAbout.bind(this);
-    this.toggleSupport = this.toggleSupport.bind(this);
-    this.toggleLanguage = this.toggleLanguage.bind(this);
+    this.handleClickAbout = this.handleClickAbout.bind(this);
+    this.handleOutsideClickAbout = this.handleOutsideClickAbout.bind(this);
+
+    this.handleClickSupport = this.handleClickSupport.bind(this);
+    this.handleOutsideClickSupport = this.handleOutsideClickSupport.bind(this);
+
+    this.handleClickLanguage = this.handleClickLanguage.bind(this);
+    this.handleOutsideClickLanguage = this.handleOutsideClickLanguage.bind(this);
 
     this.state = {
       aboutOpen: false,
@@ -37,14 +42,72 @@ export default class NavMenuDesktop extends Component {
   //
 
 
-  toggleAbout() {
-    this.setState({ aboutOpen: !this.state.aboutOpen });
+  handleClickAbout = () => {
+    if (!this.state.aboutOpen) {
+      document.addEventListener('click', this.handleOutsideClickAbout, false);
+    } else {
+      document.removeEventListener('click', this.handleOutsideClickAbout, false);
+    }
+
+    this.setState({
+      aboutOpen: !this.state.aboutOpen,
+    });
   }
-  toggleSupport() {
-    this.setState({ supportOpen: !this.state.supportOpen });
+
+  handleOutsideClickAbout(e) {
+    if (this.nodeAbout.contains(e.target)) {
+      return;
+    }
+
+    this.handleClickAbout();
   }
-  toggleLanguage() {
-    this.setState({ languageOpen: !this.state.languageOpen });
+
+
+  //
+
+
+  handleClickSupport = () => {
+    if (!this.state.supportOpen) {
+      document.addEventListener('click', this.handleOutsideClickSupport, false);
+    } else {
+      document.removeEventListener('click', this.handleOutsideClickSupport, false);
+    }
+
+    this.setState({
+      supportOpen: !this.state.supportOpen,
+    });
+  }
+
+  handleOutsideClickSupport(e) {
+    if (this.nodeSupport.contains(e.target)) {
+      return;
+    }
+
+    this.handleClickSupport();
+  }
+
+
+  //
+
+
+  handleClickLanguage = () => {
+    if (!this.state.languageOpen) {
+      document.addEventListener('click', this.handleOutsideClickLanguage, false);
+    } else {
+      document.removeEventListener('click', this.handleOutsideClickLanguage, false);
+    }
+
+    this.setState({
+      languageOpen: !this.state.languageOpen,
+    });
+  }
+
+  handleOutsideClickLanguage(e) {
+    if (this.nodeLanguage.contains(e.target)) {
+      return;
+    }
+
+    this.handleClickLanguage();
   }
 
 
@@ -61,7 +124,7 @@ export default class NavMenuDesktop extends Component {
         </li>
 
 
-        <li className="navItem" onClick={this.toggleAbout} >
+        <li className="navItem" onClick={this.handleClickAbout} ref={(node) => { this.nodeAbout = node; }} >
           <span>About Us</span>
           <DropdownArrow toggleArrow={this.state.aboutOpen} />
           <CSSTransition
@@ -84,7 +147,7 @@ export default class NavMenuDesktop extends Component {
         </li>
 
 
-        <li className="navItem" onClick={this.toggleSupport} >
+        <li className="navItem" onClick={this.handleClickSupport} ref={(node) => { this.nodeSupport = node; }} >
           <span>Support</span>
           <DropdownArrow toggleArrow={this.state.supportOpen} />
           <CSSTransition
@@ -101,7 +164,7 @@ export default class NavMenuDesktop extends Component {
         </li>
 
 
-        <li className="navItem" onClick={this.toggleLanguage} >
+        <li className="navItem" onClick={this.handleClickLanguage} ref={(node) => { this.nodeLanguage = node; }} >
           <span>Language</span>
           <DropdownArrow toggleArrow={this.state.languageOpen} />
           <CSSTransition
