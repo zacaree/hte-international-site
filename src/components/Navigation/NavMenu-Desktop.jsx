@@ -30,6 +30,8 @@ export default class NavMenuDesktop extends Component {
       backgroundVisible: false,
       bgWidth: '',
       bgHeight: '',
+      bgPositionTop: '',
+      bgPositionLeft: '',
       target: '',
     };
   }
@@ -39,17 +41,26 @@ export default class NavMenuDesktop extends Component {
 
 
   componentDidUpdate() {
-    if (this.state.backgroundVisible && !this.state.bgWidth) {
+    const { target } = this.state;
+
+    if (target && target.classList.contains('navItem')) {
       this.handleDropdown();
     }
   }
 
   handleDropdown() {
-    console.log('hi');
-    const dropdownCoords = this.state.target.children[2].getBoundingClientRect(); // there's a problem here with array [2]
+    const navMenuContainerCoords = this.state.target.parentNode.getBoundingClientRect();
+    const dropdownCoords = this.state.target.children[2].getBoundingClientRect();
+    const calcCoordsLeft = dropdownCoords.left - navMenuContainerCoords.left;
+    console.log(dropdownCoords.top);
+
+
     this.setState({
       bgWidth: dropdownCoords.width,
       bgHeight: dropdownCoords.height,
+      bgPositionTop: dropdownCoords.top,
+      bgPositionLeft: calcCoordsLeft,
+      target: '',
     });
   }
 
@@ -71,7 +82,6 @@ export default class NavMenuDesktop extends Component {
     this.setState({
       aboutVisible: false,
       backgroundVisible: false,
-      bgWidth: '',
     });
   }
 
@@ -83,7 +93,7 @@ export default class NavMenuDesktop extends Component {
     const currentTarget = e.target;
 
     this.setState({
-      aboutVisible: true,
+      supportVisible: true,
       backgroundVisible: true,
       target: currentTarget,
     });
@@ -93,7 +103,6 @@ export default class NavMenuDesktop extends Component {
     this.setState({
       supportVisible: false,
       backgroundVisible: false,
-      bgWidth: '',
     });
   }
 
@@ -101,10 +110,13 @@ export default class NavMenuDesktop extends Component {
   //
 
 
-  handleEnterLanguage = () => {
+  handleEnterLanguage = (e) => {
+    const currentTarget = e.target;
+
     this.setState({
       languageVisible: true,
       backgroundVisible: true,
+      target: currentTarget,
     });
   }
 
@@ -127,19 +139,18 @@ export default class NavMenuDesktop extends Component {
         <CSSTransition
           in={this.state.backgroundVisible}
           timeout={300}
-          classNames="menuTransition"
+          classNames="dropdownBgTransition"
           unmountOnExit
         >
           <div
             className="dropdownBackground"
             style={{
               transition: '0.3s ease-in-out',
-              width: this.state.bgWidth,
-              height: this.state.bgHeight,
+              width: `${this.state.bgWidth}px`,
+              height: `${this.state.bgHeight}px`,
+              transform: `translate(${this.state.bgPositionLeft}px, ${this.state.bgPositionTop}px)`,
             }}
-          >
-            <span className="arrow" />
-          </div>
+          />
         </CSSTransition>
 
 
@@ -158,7 +169,7 @@ export default class NavMenuDesktop extends Component {
             <DropdownArrow toggleArrow={this.state.menu_aboutVisible} />
             <CSSTransition
               in={this.state.aboutVisible}
-              timeout={300}
+              timeout={100}
               classNames="menuTransition"
               unmountOnExit
             >
@@ -185,7 +196,7 @@ export default class NavMenuDesktop extends Component {
             <DropdownArrow toggleArrow={this.state.menu_aboutVisible} />
             <CSSTransition
               in={this.state.supportVisible}
-              timeout={300}
+              timeout={100}
               classNames="menuTransition"
               unmountOnExit
             >
@@ -206,7 +217,7 @@ export default class NavMenuDesktop extends Component {
             <DropdownArrow toggleArrow={this.state.menu_aboutVisible} />
             <CSSTransition
               in={this.state.languageVisible}
-              timeout={300}
+              timeout={100}
               classNames="menuTransition"
               unmountOnExit
             >
