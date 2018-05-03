@@ -22,17 +22,14 @@ export default class NavMenuDesktop extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
+    this.toggleAbout = this.toggleAbout.bind(this);
+    this.toggleSupport = this.toggleSupport.bind(this);
+    this.toggleLanguage = this.toggleLanguage.bind(this);
 
-      aboutVisible: false,
-      supportVisible: false,
-      languageVisible: false,
-      backgroundVisible: false,
-      bgWidth: '',
-      bgHeight: '',
-      bgPositionTop: '',
-      bgPositionLeft: '',
-      target: '',
+    this.state = {
+      aboutOpen: false,
+      supportOpen: false,
+      languageOpen: false,
     };
   }
 
@@ -40,91 +37,14 @@ export default class NavMenuDesktop extends Component {
   //
 
 
-  componentDidUpdate() {
-    const { target } = this.state;
-
-    if (target && target.classList.contains('navItem')) {
-      this.handleDropdown();
-    }
+  toggleAbout() {
+    this.setState({ aboutOpen: !this.state.aboutOpen });
   }
-
-  handleDropdown() {
-    const navMenuContainerCoords = this.state.target.parentNode.getBoundingClientRect();
-    const dropdownCoords = this.state.target.children[2].getBoundingClientRect();
-    const calcCoordsLeft = dropdownCoords.left - navMenuContainerCoords.left;
-    console.log(dropdownCoords.top);
-
-
-    this.setState({
-      bgWidth: dropdownCoords.width,
-      bgHeight: dropdownCoords.height,
-      bgPositionTop: dropdownCoords.top,
-      bgPositionLeft: calcCoordsLeft,
-      target: '',
-    });
+  toggleSupport() {
+    this.setState({ supportOpen: !this.state.supportOpen });
   }
-
-
-  //
-
-
-  handleEnterAbout = (e) => {
-    const currentTarget = e.target;
-
-    this.setState({
-      aboutVisible: true,
-      backgroundVisible: true,
-      target: currentTarget,
-    });
-  }
-
-  handleLeaveAbout = () => {
-    this.setState({
-      aboutVisible: false,
-      backgroundVisible: false,
-    });
-  }
-
-
-  //
-
-
-  handleEnterSupport = (e) => {
-    const currentTarget = e.target;
-
-    this.setState({
-      supportVisible: true,
-      backgroundVisible: true,
-      target: currentTarget,
-    });
-  }
-
-  handleLeaveSupport = () => {
-    this.setState({
-      supportVisible: false,
-      backgroundVisible: false,
-    });
-  }
-
-
-  //
-
-
-  handleEnterLanguage = (e) => {
-    const currentTarget = e.target;
-
-    this.setState({
-      languageVisible: true,
-      backgroundVisible: true,
-      target: currentTarget,
-    });
-  }
-
-  handleLeaveLanguage = () => {
-    this.setState({
-      languageVisible: false,
-      backgroundVisible: false,
-    });
+  toggleLanguage() {
+    this.setState({ languageOpen: !this.state.languageOpen });
   }
 
 
@@ -133,112 +53,81 @@ export default class NavMenuDesktop extends Component {
 
   render() {
     return (
-      <div className="navMenu-desktop">
+      <ul className="navMenu-desktop">
 
 
-        <CSSTransition
-          in={this.state.backgroundVisible}
-          timeout={300}
-          classNames="dropdownBgTransition"
-          unmountOnExit
-        >
-          <div
-            className="dropdownBackground"
-            style={{
-              transition: '0.3s ease-in-out',
-              width: `${this.state.bgWidth}px`,
-              height: `${this.state.bgHeight}px`,
-              transform: `translate(${this.state.bgPositionLeft}px, ${this.state.bgPositionTop}px)`,
-            }}
-          />
-        </CSSTransition>
+        <li>
+          <Link to="/products" className="navItem">Products</Link>
+        </li>
 
 
-        <ul className="navItems">
-          <li>
-            <Link to="/products" className="navItem">Products</Link>
-          </li>
-
-
-          <li
-            className="navItem"
-            onMouseEnter={this.handleEnterAbout}
-            onMouseLeave={this.handleLeaveAbout}
+        <li className="navItem" onClick={this.toggleAbout} >
+          <span>About Us</span>
+          <DropdownArrow toggleArrow={this.state.aboutOpen} />
+          <CSSTransition
+            in={this.state.aboutOpen}
+            timeout={300}
+            classNames="menuTransition"
+            unmountOnExit
           >
-            <span>About Us</span>
-            <DropdownArrow toggleArrow={this.state.menu_aboutVisible} />
-            <CSSTransition
-              in={this.state.aboutVisible}
-              timeout={100}
-              classNames="menuTransition"
-              unmountOnExit
-            >
-              <ul className="dropdown">
-                <li>Hustler’s Story</li>
-                <li>Why Hustler’s a Better Mower</li>
-                <li>European Distribution</li>
-              </ul>
-            </CSSTransition>
-          </li>
+            <ul className="dropdown">
+              <li>Hustler’s Story</li>
+              <li>Why Hustler’s a Better Mower</li>
+              <li>European Distribution</li>
+            </ul>
+          </CSSTransition>
+        </li>
 
 
-          <li>
-            <Link to="/find-a-distributor" className="navItem">Find A Distributor</Link>
-          </li>
+        <li>
+          <Link to="/find-a-distributor" className="navItem">Find A Distributor</Link>
+        </li>
 
 
-          <li
-            className="navItem"
-            onMouseEnter={this.handleEnterSupport}
-            onMouseLeave={this.handleLeaveSupport}
+        <li className="navItem" onClick={this.toggleSupport} >
+          <span>Support</span>
+          <DropdownArrow toggleArrow={this.state.supportOpen} />
+          <CSSTransition
+            in={this.state.supportOpen}
+            timeout={300}
+            classNames="menuTransition"
+            unmountOnExit
           >
-            <span>Support</span>
-            <DropdownArrow toggleArrow={this.state.menu_aboutVisible} />
-            <CSSTransition
-              in={this.state.supportVisible}
-              timeout={100}
-              classNames="menuTransition"
-              unmountOnExit
-            >
-              <ul className="dropdown">
-                <li>FAQ</li>
-                <li>Contact Us</li>
-              </ul>
-            </CSSTransition>
-          </li>
+            <ul className="dropdown">
+              <li>FAQ</li>
+              <li>Contact Us</li>
+            </ul>
+          </CSSTransition>
+        </li>
 
 
-          <li
-            className="navItem"
-            onMouseEnter={this.handleEnterLanguage}
-            onMouseLeave={this.handleLeaveLanguage}
+        <li className="navItem" onClick={this.toggleLanguage} >
+          <span>Language</span>
+          <DropdownArrow toggleArrow={this.state.languageOpen} />
+          <CSSTransition
+            in={this.state.languageOpen}
+            timeout={300}
+            classNames="menuTransition"
+            unmountOnExit
           >
-            <span>Language</span>
-            <DropdownArrow toggleArrow={this.state.menu_aboutVisible} />
-            <CSSTransition
-              in={this.state.languageVisible}
-              timeout={100}
-              classNames="menuTransition"
-              unmountOnExit
-            >
-              <ul className="dropdown">
-                <li><img src={denmark} alt="denmark" /><span>Danish</span></li>
-                <li><img src={netherlands} alt="netherlands" /><span>Dutch</span></li>
-                <li><img src={uk} alt="uk" /><span>English</span></li>
-                <li><img src={belgium} alt="belgium" /><span>Flemish</span></li>
-                <li><img src={france} alt="france" /><span>French</span></li>
-                <li><img src={germany} alt="germany" /><span>German</span></li>
-                <li><img src={portugal} alt="portugal" /><span>Portugese</span></li>
-                <li><img src={spain} alt="spain" /><span>Spanish</span></li>
-                <li><img src={sweden} alt="sweden" /><span>Swedish</span></li>
-                <hr />
-                <a href="https://www.hustlerturf.com/"><li><img src={usa} alt="USA" /><span>HustlerTurf.com</span></li></a>
-              </ul>
-            </CSSTransition>
-          </li>
+            <ul className="dropdown">
+              <li><img src={denmark} alt="denmark" /><span>Danish</span></li>
+              <li><img src={netherlands} alt="netherlands" /><span>Dutch</span></li>
+              <li><img src={uk} alt="uk" /><span>English</span></li>
+              <li><img src={belgium} alt="belgium" /><span>Flemish</span></li>
+              <li><img src={france} alt="france" /><span>French</span></li>
+              <li><img src={germany} alt="germany" /><span>German</span></li>
+              <li><img src={portugal} alt="portugal" /><span>Portugese</span></li>
+              <li><img src={spain} alt="spain" /><span>Spanish</span></li>
+              <li><img src={sweden} alt="sweden" /><span>Swedish</span></li>
+              <hr />
+              <a href="https://www.hustlerturf.com/"><li><img src={usa} alt="USA" /><span>HustlerTurf.com</span></li></a>
+            </ul>
+          </CSSTransition>
+        </li>
 
-        </ul>
-      </div>
+
+      </ul>
     );
   }
 }

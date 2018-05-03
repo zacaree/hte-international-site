@@ -57,20 +57,7 @@ nav
 // NavMenu - Desktop
 // *****************
 
-.dropdownBackground
-  position: absolute
-  display: flex
-  justify-content: center
-  // +size(100px, 100px)
-  border-top: 6px solid hsla(0,0%,0%,0)
-  -moz-background-clip: padding
-  -webkit-background-clip: padding
-  background-clip: padding-box
-  background-color: $l1
-  box-shadow: $shadow
-  z-index: -1
-
-.navItems
+.navMenu-desktop
   position: relative
   display: flex
   height: 100%
@@ -99,11 +86,10 @@ nav
 
   .dropdown
     position: absolute
-    top: 70px
+    top: 76px
     right: 0
     padding: 6px
-    border-top: 6px solid hsla(0,0%,0%,0)
-    // background-color: $l1
+    background-color: $l1
     white-space: nowrap
     transition: 0.3s ease-in-out
 
@@ -127,7 +113,6 @@ nav
 
     hr
       margin: 6px 0
-
 
 
 
@@ -194,26 +179,20 @@ nav
 // **********
 
 .menuTransition-enter
+  transform: translateY(16px)
   opacity: 0
 .menuTransition-enter-active
+  transform: translateY(0px)
   opacity: 1
-  // transition: 300ms ease-in-out
+  transition: 300ms ease-in-out
 .menuTransition-exit
+  transform: translateY(0px)
   opacity: 1
-  // transition: 300ms ease-in-out
+  transition: 300ms ease-in-out
 .menuTransition-exit-active
+  transform: translateY(16px)
   opacity: 0
 
-.dropdownBgTransition-enter
-  opacity: 0
-.dropdownBgTransition-enter-active
-  opacity: 1
-  // transition: 200ms ease-in-out
-.dropdownBgTransition-exit
-  opacity: 1
-  // transition: 200ms ease-in-out
-.dropdownBgTransition-exit-active
-  opacity: 0
 
 
 
