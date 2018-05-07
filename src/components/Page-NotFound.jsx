@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const NotFound = ({ location }) => (
-  <div className="page-wrap">
+  <div className="pageWrap">
     <section>
       <div className="wrap">
         <h3>404: No page found for <code>{location.pathname}</code></h3>
