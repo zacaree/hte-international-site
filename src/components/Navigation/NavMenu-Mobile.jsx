@@ -5,7 +5,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
-import BrandsDropdownMobile from './BrandsDropdown-Mobile';
 import MenuIcon from './../../img/HamburgerMenu';
 import DropdownArrow from './../../img/DropdownArrow';
 import './../../styles/navigation/navMenu-mobile.css';
@@ -95,14 +94,14 @@ export default class NavMenuMobile extends Component {
             <div className="ctr-ourBrands-mobile" ref={(node) => { this.node = node; }}>
               <li onClick={this.handleClickBrands}>Our Brands <DropdownArrow toggleArrow={this.state.brandDropdownVisible} /></li>
 
-              <CSSTransition
+              {/* <CSSTransition
                 in={this.state.brandDropdownVisible}
                 timeout={300}
                 classNames="brandTransition"
                 unmountOnExit
               >
                 <BrandsDropdownMobile />
-              </CSSTransition>
+              </CSSTransition> */}
 
             </div>
             <Link to="/dev/contact-us"><li>Contact Us</li></Link>

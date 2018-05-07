@@ -22,14 +22,8 @@ export default class NavMenuDesktop extends Component {
   constructor(props) {
     super(props);
 
-    this.handleClickAbout = this.handleClickAbout.bind(this);
-    this.handleOutsideClickAbout = this.handleOutsideClickAbout.bind(this);
-
-    this.handleClickSupport = this.handleClickSupport.bind(this);
-    this.handleOutsideClickSupport = this.handleOutsideClickSupport.bind(this);
-
-    this.handleClickLanguage = this.handleClickLanguage.bind(this);
-    this.handleOutsideClickLanguage = this.handleOutsideClickLanguage.bind(this);
+    // Don't need any binding here because our methods are arrow functions.
+    // https://youtu.be/oZbTqEmQpDo?list=WL&t=227
 
     this.state = {
       aboutOpen: false,
@@ -48,17 +42,15 @@ export default class NavMenuDesktop extends Component {
     } else {
       document.removeEventListener('click', this.handleOutsideClickAbout, false);
     }
-
     this.setState({
       aboutOpen: !this.state.aboutOpen,
     });
   }
 
-  handleOutsideClickAbout(e) {
+  handleOutsideClickAbout = (e) => {
     if (this.nodeAbout.contains(e.target)) {
       return;
     }
-
     this.handleClickAbout();
   }
 
@@ -72,17 +64,15 @@ export default class NavMenuDesktop extends Component {
     } else {
       document.removeEventListener('click', this.handleOutsideClickSupport, false);
     }
-
     this.setState({
       supportOpen: !this.state.supportOpen,
     });
   }
 
-  handleOutsideClickSupport(e) {
+  handleOutsideClickSupport = (e) => {
     if (this.nodeSupport.contains(e.target)) {
       return;
     }
-
     this.handleClickSupport();
   }
 
@@ -96,17 +86,15 @@ export default class NavMenuDesktop extends Component {
     } else {
       document.removeEventListener('click', this.handleOutsideClickLanguage, false);
     }
-
     this.setState({
       languageOpen: !this.state.languageOpen,
     });
   }
 
-  handleOutsideClickLanguage(e) {
+  handleOutsideClickLanguage = (e) => {
     if (this.nodeLanguage.contains(e.target)) {
       return;
     }
-
     this.handleClickLanguage();
   }
 
