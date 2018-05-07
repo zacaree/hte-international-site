@@ -1,50 +1,59 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './../../styles/navigation/footer.css';
-import ExcelLogo from './../../img/ExcelLogo';
-import ArrowUp from './../../img/ArrowUp';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faYoutube from '@fortawesome/fontawesome-free-brands/faYoutube';
+import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebookF';
+import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram';
+import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter';
+import HustlerLogo from './../../img/HustlerLogo_OnBlack.svg';
 import Copyright from './Copyright';
 
 
 const Footer = () => (
   <footer>
-    <div className="wrap-footer-top">
-      <div className="container-top">
+    <div className="footer-wrap-top">
+      <div className="ctr-top">
 
-        {/* eslint-disable-next-line */}
-        <div className="backToTop" onClick={() => (window.scrollTo(0, 0))}>
-          <ArrowUp />
-        </div>
+        <div className="ctr-pageListings">
+          <ul>
+            <h5>Products</h5>
+            <Link to="/dev/products"><li>All Products</li></Link>
+          </ul>
 
-        <div className="container-pageListings">
-          <ul className="navigation">
-            <Link to="/dev/about-us"><li>About Us</li></Link>
-            <Link to="/dev/culture-and-values"><li>Culture & Values</li></Link>
-            <Link to="/dev/career-opportunities"><li>Career Opportunities</li></Link>
-            <Link to="/dev/benefits"><li>Benefits</li></Link>
+          <ul>
+            <h5>About Us</h5>
+            <Link to="/dev/story"><li>Hustler’s Story</li></Link>
+            <Link to="/dev/a-better-mower"><li>Why Hustler’s a Better Mower</li></Link>
+            <Link to="/dev/distribution"><li>European Distribution</li></Link>
+          </ul>
+
+          <ul>
+            <h5>Support</h5>
+            <Link to="/dev/faq"><li>FAQ</li></Link>
             <Link to="/dev/contact-us"><li>Contact Us</li></Link>
           </ul>
-          <ul className="navigation">
-            <li id="exception">Our Brands &#9662;</li>
-            <ul className="ul-ourBrands">
-              <a href="https://www.hustlerturf.com/"><li>Hustler Turf Equipment</li></a>
-              <a href="https://www.bigdogmowerco.com/"><li>BigDog Mower Co.</li></a>
-            </ul>
-          </ul>
         </div>
 
-        <div className="container-quote">
-          <p>Founded in 1960 and based in Hesston, Kansas, Excel Industries is a leading manufacturer of premium commercial and residential turf equipment.</p>
-          <p>Excel introduced the world’s first zero-turn mower under the Hustler brand in 1964. Excel Industries and its affiliates have a global distribution network of more than 2,500 U.S. retailers and 25 distributors worldwide.</p>
+        <div className="ctr-about">
+          <h5>Hustler Turf Equipment</h5>
+          <p>Hustler manufactures zero-turn mowers for the residential and commercial mower markets. Our strength, innovation and performance set the standard for the industry.</p>
+          <p>Hustler – Engineering Performance.</p>
+          <div className="ctr-social">
+            <h5>Follow Us</h5>
+            <a href=""><FontAwesomeIcon icon={faYoutube} size="lg" /></a>
+            <a href=""><FontAwesomeIcon icon={faFacebook} size="lg" /></a>
+            <a href=""><FontAwesomeIcon icon={faInstagram} size="lg" /></a>
+            <a href=""><FontAwesomeIcon icon={faTwitter} size="lg" /></a>
+          </div>
         </div>
       </div>
     </div>
     <hr />
 
-    <div className="wrap-footer-bottom">
-      <div className="container-bottom">
-        <ExcelLogo />
+    <div className="footer-wrap-bottom">
+      <div className="ctr-bottom">
+        <Link to="/dev"><img src={HustlerLogo} alt="Hustler Logo" /></Link>
         <Copyright />
       </div>
     </div>
