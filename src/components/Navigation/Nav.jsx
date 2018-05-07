@@ -7,16 +7,22 @@ import { Link } from 'react-router-dom';
 import HustlerLogo from './../../img/HustlerLogo.svg';
 import NavMenuDesktop from './NavMenu-Desktop';
 import NavMenuMobile from './NavMenu-Mobile';
-// import './../../styles/navigation/nav.css';
 
 const Nav = () => (
   <nav>
     <div className="wrap-nav">
-      <Link to="/dev">
-        <div className="ctr-logo">
-          <img src={HustlerLogo} alt="Hustler Logo" />
-        </div>
-      </Link>
+      <div className="ctr-logoLockup">
+        <Link to="/dev">
+          <div className="ctr-logo">
+            <img src={HustlerLogo} alt="Hustler Logo" />
+          </div>
+        </Link>
+        <div className="divider" />
+        <ul className="ctr-text">
+          <li>European</li>
+          <li>Distribution</li>
+        </ul>
+      </div>
       <NavMenuDesktop />
       <NavMenuMobile />
     </div>

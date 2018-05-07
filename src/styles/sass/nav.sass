@@ -18,6 +18,10 @@ nav
 
 
   // Left
+  .ctr-logoLockup
+    display: flex
+    align-items: center
+    
   .ctr-logo
     display: flex
     justify-content: center
@@ -29,6 +33,45 @@ nav
     img
       width: 207px
       height: 36px
+
+  .divider
+    width: 1px
+    height: 40px
+    // height: calc(100% - 24px)
+    background-color: $d1
+    margin-left: 20px
+
+  .ctr-text
+    overflow: hidden
+    
+    li
+      color: $d3
+      font-family: "bebas-neue", 'Roboto', sans-serif
+      font-size: 1.1rem
+      line-height: 1.1rem
+      margin-left: 8px
+      text-transform: uppercase
+      transform: translateX(-120%)
+      
+      @for $i from 1 through 2
+        &:nth-child(#{$i})
+          animation:
+            name: lockupTextAnimate
+            duration: 650ms
+            delay: (300ms + ($i * 100ms))  // initial delay is 300ms, then each line pops out 100ms later than the one before it.
+            timing-function: cubic-bezier(0.165, 0.84, 0.44, 1)
+            fill-mode: forwards
+
+    @keyframes lockupTextAnimate
+      0%
+        transform: translateX(-120%)
+
+      100%
+        transform: translateX(0)
+
+
+  
+
 
 
   // Right
@@ -88,8 +131,10 @@ nav
     position: absolute
     top: 76px
     right: 0
+    min-width: 260px
     padding: 6px
     background-color: $l1
+    box-shadow: $shadow
     white-space: nowrap
     transition: 0.3s ease-in-out
 
@@ -238,3 +283,8 @@ nav
 
     .menuBtn
       width: 48px
+
+
+
+
+

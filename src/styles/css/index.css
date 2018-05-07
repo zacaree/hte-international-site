@@ -209,6 +209,9 @@ nav {
     margin: 0 auto;
     max-width: 1200px;
     padding: 0 1rem; }
+  nav .ctr-logoLockup {
+    display: flex;
+    align-items: center; }
   nav .ctr-logo {
     display: flex;
     justify-content: center;
@@ -219,6 +222,39 @@ nav {
     nav .ctr-logo img {
       width: 207px;
       height: 36px; }
+  nav .divider {
+    width: 1px;
+    height: 40px;
+    background-color: #AAAAAA;
+    margin-left: 20px; }
+  nav .ctr-text {
+    overflow: hidden; }
+    nav .ctr-text li {
+      color: #555555;
+      font-family: "bebas-neue", 'Roboto', sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.1rem;
+      margin-left: 8px;
+      text-transform: uppercase;
+      transform: translateX(-120%); }
+      nav .ctr-text li:nth-child(1) {
+        animation-name: lockupTextAnimate;
+        animation-duration: 650ms;
+        animation-delay: 400ms;
+        animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        animation-fill-mode: forwards; }
+      nav .ctr-text li:nth-child(2) {
+        animation-name: lockupTextAnimate;
+        animation-duration: 650ms;
+        animation-delay: 500ms;
+        animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        animation-fill-mode: forwards; }
+
+@keyframes lockupTextAnimate {
+  0% {
+    transform: translateX(-120%); }
+  100% {
+    transform: translateX(0); } }
   nav .menuBtn {
     display: none;
     justify-content: center;
@@ -259,8 +295,10 @@ nav {
     position: absolute;
     top: 76px;
     right: 0;
+    min-width: 260px;
     padding: 6px;
     background-color: #FFFFFF;
+    box-shadow: 0 6px 30px rgba(80, 146, 190, 0.18);
     white-space: nowrap;
     transition: 0.3s ease-in-out; }
     .navMenu-desktop .dropdown li {
