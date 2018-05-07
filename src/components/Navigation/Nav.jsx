@@ -4,25 +4,25 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import HustlerLogo from './../../img/HustlerLogo.svg';
+import HustlerLogo from './../../img/HustlerLogo_OnWhite.svg';
 import NavMenuDesktop from './NavMenu-Desktop';
 import NavMenuMobile from './NavMenu-Mobile';
 
 const Nav = () => (
   <nav>
     <div className="wrap-nav">
-      <div className="ctr-logoLockup">
-        <Link to="/dev">
-          <div className="ctr-logo">
-            <img src={HustlerLogo} alt="Hustler Logo" />
-          </div>
-        </Link>
+
+      <Link to="/dev" className="ctr-logoLockup">
+        <div className="ctr-logo">
+          <img src={HustlerLogo} alt="Hustler Logo" />
+        </div>
         <div className="divider" />
         <ul className="ctr-text">
           <li>European</li>
           <li>Distribution</li>
         </ul>
-      </div>
+      </Link>
+
       <NavMenuDesktop />
       <NavMenuMobile />
     </div>
