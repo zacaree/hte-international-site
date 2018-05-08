@@ -12,7 +12,7 @@ const Nav = () => (
   <nav>
     <div className="wrap-nav">
 
-      <Link to="/dev" className="ctr-logoLockup">
+      <Link to="/" className="ctr-logoLockup">
         <div className="ctr-logo">
           <img src={HustlerLogo} alt="Hustler Logo" />
         </div>

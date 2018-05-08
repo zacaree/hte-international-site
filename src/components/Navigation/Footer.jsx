@@ -18,20 +18,20 @@ const Footer = () => (
         <div className="ctr-pageListings">
           <ul>
             <h5>Products</h5>
-            <Link to="/dev/products"><li>All Products</li></Link>
+            <Link to="/products"><li>All Products</li></Link>
           </ul>
 
           <ul>
             <h5>About Us</h5>
-            <Link to="/dev/hustler-story"><li>Hustler’s Story</li></Link>
-            <Link to="/dev/why-hustler"><li>Why Hustler’s a Better Mower</li></Link>
-            <Link to="/dev/distribution"><li>European Distribution</li></Link>
+            <Link to="/hustler-story"><li>Hustler’s Story</li></Link>
+            <Link to="/why-hustler"><li>Why Hustler’s a Better Mower</li></Link>
+            <Link to="/distribution"><li>European Distribution</li></Link>
           </ul>
 
           <ul>
             <h5>Support</h5>
-            <Link to="/dev/faq"><li>FAQ</li></Link>
-            <Link to="/dev/contact-us"><li>Contact Us</li></Link>
+            <Link to="/faq"><li>FAQ</li></Link>
+            <Link to="/contact-us"><li>Contact Us</li></Link>
           </ul>
         </div>
 
@@ -53,7 +53,7 @@ const Footer = () => (
 
     <div className="footer-wrap-bottom">
       <div className="ctr-bottom">
-        <Link to="/dev"><img src={HustlerLogo} alt="Hustler Logo" /></Link>
+        <Link to="/"><img src={HustlerLogo} alt="Hustler Logo" /></Link>
         <Copyright />
       </div>
     </div>

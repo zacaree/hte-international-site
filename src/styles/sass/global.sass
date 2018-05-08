@@ -13,7 +13,7 @@ $d4:             #303030    // Main headline and btn color
 
 $gradientX:      linear-gradient(to right, #FFB714 0%, #FFE579 100%)
 $gradientY:      linear-gradient(to bottom, #FFB714 0%, #FFE579 100%)
-$shadow:         0 6px 30px hsla(0, 0%, 0%, 0.14)
+$shadow:         0 12px 30px -6px hsla(0, 0%, 0%, 0.1)
 $deepShadow:     0 10px 30px -4px hsla(0, 0%, 0%, 0.3)
 $btnShadow:      0 6px 30px -2px hsla(196.2, 100%, 60%, 0.34)
 
@@ -42,44 +42,44 @@ body
   font-size: 16px
   background-color: $l2
 
-h2, h3, h4, h5, p, li, a, .btn, span, label, input, select, textarea
+
+h4, h5, p, li, a, .btn, span, label, input, select, textarea
   font-family: 'Roboto', sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-  // text-rendering: optimizeLegibility
 
-h1
+h1, h2, h3
   color: $d4
   font-family: "bebas-neue", 'Roboto', sans-serif
-  font-size: 3.125rem
   font-weight: normal
-  margin-top: 0 
-  margin-bottom: 30px
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
+h1 // Page headlines
+  font-size: 3.125rem
+  margin-top: 0 
+  margin-bottom: 30px
+
 h2
   margin: 0
-  color: $d4
   font-size: 2.4rem
 
-h3
+h3  // Learn more text buttons
   margin: 0
-  color: $d4
   font-size: 1.4rem
 
-h4
+h4  // Hero subtitle
   color: $d4
   font-size: 1.25rem
   font-weight: 400
   line-height: 28px
 
-h5
+h5  // Footer column titles
   margin: 0
   font-size: 1.2rem
   font-weight: 900
 
-p, input, select, textarea
+p, input, select, textarea, span
   margin: 0
   color: $d3
   font-size: 1rem
@@ -154,8 +154,8 @@ section
   padding: 8rem 30px 0
 
 .accentBar
-  width: 5rem
-  height: 0.25rem
+  width: 80px
+  height: 6px
   margin-bottom: 1rem
   background-color: $p1
   background-image: $gradientX
@@ -190,8 +190,7 @@ button
 
 .card
   background-color: $l1
-  border-radius: 3px
-  box-shadow: 0 6px 30px hsla(204, 46%, 53%, 0.18)
+  box-shadow: $shadow
 
 
 
@@ -253,11 +252,6 @@ button
 // ************* 
 // Media Queries 
 // ************* 
-
-@media (max-width: 960px)
-  section:first-of-type
-    margin-top: -40px
-
 
 @media (max-width: 420px)
   .wrap
