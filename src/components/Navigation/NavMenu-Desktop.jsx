@@ -108,7 +108,9 @@ export default class NavMenuDesktop extends Component {
 
 
         <li>
-          <Link to="/products" className="navItem">Products</Link>
+          <Link to="/products" className="navItem">
+            <span>Products</span>
+          </Link>
         </li>
 
 
@@ -131,7 +133,9 @@ export default class NavMenuDesktop extends Component {
 
 
         <li>
-          <Link to="/find-a-distributor" className="navItem">Find A Distributor</Link>
+          <Link to="/find-a-distributor" className="navItem">
+            <span>Find A Distributor</span>
+          </Link>
         </li>
 
 

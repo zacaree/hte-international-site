@@ -25,3 +25,69 @@
 
   .btn
     margin-top: 1.8rem
+    padding: 1rem 3rem
+    font-family: "bebas-neue", 'Roboto', sans-serif
+    font-weight: normal
+    font-size: 1.4rem
+
+
+
+.section-cta
+  padding-top: 100px
+
+  .cta
+    flex: 1
+    margin: 0 15px
+
+  .bgImg
+    display: block
+    position: relative
+    margin-bottom: 2.4rem
+    background-color: $l3
+    background-position: center
+    background-size: cover
+    transition: transform 0.2s
+    box-shadow: $deepShadow
+
+    &:hover
+      transform: translateY(2px)
+
+  .bgImg-1
+    background-image: url(./../../img/cta_hustlerStory.jpg)
+  .bgImg-2
+    background-image: url(./../../img/cta_whyHustler.jpg)
+  .bgImg-3
+    background-image: url(./../../img/cta_dealerPhoto.jpg)
+
+  h2
+    font-family: "bebas-neue", 'Roboto', sans-serif
+    font-weight: normal
+    margin-bottom: 0.5rem
+  
+  p
+    margin-bottom: 1rem
+    padding-right: 1rem
+
+  .textBtn
+    display: flex
+    align-items: center
+    padding: 10px 0
+    width: 120px
+
+    &:hover svg
+      transform: translateX(3px)
+
+    h3
+      display: inline
+      font-family: "bebas-neue", 'Roboto', sans-serif
+      font-weight: normal
+
+    svg
+      fill: $d4
+      transition: 0.2s ease-in-out
+
+  
+@media (min-width: 1500px)
+  .ctr-hero
+    height: 1200px
+    height: 50vw

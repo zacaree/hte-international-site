@@ -8,7 +8,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  background-color: #F8F8F8; }
 
 h2, h3, h4, h5, p, li, a, .btn, span, label, input, select, textarea {
   font-family: 'Roboto', sans-serif;
@@ -25,6 +26,16 @@ h1 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+h2 {
+  margin: 0;
+  color: #303030;
+  font-size: 2.4rem; }
+
+h3 {
+  margin: 0;
+  color: #303030;
+  font-size: 1.4rem; }
+
 h4 {
   color: #303030;
   font-size: 1.25rem;
@@ -38,7 +49,7 @@ h5 {
 
 p, input, select, textarea {
   margin: 0;
-  color: #303030;
+  color: #555555;
   font-size: 1rem;
   line-height: 1.5rem; }
 
@@ -132,6 +143,11 @@ button {
 .btn:hover, .btn:focus {
   transform: translateY(2px); }
 
+.aspectRatio {
+  width: 100%;
+  height: auto;
+  padding: 62% 0 0 0; }
+
 .card {
   background-color: #FFFFFF;
   border-radius: 3px;
@@ -143,10 +159,13 @@ button {
   margin: 0;
   padding: 0; }
 
-.row {
+.row-offset-8 {
   display: flex;
-  flex-wrap: wrap;
-  margin: 0 -0.5rem; }
+  margin: 0 -8px; }
+
+.row-offset-15 {
+  display: flex;
+  margin: 0 -15px; }
 
 .pageTransition-enter {
   z-index: 1;
@@ -191,7 +210,7 @@ nav {
   width: 100%;
   height: 70px;
   background-color: rgba(255, 255, 255, 0.97);
-  box-shadow: 0 6px 30px rgba(80, 146, 190, 0.18);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.14);
   z-index: 99; }
   nav .wrap-nav {
     position: relative;
@@ -269,7 +288,7 @@ nav {
     align-items: center;
     height: 100%;
     padding: 0 14px;
-    color: #888888;
+    color: #555555;
     cursor: pointer;
     font-weight: 700;
     font-size: 0.8rem;
@@ -280,7 +299,7 @@ nav {
   .navMenu-desktop svg {
     width: 18px;
     height: 18px;
-    fill: #888888;
+    fill: #555555;
     margin: 0 -4px -1px 3px;
     transition: 0.3s; }
   .navMenu-desktop .dropdown {
@@ -290,7 +309,7 @@ nav {
     min-width: 260px;
     padding: 6px;
     background-color: #FFFFFF;
-    box-shadow: 0 6px 30px rgba(80, 146, 190, 0.18);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.14);
     white-space: nowrap;
     transition: 0.3s ease-in-out; }
     .navMenu-desktop .dropdown li {
@@ -434,6 +453,10 @@ footer {
     .footer-wrap-bottom a:hover {
       text-decoration: underline; }
 
+@media (max-width: 960px) {
+  * footer {
+    margin-top: 80px; } }
+
 @media (max-width: 730px) {
   * .ctr-pageListings {
     flex: 4;
@@ -503,4 +526,57 @@ footer {
     text-align: center;
     color: #F8F8F8; }
   .ctr-hero .btn {
-    margin-top: 1.8rem; }
+    margin-top: 1.8rem;
+    padding: 1rem 3rem;
+    font-family: "bebas-neue", 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 1.4rem; }
+
+.section-cta {
+  padding-top: 100px; }
+  .section-cta .cta {
+    flex: 1;
+    margin: 0 15px; }
+  .section-cta .bgImg {
+    display: block;
+    position: relative;
+    margin-bottom: 2.4rem;
+    background-color: #EAEAEA;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.2s;
+    box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.3); }
+    .section-cta .bgImg:hover {
+      transform: translateY(2px); }
+  .section-cta .bgImg-1 {
+    background-image: url(./../../img/cta_hustlerStory.jpg); }
+  .section-cta .bgImg-2 {
+    background-image: url(./../../img/cta_whyHustler.jpg); }
+  .section-cta .bgImg-3 {
+    background-image: url(./../../img/cta_dealerPhoto.jpg); }
+  .section-cta h2 {
+    font-family: "bebas-neue", 'Roboto', sans-serif;
+    font-weight: normal;
+    margin-bottom: 0.5rem; }
+  .section-cta p {
+    margin-bottom: 1rem;
+    padding-right: 1rem; }
+  .section-cta .textBtn {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    width: 120px; }
+    .section-cta .textBtn:hover svg {
+      transform: translateX(3px); }
+    .section-cta .textBtn h3 {
+      display: inline;
+      font-family: "bebas-neue", 'Roboto', sans-serif;
+      font-weight: normal; }
+    .section-cta .textBtn svg {
+      fill: #303030;
+      transition: 0.2s ease-in-out; }
+
+@media (min-width: 1500px) {
+  .ctr-hero {
+    height: 1200px;
+    height: 50vw; } }

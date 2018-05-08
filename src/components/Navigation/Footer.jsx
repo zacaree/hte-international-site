@@ -23,8 +23,8 @@ const Footer = () => (
 
           <ul>
             <h5>About Us</h5>
-            <Link to="/dev/story"><li>Hustler’s Story</li></Link>
-            <Link to="/dev/a-better-mower"><li>Why Hustler’s a Better Mower</li></Link>
+            <Link to="/dev/hustler-story"><li>Hustler’s Story</li></Link>
+            <Link to="/dev/why-hustler"><li>Why Hustler’s a Better Mower</li></Link>
             <Link to="/dev/distribution"><li>European Distribution</li></Link>
           </ul>
 
@@ -41,10 +41,10 @@ const Footer = () => (
           <p>Hustler – Engineering Performance.</p>
           <div className="ctr-social">
             <h5>Follow Us</h5>
-            <a href=""><FontAwesomeIcon icon={faYoutube} size="lg" /></a>
-            <a href=""><FontAwesomeIcon icon={faFacebook} size="lg" /></a>
-            <a href=""><FontAwesomeIcon icon={faInstagram} size="lg" /></a>
-            <a href=""><FontAwesomeIcon icon={faTwitter} size="lg" /></a>
+            <a href="http://www.youtube.com/HustlerTurfEquip"><FontAwesomeIcon icon={faYoutube} size="lg" /></a>
+            <a href="https://www.facebook.com/HustlerTurf"><FontAwesomeIcon icon={faFacebook} size="lg" /></a>
+            <a href="https://www.instagram.com/hustlerturf/"><FontAwesomeIcon icon={faInstagram} size="lg" /></a>
+            <a href="https://twitter.com/hustlerturf"><FontAwesomeIcon icon={faTwitter} size="lg" /></a>
           </div>
         </div>
       </div>
