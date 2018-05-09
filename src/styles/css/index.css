@@ -110,7 +110,7 @@ section {
 .wrap {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 8rem 30px 0; }
+  padding: 6rem 30px 0; }
 
 .accentBar {
   width: 80px;
@@ -576,30 +576,64 @@ footer {
     height: 1200px;
     height: 50vw; } }
 
-.ctr-productsGrid .card {
-  position: relative;
-  margin: 100px 15px 0; }
-
-.ctr-productsGrid img {
-  position: absolute;
-  top: -14.5rem;
-  left: 0;
-  width: 100%; }
-
-.ctr-productsGrid .ctr-productInfo {
-  padding: 5rem 24px 30px; }
-
-.ctr-productsGrid h2 {
-  margin-bottom: 8px; }
-
-.ctr-productsGrid p {
-  margin-bottom: 20px; }
-
-.ctr-productsGrid .textBtn {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 24px;
-  height: 70px;
-  border-top: 1px solid #DDDDDD;
-  cursor: pointer; }
+.ctr-productsGrid {
+  padding: 0 30px; }
+  .ctr-productsGrid .row-offset-15 {
+    flex-wrap: wrap;
+    justify-content: flex-start; }
+  .ctr-productsGrid .card {
+    position: relative;
+    width: calc(33.33% - 30px);
+    margin: 300px 15px 0; }
+    @media (max-width: 960px) {
+      .ctr-productsGrid .card {
+        width: calc(50% - 30px); } }
+    @media (max-width: 600px) {
+      .ctr-productsGrid .card {
+        width: calc(100% - 30px); } }
+    .ctr-productsGrid .card:hover .ctr-productImg {
+      transform: translateY(3px); }
+  .ctr-productsGrid .ctr-productImg {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    transition: 0.2s ease-in-out; }
+    .ctr-productsGrid .ctr-productImg img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%; }
+  .ctr-productsGrid .ctr-productInfo {
+    padding: 0 24px 100px; }
+  .ctr-productsGrid h2 {
+    margin-bottom: 8px; }
+  .ctr-productsGrid p {
+    margin-bottom: 20px; }
+  .ctr-productsGrid .idealFor {
+    display: flex; }
+    .ctr-productsGrid .idealFor svg {
+      fill: #303030;
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      min-height: 20px; }
+    .ctr-productsGrid .idealFor span {
+      margin-left: 6px; }
+  .ctr-productsGrid .textBtn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    height: 70px;
+    border-top: 1px solid #DDDDDD;
+    cursor: pointer; }
+    .ctr-productsGrid .textBtn svg {
+      fill: #303030;
+      transition: 0.3s;
+      transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
+    .ctr-productsGrid .textBtn:hover svg {
+      transform: translateX(4px); }

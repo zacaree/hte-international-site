@@ -1,32 +1,63 @@
 
 .ctr-productsGrid
+  padding: 0 30px
 
   .row-offset-15
-    // flex-wrap: wrap
-    // justify-content: center
+    flex-wrap: wrap
+    justify-content: flex-start
 
   .card
     position: relative
-    margin: 100px 15px 0
-    // min-width: 24%
-    // max-width: 30%
+    width: calc(33.33% - 30px)
+    margin: 300px 15px 0
 
-  img
-    position: absolute
-    top: -14.5rem
-    left: 0
+    @media (max-width: 960px)
+      width: calc(50% - 30px)
+    @media (max-width: 600px)
+      width: calc(100% - 30px)
+
+    &:hover .ctr-productImg
+      transform: translateY(3px)
+
+  .ctr-productImg
+    position: relative
     width: 100%
+    height: 90px
+    transition: 0.2s ease-in-out
+
+    img
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
 
   .ctr-productInfo
-    padding: 5rem 24px 30px
+    padding: 0 24px 100px
 
   h2
     margin-bottom: 8px
 
   p
     margin-bottom: 20px
+  
+  .idealFor
+    display: flex
+
+    svg
+      fill: $d4
+      +size(20px, 20px)
+      min-width: 20px
+      min-height: 20px
+    
+    span
+      margin-left: 6px
+
 
   .textBtn
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
     display: flex
     align-items: center
     justify-content: space-between
@@ -34,3 +65,11 @@
     height: 70px
     border-top: 1px solid $border
     cursor: pointer
+
+    svg
+      fill: $d4
+      transition: 0.3s
+      transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1)
+
+    &:hover svg
+      transform: translateX(4px)
