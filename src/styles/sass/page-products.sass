@@ -8,6 +8,8 @@
     // align-items: flex-start
 
   .card
+    display: flex
+    flex-direction: column
     position: relative
     width: calc(33.33% - 30px)
     margin: 300px 15px 0
@@ -34,7 +36,8 @@
       width: 88%
 
   .ctr-productInfo
-    padding: 0 24px 100px
+    padding: 0 24px 30px
+    flex: 1
 
   h2
     margin-bottom: 8px
@@ -56,23 +59,66 @@
       margin-left: 6px
 
 
-  .textBtn
-    position: absolute
-    bottom: 0
-    left: 0
-    right: 0
+  .ctr-availableModels
+    border-top: 1px solid $border
+    
+  .txtBtn
     display: flex
     align-items: center
     justify-content: space-between
     padding: 0 24px
     height: 70px
-    border-top: 1px solid $border
     cursor: pointer
 
     svg
       fill: $d4
-      transition: 0.3s
-      transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1)
+      // transition: 0.3s
+      // transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1)
 
-    &:hover svg
-      transform: translateX(4px)
+  .dropdown
+    padding: 0 24px
+
+  .ctr-model
+    margin-bottom: 1.4rem
+
+    p
+      margin: 0
+
+  .modelNum span
+    color: $d1
+    font-size: 0.8rem
+
+
+
+
+// Isolation Overlay
+
+.productModalOverlay
+  display: flex
+  align-items: center
+  justify-content: center
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: hsla(0, 0%, 0%, 0.8)
+  z-index: 1000
+
+  .close
+    position: absolute
+    top: 1rem
+    right: 1rem
+    z-index: 2
+    width: 50px
+    height: 50px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: hsla(0, 0%, 0%, 0)
+    border-radius: 3px
+    cursor: pointer
+    transition: 0.2s ease-in-out
+
+    &:hover
+      background-color: hsla(0, 0%, 100%, 0.1)

@@ -24,7 +24,7 @@ h1, h2, h3 {
   -moz-osx-font-smoothing: grayscale; }
 
 h1 {
-  font-size: 3.125rem;
+  font-size: 3.75rem;
   margin-top: 0;
   margin-bottom: 30px; }
 
@@ -582,6 +582,8 @@ footer {
     flex-wrap: wrap;
     justify-content: flex-start; }
   .ctr-productsGrid .card {
+    display: flex;
+    flex-direction: column;
     position: relative;
     width: calc(33.33% - 30px);
     margin: 300px 15px 0; }
@@ -605,7 +607,8 @@ footer {
       left: 6%;
       width: 88%; }
   .ctr-productsGrid .ctr-productInfo {
-    padding: 0 24px 100px; }
+    padding: 0 24px 30px;
+    flex: 1; }
   .ctr-productsGrid h2 {
     margin-bottom: 8px; }
   .ctr-productsGrid p {
@@ -621,21 +624,51 @@ footer {
       fill: #303030; }
     .ctr-productsGrid .idealFor span {
       margin-left: 6px; }
-  .ctr-productsGrid .textBtn {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  .ctr-productsGrid .ctr-availableModels {
+    border-top: 1px solid #DDDDDD; }
+  .ctr-productsGrid .txtBtn {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 24px;
     height: 70px;
-    border-top: 1px solid #DDDDDD;
     cursor: pointer; }
-    .ctr-productsGrid .textBtn svg {
-      fill: #303030;
-      transition: 0.3s;
-      transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
-    .ctr-productsGrid .textBtn:hover svg {
-      transform: translateX(4px); }
+    .ctr-productsGrid .txtBtn svg {
+      fill: #303030; }
+  .ctr-productsGrid .dropdown {
+    padding: 0 24px; }
+  .ctr-productsGrid .ctr-model {
+    margin-bottom: 1.4rem; }
+    .ctr-productsGrid .ctr-model p {
+      margin: 0; }
+  .ctr-productsGrid .modelNum span {
+    color: #AAAAAA;
+    font-size: 0.8rem; }
+
+.productModalOverlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000; }
+  .productModalOverlay .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out; }
+    .productModalOverlay .close:hover {
+      background-color: rgba(255, 255, 255, 0.1); }
