@@ -4,7 +4,7 @@
 /* eslint jsx-a11y/no-static-element-interactions: 0 */
 
 import React, { Component } from 'react';
-import { CSSTransition } from 'react-transition-group';
+// import { CSSTransition } from 'react-transition-group';
 import DropdownArrow from './../img/DropdownArrow';
 import ProductModel from './ProductModel';
 
@@ -12,24 +12,28 @@ import ProductModel from './ProductModel';
 export default class ProductCard extends Component {
   constructor(props) {
     super(props);
-
+    this.grabHeight = React.createRef();
     this.state = {
       showDropdown: false,
     };
   }
 
-
   toggleDropdown = () => {
     this.setState({
       showDropdown: !this.state.showDropdown,
+      height: this.grabHeight.current.clientHeight,
     });
   }
 
 
   render() {
     const { img, name, description, idealIcon, idealText, models } = this.props.product;
+    const { showDropdown, height } = this.state;
+    const currentHeight = showDropdown ? height : 0;
+    const currentZIndex = showDropdown ? 1001 : 1;
+
     return (
-      <div className="ctr-card" onClick={this.toggleDropdown} >
+      <div className="ctr-card" onClick={this.toggleDropdown} style={{ zIndex: currentZIndex }} >
         <div className="card">
           <div className="ctr-productImg">
             <img src={img} alt='52&quot; Raptor' />
@@ -46,25 +50,22 @@ export default class ProductCard extends Component {
           </div>
           <div className="txtBtn">
             <h3>Available Models</h3>
-            <DropdownArrow toggleArrow={this.state.showDropdown} />
+            <DropdownArrow toggleArrow={showDropdown} />
           </div>
         </div>
         <div className="ctr-dropdown">
+          <div className="dropdown" style={{ height: `${currentHeight}px` }} >
 
-          <CSSTransition
-            in={this.state.showDropdown}
-            timeout={300}
-            classNames="fadeIn"
-            unmountOnExit
-          >
-
-            <div className="dropdown">
+            <div className="ctr-models" ref={this.grabHeight} >
               {models.map(model => (
-                <ProductModel model={model} />
+                <ProductModel
+                  key={model.modelNum}
+                  model={model}
+                />
               ))}
             </div>
 
-          </CSSTransition>
+          </div>
         </div>
       </div>
     );

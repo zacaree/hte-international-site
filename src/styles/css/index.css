@@ -635,9 +635,11 @@ footer {
     width: 100%;
     padding: 0 24px;
     background-color: #FFFFFF;
-    box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.1); }
+    box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: height 0.3s ease-in-out; }
   .ctr-productsGrid .ctr-model {
-    margin-bottom: 1.4rem; }
+    padding-bottom: 1.4rem; }
     .ctr-productsGrid .ctr-model p {
       margin: 0; }
   .ctr-productsGrid .modelNum span {
