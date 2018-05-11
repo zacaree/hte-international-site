@@ -243,17 +243,10 @@ export default class PageProducts extends Component {
       ],
 
       showProductModal: false,
-      showDropdown: false,
+
     };
   }
 
-
-  toggleDropdown = (e) => {
-    console.log(e);
-    this.setState({
-      showDropdown: !this.state.showDropdown,
-    });
-  }
 
   toggleProductModal = () => {
     this.setState({
@@ -280,7 +273,7 @@ export default class PageProducts extends Component {
                   key={product.name}
                   product={product}
                   showDropdown={this.state.showDropdown}
-                  clickHandler={this.toggleDropdown}
+                  // clickHandler={this.toggleDropdown}
                 />
               ))}
 

@@ -59,7 +59,7 @@ a {
   color: inherit;
   text-decoration: none; }
 
-a, li, label, .btn {
+a, li, label, .btn, img {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -568,21 +568,27 @@ footer {
   .ctr-productsGrid .row-offset-15 {
     flex-wrap: wrap;
     justify-content: flex-start; }
-  .ctr-productsGrid .card {
+  .ctr-productsGrid .ctr-card {
     display: flex;
     flex-direction: column;
     position: relative;
     width: calc(33.33% - 30px);
     margin: 300px 15px 0; }
     @media (max-width: 960px) {
-      .ctr-productsGrid .card {
+      .ctr-productsGrid .ctr-card {
         width: calc(50% - 30px); } }
     @media (max-width: 600px) {
-      .ctr-productsGrid .card {
+      .ctr-productsGrid .ctr-card {
         width: calc(100% - 30px); } }
+  .ctr-productsGrid .card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; }
     .ctr-productsGrid .card:hover .ctr-productImg {
       transform: translateY(3px); }
   .ctr-productsGrid .ctr-productImg {
+    pointer-events: none;
     position: relative;
     bottom: -16px;
     width: 100%;
@@ -611,20 +617,25 @@ footer {
       fill: #303030; }
     .ctr-productsGrid .idealFor span {
       margin-left: 6px; }
-  .ctr-productsGrid .ctr-availableModels {
-    border-top: 1px solid #DDDDDD; }
   .ctr-productsGrid .txtBtn {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 24px;
     height: 70px;
+    border-top: 1px solid #DDDDDD;
     cursor: pointer; }
     .ctr-productsGrid .txtBtn svg {
-      fill: #303030;
-      transition: 0.3s ease-in-out; }
+      fill: #303030; }
+  .ctr-productsGrid .ctr-dropdown {
+    position: relative; }
   .ctr-productsGrid .dropdown {
-    padding: 0 24px; }
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 0 24px;
+    background-color: #FFFFFF;
+    box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.1); }
   .ctr-productsGrid .ctr-model {
     margin-bottom: 1.4rem; }
     .ctr-productsGrid .ctr-model p {

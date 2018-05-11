@@ -1,7 +1,7 @@
 import React from 'react';
 
 const DropdownArrow = props => (
-  <svg style={{ transform: `translateY(${props.toggleArrow ? -1 : 0}px) rotateX(${props.toggleArrow ? 180 : 0}deg)` }} fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" >
+  <svg style={{ transform: `translateY(${props.toggleArrow ? -1 : 0}px) rotateX(${props.toggleArrow ? 180 : 0}deg)`, transition: '0.3s ease-in-out' }} fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" >
     <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
     <path d="M0-.75h24v24H0z" fill="none" />
   </svg>
