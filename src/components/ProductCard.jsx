@@ -19,6 +19,7 @@ export default class ProductCard extends Component {
   }
 
   toggleDropdown = () => {
+    this.props.clickHandlerA();
     this.setState({
       showDropdown: !this.state.showDropdown,
       height: this.grabHeight.current.clientHeight,

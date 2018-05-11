@@ -237,15 +237,15 @@ export default class PageProducts extends Component {
         },
       ],
 
-      showProductModal: false,
+      showOverlay: false,
 
     };
   }
 
 
-  toggleProductModal = () => {
+  toggleOverlay = () => {
     this.setState({
-      showProductModal: !this.state.showProductModal,
+      showOverlay: !this.state.showOverlay,
     });
   }
 
@@ -267,7 +267,8 @@ export default class PageProducts extends Component {
                 <ProductCard
                   key={product.name}
                   product={product}
-                  showDropdown={this.state.showDropdown}
+                  clickHandlerA={this.toggleOverlay}
+                  // showDropdown={this.state.showDropdown}
                   // clickHandler={this.toggleDropdown}
                 />
               ))}
@@ -276,12 +277,12 @@ export default class PageProducts extends Component {
           </div>
 
           <CSSTransition
-            in={this.state.showProductModal}
+            in={this.state.showOverlay}
             timeout={300}
             classNames="fadeIn"
             unmountOnExit
           >
-            <ProductModalOverlay clickHandler={this.toggleProductModal} />
+            <ProductModalOverlay clickHandler={this.toggleOverlay} />
           </CSSTransition>
 
         </div>
