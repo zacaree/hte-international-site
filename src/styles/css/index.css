@@ -166,31 +166,36 @@ button {
   display: flex;
   margin: 0 -15px; }
 
-.pageTransition-enter {
-  z-index: 1;
-  opacity: 0;
-  transform: perspective(1000px) translate3d(0, 0, 20px);
-  transform-origin: top;
-  transition: all 600ms ease-in-out; }
-
-.pageTransition-enter.pageTransition-enter-active {
-  opacity: 1;
-  transform: perspective(1000px) translate3d(0, 0, 0);
-  transform-origin: top;
-  transition: all 600ms ease-in-out; }
-
-.globalFadeInTransition-enter {
+.fadeInUp-enter {
+  transform: translateY(16px);
   opacity: 0; }
 
-.globalFadeInTransition-enter-active {
+.fadeInUp-enter-active {
+  transform: translateY(0px);
   opacity: 1;
   transition: 300ms ease-in-out; }
 
-.globalFadeInTransition-exit {
+.fadeInUp-exit {
+  transform: translateY(0px);
   opacity: 1;
   transition: 300ms ease-in-out; }
 
-.globalFadeInTransition-exit-active {
+.fadeInUp-exit-active {
+  transform: translateY(16px);
+  opacity: 0; }
+
+.fadeIn-enter {
+  opacity: 0; }
+
+.fadeIn-enter-active {
+  opacity: 1;
+  transition: 300ms ease-in-out; }
+
+.fadeIn-exit {
+  opacity: 1;
+  transition: 300ms ease-in-out; }
+
+.fadeIn-exit-active {
   opacity: 0; }
 
 @media (max-width: 420px) {
@@ -325,24 +330,6 @@ nav {
       margin: 1px 0 0 8px; }
     .navMenu-desktop .dropdown hr {
       margin: 6px 0; }
-
-.menuTransition-enter {
-  transform: translateY(16px);
-  opacity: 0; }
-
-.menuTransition-enter-active {
-  transform: translateY(0px);
-  opacity: 1;
-  transition: 300ms ease-in-out; }
-
-.menuTransition-exit {
-  transform: translateY(0px);
-  opacity: 1;
-  transition: 300ms ease-in-out; }
-
-.menuTransition-exit-active {
-  transform: translateY(16px);
-  opacity: 0; }
 
 /* ************* */
 /* Media Queries */

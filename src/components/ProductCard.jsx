@@ -4,9 +4,9 @@
 /* eslint jsx-a11y/no-static-element-interactions: 0 */
 
 import React from 'react';
-// import { CSSTransition } from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group';
 import DropdownArrow from './../img/DropdownArrow';
-import ProductDropdown from './ProductDropdown';
+import ProductModel from './ProductModel';
 
 
 const ProductCard = (props) => {
@@ -35,21 +35,20 @@ const ProductCard = (props) => {
           <h3>Available Models</h3>
           <DropdownArrow />
         </div>
-
-        {models.map(model => (
-          <ProductDropdown model={model} />
-        ))}
-
-        {/* <CSSTransition
+        <CSSTransition
           in={name && props.showDropdown}
           timeout={300}
-          classNames="globalFadeInTransition"
+          classNames="fadeIn"
           unmountOnExit
         >
+
           <div className="dropdown">
-            It drops!
+            {models.map(model => (
+              <ProductModel model={model} />
+            ))}
           </div>
-        </CSSTransition> */}
+
+        </CSSTransition>
       </div>
     </div>
   );

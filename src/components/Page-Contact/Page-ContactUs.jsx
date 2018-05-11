@@ -119,7 +119,7 @@ export default class PageContactUs extends Component {
             <CSSTransition
               in={this.state.contactWho === 'hr'}
               timeout={300}
-              classNames="globalFadeInTransition"
+              classNames="fadeIn"
               unmountOnExit
             >
               <FormHR />
@@ -128,7 +128,7 @@ export default class PageContactUs extends Component {
             <CSSTransition
               in={this.state.contactWho === 'service'}
               timeout={300}
-              classNames="globalFadeInTransition"
+              classNames="fadeIn"
               unmountOnExit
             >
               <FormService />
@@ -137,7 +137,7 @@ export default class PageContactUs extends Component {
             <CSSTransition
               in={this.state.contactWho === 'sales'}
               timeout={300}
-              classNames="globalFadeInTransition"
+              classNames="fadeIn"
               unmountOnExit
             >
               <FormSales />

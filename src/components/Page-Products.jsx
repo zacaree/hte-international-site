@@ -290,7 +290,7 @@ export default class PageProducts extends Component {
           <CSSTransition
             in={this.state.showProductModal}
             timeout={300}
-            classNames="globalFadeInTransition"
+            classNames="fadeIn"
             unmountOnExit
           >
             <ProductModalOverlay clickHandler={this.toggleProductModal} />

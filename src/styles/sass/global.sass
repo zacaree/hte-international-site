@@ -211,39 +211,64 @@ button
 
 
 
+// **********
+// Animations
+// **********
+
+.fadeInUp-enter
+  transform: translateY(16px)
+  opacity: 0
+.fadeInUp-enter-active
+  transform: translateY(0px)
+  opacity: 1
+  transition: 300ms ease-in-out
+.fadeInUp-exit
+  transform: translateY(0px)
+  opacity: 1
+  transition: 300ms ease-in-out
+.fadeInUp-exit-active
+  transform: translateY(16px)
+  opacity: 0
+
+
+.fadeIn-enter
+  opacity: 0
+.fadeIn-enter-active
+  opacity: 1
+  transition: 300ms ease-in-out
+.fadeIn-exit
+  opacity: 1
+  transition: 300ms ease-in-out
+.fadeIn-exit-active
+  opacity: 0
+
+
+
+
+
+  
 
 
 // ********** 
 // Animations 
 // ********** 
 
-.pageTransition-enter
-  z-index: 1
-  opacity: 0
-  transform: perspective(1000px) translate3d(0, 0, 20px)
-  transform-origin: top
-  transition: all 600ms ease-in-out
+// .pageTransition-enter
+//   z-index: 1
+//   opacity: 0
+//   transform: perspective(1000px) translate3d(0, 0, 20px)
+//   transform-origin: top
+//   transition: all 600ms ease-in-out
 
-.pageTransition-enter.pageTransition-enter-active
-  opacity: 1
-  transform: perspective(1000px) translate3d(0, 0, 0)
-  transform-origin: top
-  transition: all 600ms ease-in-out
+// .pageTransition-enter.pageTransition-enter-active
+//   opacity: 1
+//   transform: perspective(1000px) translate3d(0, 0, 0)
+//   transform-origin: top
+//   transition: all 600ms ease-in-out
 
 
 
-// Global Transition 
 
-.globalFadeInTransition-enter
-  opacity: 0
-.globalFadeInTransition-enter-active
-  opacity: 1
-  transition: 300ms ease-in-out
-.globalFadeInTransition-exit
-  opacity: 1
-  transition: 300ms ease-in-out
-.globalFadeInTransition-exit-active
-  opacity: 0
 
 
 

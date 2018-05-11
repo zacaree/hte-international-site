@@ -120,7 +120,7 @@ export default class NavMenuDesktop extends Component {
           <CSSTransition
             in={this.state.aboutOpen}
             timeout={300}
-            classNames="menuTransition"
+            classNames="fadeInUp"
             unmountOnExit
           >
             <ul className="dropdown">
@@ -145,7 +145,7 @@ export default class NavMenuDesktop extends Component {
           <CSSTransition
             in={this.state.supportOpen}
             timeout={300}
-            classNames="menuTransition"
+            classNames="fadeInUp"
             unmountOnExit
           >
             <ul className="dropdown">
@@ -162,7 +162,7 @@ export default class NavMenuDesktop extends Component {
           <CSSTransition
             in={this.state.languageOpen}
             timeout={300}
-            classNames="menuTransition"
+            classNames="fadeInUp"
             unmountOnExit
           >
             <ul className="dropdown">
