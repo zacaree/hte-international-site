@@ -237,17 +237,17 @@ export default class PageProducts extends Component {
         },
       ],
 
-      showOverlay: false,
+      // showOverlay: false,
 
     };
   }
 
 
-  toggleOverlay = () => {
-    this.setState({
-      showOverlay: !this.state.showOverlay,
-    });
-  }
+  // toggleOverlay = () => {
+  //   this.setState({
+  //     showOverlay: !this.state.showOverlay,
+  //   });
+  // }
 
 
   render() {
@@ -267,7 +267,7 @@ export default class PageProducts extends Component {
                 <ProductCard
                   key={product.name}
                   product={product}
-                  clickHandlerA={this.toggleOverlay}
+                  // clickHandlerA={this.toggleOverlay}
                   // showDropdown={this.state.showDropdown}
                   // clickHandler={this.toggleDropdown}
                 />
@@ -276,14 +276,14 @@ export default class PageProducts extends Component {
             </div>
           </div>
 
-          <CSSTransition
+          {/* <CSSTransition
             in={this.state.showOverlay}
             timeout={300}
             classNames="fadeIn"
             unmountOnExit
           >
             <ProductModalOverlay clickHandler={this.toggleOverlay} />
-          </CSSTransition>
+          </CSSTransition> */}
 
         </div>
       </div>
