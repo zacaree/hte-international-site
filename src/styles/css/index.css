@@ -621,7 +621,8 @@ footer {
     height: 70px;
     cursor: pointer; }
     .ctr-productsGrid .txtBtn svg {
-      fill: #303030; }
+      fill: #303030;
+      transition: 0.3s ease-in-out; }
   .ctr-productsGrid .dropdown {
     padding: 0 24px; }
   .ctr-productsGrid .ctr-model {

@@ -33,7 +33,7 @@ const ProductCard = (props) => {
       <div className="ctr-availableModels">
         <div className="txtBtn">
           <h3>Available Models</h3>
-          <DropdownArrow />
+          <DropdownArrow toggleArrow={props.showDropdown} />
         </div>
         <CSSTransition
           in={name && props.showDropdown}
