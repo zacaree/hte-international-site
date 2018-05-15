@@ -1,9 +1,9 @@
 /* eslint react/prefer-stateless-function: 0 */
 
 import React, { Component } from 'react';
-import { CSSTransition } from 'react-transition-group';
+// import { CSSTransition } from 'react-transition-group';
 import ProductCard from './ProductCard';
-import ProductModalOverlay from './ProductModalOverlay';
+import ProductModal from './ProductModal';
 import IconHome from './../img/IconHome';
 import IconWrench from './../img/IconWrench';
 import Raptor from './../img/products/Raptor_10x9ratio.png';
@@ -15,6 +15,7 @@ import XONE from './../img/products/XONE_10x9ratio.png';
 import SuperZ from './../img/products/SuperZ_10x9ratio.png';
 import HustlerZDiesel from './../img/products/HustlerZDiesel_10x9ratio.png';
 import Trimstar from './../img/products/Trimstar_10x9ratio.png';
+import RaptorBg from './../img/products/RaptorBg_700x360ratio.jpg';
 
 
 export default class PageProducts extends Component {
@@ -27,6 +28,7 @@ export default class PageProducts extends Component {
         {
           name: 'Raptor',
           img: Raptor,
+          bgImg: RaptorBg,
           description: 'Legendary Hustler performance and engineering in an entry-level zero-turn mower.',
           idealIcon: <IconHome />,
           idealText: 'Ideal for yards up to one acre',
@@ -51,6 +53,7 @@ export default class PageProducts extends Component {
         {
           name: 'Raptor SD',
           img: RaptorSD,
+          bgImg: RaptorBg,
           description: 'More features, more muscle, makes small work out of big jobs.',
           idealIcon: <IconHome />,
           idealText: 'Ideal for yards up to three acres',
@@ -75,6 +78,7 @@ export default class PageProducts extends Component {
         {
           name: 'Raptor Flip-Up',
           img: RaptorFlipUp,
+          bgImg: RaptorBg,
           description: 'Push a button to raise, lower, or adjust deck height.',
           idealIcon: <IconWrench />,
           idealText: 'Cleaning and changing blades was never so easy',
@@ -94,6 +98,7 @@ export default class PageProducts extends Component {
         {
           name: 'FasTrak',
           img: Fastrak,
+          bgImg: RaptorBg,
           description: 'Top-of-the-line residential zero-turn with most rugged frame, forks and deck in the industry.',
           idealIcon: <IconHome />,
           idealText: 'Ideal for three to six acre estates',
@@ -118,6 +123,7 @@ export default class PageProducts extends Component {
         {
           name: 'FasTrak SDX',
           img: FastrakSDX,
+          bgImg: RaptorBg,
           description: 'Stronger, faster, tougher, with commercial-grade transmissions, upgraded custom seat and more.',
           idealIcon: '',
           idealText: '',
@@ -147,6 +153,7 @@ export default class PageProducts extends Component {
         {
           name: 'X-ONE',
           img: XONE,
+          bgImg: RaptorBg,
           description: 'Commercial zero-turn mower built for all-day, every day performance.',
           idealIcon: '',
           idealText: '',
@@ -166,6 +173,7 @@ export default class PageProducts extends Component {
         {
           name: 'Super Z',
           img: SuperZ,
+          bgImg: RaptorBg,
           description: 'High-performance zero-turn with unsurpassed strength, reliability, speed, productivity, and a warranty to match.',
           idealIcon: '',
           idealText: '',
@@ -185,6 +193,7 @@ export default class PageProducts extends Component {
         {
           name: 'Hustler Z Diesel',
           img: HustlerZDiesel,
+          bgImg: RaptorBg,
           description: 'The power and precision of a Hustler, the stamina of a diesel.',
           idealIcon: '',
           idealText: '',
@@ -214,6 +223,7 @@ export default class PageProducts extends Component {
         {
           name: 'TrimStar',
           img: Trimstar,
+          bgImg: RaptorBg,
           description: 'Innovative and easy-to-use walk-behind featuring Patented H-Bar<sup>&reg;</sup> steering.',
           idealIcon: '',
           idealText: '',
@@ -253,7 +263,7 @@ export default class PageProducts extends Component {
   render() {
     return (
       <div>
-        <div className="pageWrap">
+        <div className="pageWrap ctr-productsPage">
 
           <section className="productsHead wrap">
             <h1>All Products - Europe</h1>
@@ -276,14 +286,20 @@ export default class PageProducts extends Component {
             </div>
           </div>
 
+          <div className="modalBackground" />
+
+          <ProductModal product={this.state.products[0]} />
+
+
           {/* <CSSTransition
             in={this.state.showOverlay}
             timeout={300}
             classNames="fadeIn"
             unmountOnExit
           >
-            <ProductModalOverlay clickHandler={this.toggleOverlay} />
+            <ProductModal clickHandler={this.toggleOverlay} />
           </CSSTransition> */}
+
 
         </div>
       </div>

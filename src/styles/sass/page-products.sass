@@ -1,62 +1,76 @@
+.ctr-productsPage
 
-.ctr-productsGrid
-  padding: 0 30px
+  .ctr-productsGrid
+    padding: 0 30px
 
-  .row-offset-15
-    flex-wrap: wrap
-    justify-content: flex-start
-    // align-items: flex-start
+    .row-offset-15
+      flex-wrap: wrap
+      justify-content: flex-start
+      // align-items: flex-start
 
-  .ctr-card
-    display: flex
-    flex-direction: column
-    position: relative
-    width: calc(33.33% - 30px)
-    margin: 300px 15px 0
+    .ctr-card
+      display: flex
+      flex-direction: column
+      position: relative
+      width: calc(33.33% - 30px)
+      margin: 300px 15px 0
 
-    @media (max-width: 960px)
-      width: calc(50% - 30px)
-    @media (max-width: 600px)
-      width: calc(100% - 30px)
+      @media (max-width: 960px)
+        width: calc(50% - 30px)
+      @media (max-width: 600px)
+        width: calc(100% - 30px)
+        
+    .card
+      +size(100%, 100%)
+      display: flex
+      flex-direction: column
       
-  .card
-    +size(100%, 100%)
-    display: flex
-    flex-direction: column
-    
-    &:hover .ctr-productImg
-      transform: translateY(3px)
+      &:hover .ctr-productImg
+        transform: translateY(3px)
+
+    .ctr-productImg
+      pointer-events: none
+      position: relative
+      bottom: -16px
+      width: 100%
+      height: 90px
+      transition: 0.2s ease-in-out
+
+      img
+        position: absolute
+        bottom: 0
+        left: 6%
+        width: 88%
+
+    .txtBtn
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 0 24px
+      height: 70px
+      border-top: 1px solid $border
+      cursor: pointer
+
+      svg
+        fill: $d4
 
 
 
-  .ctr-productImg
-    pointer-events: none
-    position: relative
-    bottom: -16px
-    width: 100%
-    height: 90px
-    transition: 0.2s ease-in-out
 
-    img
-      position: absolute
-      bottom: 0
-      left: 6%
-      width: 88%
-
-
+  // ctr-productInfo styles are shared between cards and modals 
 
   .ctr-productInfo
     padding: 0 24px 30px
     flex: 1
 
-  h2
-    margin-bottom: 8px
+    h2
+      margin-bottom: 8px
 
-  p
-    margin-bottom: 20px
-  
-  .idealFor
-    display: flex
+    p
+      margin-bottom: 20px
+    
+    .idealFor
+      display: flex
 
     svg
       margin: 2px
@@ -69,78 +83,134 @@
       margin-left: 6px
 
 
-
-  .txtBtn
-    display: flex
-    align-items: center
-    justify-content: space-between
-    padding: 0 24px
-    height: 70px
-    border-top: 1px solid $border
-    cursor: pointer
-
-    svg
-      fill: $d4
+    
 
 
-  .ctr-dropdown
-    position: relative
+  // *************
+  // Product Modal
+  // *************
 
-  .dropdown
+  .modalBackground
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: hsla(0, 0%, 0%, 0.8)
+    z-index: $z-modalBackground
+
+
+
+
+  .ctr-productModal
     position: absolute
     top: 0
+    left: 0
+    +size(100%, 100%)
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: $z-productModal
+
+  .productModal
+    position: relative
+    margin: 30px
     width: 100%
-    padding: 0 24px
+    max-width: 700px
     background-color: $l1
-    box-shadow: $shadow
-    // for animation
-    overflow: hidden
-    transition: height 0.3s ease-in-out
-
-  .ctr-model
-    padding-bottom: 1.4rem
-
-    p
-      margin: 0
-
-  .modelNum span
-    color: $d1
-    font-size: 0.8rem
-
     
 
 
 
+    .ctr-productModalTop
+      position: relative
+
+    .close
+      position: absolute
+      top: 10px
+      right: 10px
+      width: 40px
+      height: 40px
+      display: flex
+      align-items: center
+      justify-content: center
+      background-color: hsla(0, 0%, 0%, 0)
+      border-radius: 100%
+      cursor: pointer
+      transition: 0.2s ease-in-out
+
+      svg
+        fill: $l1
+
+      &:hover
+        background-color: hsla(0, 0%, 100%, 0.15)
+
+    .productBgImg
+      background-color: $l3
+      width: 100%
+      height: 310px
+      background-position: center
+      background-size: cover
+    
+    .ctr-productInfo
+      position: absolute
+      top: 0
+      width: 310px
+      padding: 50px 30px
+
+      h2
+        font-size: 50px
+        color: $l1
+
+      p
+        margin-bottom: 20px
+        color: $l1
+
+      svg
+        fill: $l1
+      
+      span
+        color: $l1
+
+    .ctr-productImg
+      position: absolute
+      bottom: -120px
+      right: 0px
+      width: 380px
+
+      img
+        width: 100%
 
 
-// Isolation Overlay
 
-.productModalOverlay
-  display: flex
-  align-items: center
-  justify-content: center
-  position: fixed
-  top: 0
-  left: 0
-  right: 0
-  bottom: 0
-  background-color: hsla(0, 0%, 0%, 0.8)
-  z-index: 1000
 
-  .close
-    position: absolute
-    top: 1rem
-    right: 1rem
-    z-index: 2
-    width: 50px
-    height: 50px
-    display: flex
-    align-items: center
-    justify-content: center
-    background-color: hsla(0, 0%, 0%, 0)
-    border-radius: 3px
-    cursor: pointer
-    transition: 0.2s ease-in-out
+    .ctr-productModalBottom
+      margin-top: 100px
 
-    &:hover
-      background-color: hsla(0, 0%, 100%, 0.1)
+    h3
+      margin: 10px 30px
+      font-size: 24px
+
+    .ctr-model
+      position: relative
+      border-top: 1px solid $border
+      padding: 22px 30px
+
+      p
+        margin: 0
+
+      &:last-of-type
+        border-bottom: 1px solid $border
+
+    .modelNum
+      position: absolute
+      top: 10px
+      right: 30px
+
+      span
+        color: $d1
+        font-size: 0.8rem
+        
+    .btn
+      text-align: center
+      margin: 20px 30px

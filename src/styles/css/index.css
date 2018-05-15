@@ -563,61 +563,43 @@ footer {
     height: 1200px;
     height: 50vw; } }
 
-.ctr-productsGrid {
+.ctr-productsPage .ctr-productsGrid {
   padding: 0 30px; }
-  .ctr-productsGrid .row-offset-15 {
+  .ctr-productsPage .ctr-productsGrid .row-offset-15 {
     flex-wrap: wrap;
     justify-content: flex-start; }
-  .ctr-productsGrid .ctr-card {
+  .ctr-productsPage .ctr-productsGrid .ctr-card {
     display: flex;
     flex-direction: column;
     position: relative;
     width: calc(33.33% - 30px);
     margin: 300px 15px 0; }
     @media (max-width: 960px) {
-      .ctr-productsGrid .ctr-card {
+      .ctr-productsPage .ctr-productsGrid .ctr-card {
         width: calc(50% - 30px); } }
     @media (max-width: 600px) {
-      .ctr-productsGrid .ctr-card {
+      .ctr-productsPage .ctr-productsGrid .ctr-card {
         width: calc(100% - 30px); } }
-  .ctr-productsGrid .card {
+  .ctr-productsPage .ctr-productsGrid .card {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column; }
-    .ctr-productsGrid .card:hover .ctr-productImg {
+    .ctr-productsPage .ctr-productsGrid .card:hover .ctr-productImg {
       transform: translateY(3px); }
-  .ctr-productsGrid .ctr-productImg {
+  .ctr-productsPage .ctr-productsGrid .ctr-productImg {
     pointer-events: none;
     position: relative;
     bottom: -16px;
     width: 100%;
     height: 90px;
     transition: 0.2s ease-in-out; }
-    .ctr-productsGrid .ctr-productImg img {
+    .ctr-productsPage .ctr-productsGrid .ctr-productImg img {
       position: absolute;
       bottom: 0;
       left: 6%;
       width: 88%; }
-  .ctr-productsGrid .ctr-productInfo {
-    padding: 0 24px 30px;
-    flex: 1; }
-  .ctr-productsGrid h2 {
-    margin-bottom: 8px; }
-  .ctr-productsGrid p {
-    margin-bottom: 20px; }
-  .ctr-productsGrid .idealFor {
-    display: flex; }
-    .ctr-productsGrid .idealFor svg {
-      margin: 2px;
-      width: 18px;
-      height: 18px;
-      min-width: 18px;
-      min-height: 18px;
-      fill: #303030; }
-    .ctr-productsGrid .idealFor span {
-      margin-left: 6px; }
-  .ctr-productsGrid .txtBtn {
+  .ctr-productsPage .ctr-productsGrid .txtBtn {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -625,51 +607,121 @@ footer {
     height: 70px;
     border-top: 1px solid #DDDDDD;
     cursor: pointer; }
-    .ctr-productsGrid .txtBtn svg {
+    .ctr-productsPage .ctr-productsGrid .txtBtn svg {
       fill: #303030; }
-  .ctr-productsGrid .ctr-dropdown {
-    position: relative; }
-  .ctr-productsGrid .dropdown {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding: 0 24px;
-    background-color: #FFFFFF;
-    box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: height 0.3s ease-in-out; }
-  .ctr-productsGrid .ctr-model {
-    padding-bottom: 1.4rem; }
-    .ctr-productsGrid .ctr-model p {
-      margin: 0; }
-  .ctr-productsGrid .modelNum span {
-    color: #AAAAAA;
-    font-size: 0.8rem; }
 
-.productModalOverlay {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.ctr-productsPage .ctr-productInfo {
+  padding: 0 24px 30px;
+  flex: 1; }
+  .ctr-productsPage .ctr-productInfo h2 {
+    margin-bottom: 8px; }
+  .ctr-productsPage .ctr-productInfo p {
+    margin-bottom: 20px; }
+  .ctr-productsPage .ctr-productInfo .idealFor {
+    display: flex; }
+  .ctr-productsPage .ctr-productInfo svg {
+    margin: 2px;
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    min-height: 18px;
+    fill: #303030; }
+  .ctr-productsPage .ctr-productInfo span {
+    margin-left: 6px; }
+
+.ctr-productsPage .modalBackground {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1000; }
-  .productModalOverlay .close {
+  z-index: 199; }
+
+.ctr-productsPage .ctr-productModal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200; }
+
+.ctr-productsPage .productModal {
+  position: relative;
+  margin: 30px;
+  width: 100%;
+  max-width: 700px;
+  background-color: #FFFFFF; }
+  .ctr-productsPage .productModal .ctr-productModalTop {
+    position: relative; }
+  .ctr-productsPage .productModal .close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    z-index: 2;
-    width: 50px;
-    height: 50px;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0);
-    border-radius: 3px;
+    border-radius: 100%;
     cursor: pointer;
     transition: 0.2s ease-in-out; }
-    .productModalOverlay .close:hover {
-      background-color: rgba(255, 255, 255, 0.1); }
+    .ctr-productsPage .productModal .close svg {
+      fill: #FFFFFF; }
+    .ctr-productsPage .productModal .close:hover {
+      background-color: rgba(255, 255, 255, 0.15); }
+  .ctr-productsPage .productModal .productBgImg {
+    background-color: #EAEAEA;
+    width: 100%;
+    height: 310px;
+    background-position: center;
+    background-size: cover; }
+  .ctr-productsPage .productModal .ctr-productInfo {
+    position: absolute;
+    top: 0;
+    width: 310px;
+    padding: 50px 30px; }
+    .ctr-productsPage .productModal .ctr-productInfo h2 {
+      font-size: 50px;
+      color: #FFFFFF; }
+    .ctr-productsPage .productModal .ctr-productInfo p {
+      margin-bottom: 20px;
+      color: #FFFFFF; }
+    .ctr-productsPage .productModal .ctr-productInfo svg {
+      fill: #FFFFFF; }
+    .ctr-productsPage .productModal .ctr-productInfo span {
+      color: #FFFFFF; }
+  .ctr-productsPage .productModal .ctr-productImg {
+    position: absolute;
+    bottom: -120px;
+    right: 0px;
+    width: 380px; }
+    .ctr-productsPage .productModal .ctr-productImg img {
+      width: 100%; }
+  .ctr-productsPage .productModal .ctr-productModalBottom {
+    margin-top: 100px; }
+  .ctr-productsPage .productModal h3 {
+    margin: 10px 30px;
+    font-size: 24px; }
+  .ctr-productsPage .productModal .ctr-model {
+    position: relative;
+    border-top: 1px solid #DDDDDD;
+    padding: 22px 30px; }
+    .ctr-productsPage .productModal .ctr-model p {
+      margin: 0; }
+    .ctr-productsPage .productModal .ctr-model:last-of-type {
+      border-bottom: 1px solid #DDDDDD; }
+  .ctr-productsPage .productModal .modelNum {
+    position: absolute;
+    top: 10px;
+    right: 30px; }
+    .ctr-productsPage .productModal .modelNum span {
+      color: #AAAAAA;
+      font-size: 0.8rem; }
+  .ctr-productsPage .productModal .btn {
+    text-align: center;
+    margin: 20px 30px; }
