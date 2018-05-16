@@ -3,6 +3,7 @@
 /* eslint object-curly-newline: 0 */
 /* eslint jsx-a11y/click-events-have-key-events: 0 */
 /* eslint jsx-a11y/no-static-element-interactions: 0 */
+/* eslint react/no-danger: 0 */
 
 import React, { Component } from 'react';
 import { CSSTransition } from 'react-transition-group';
@@ -26,6 +27,8 @@ export default class Product extends Component {
     });
   }
 
+  trimstarDescription = () => ({ __html: '<p>Innovative and easy-to-use walk-behind featuring Patented H-Bar<sup>&reg;</sup> steering.</p>' })
+
 
   render() {
     const { img, name, description, idealIcon, idealText } = this.props.product;
@@ -39,7 +42,10 @@ export default class Product extends Component {
             </div>
             <div className="ctr-productInfo">
               <h2>{name}</h2>
-              <p>{description}</p>
+              {name === 'TrimStar' ?
+                <div dangerouslySetInnerHTML={this.trimstarDescription()} /> :
+                <p>{description}</p>
+              }
               {idealText && (
                 <div className="idealFor">
                   {idealIcon}
