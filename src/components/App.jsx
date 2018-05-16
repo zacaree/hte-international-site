@@ -10,6 +10,9 @@ import Nav from './Navigation/Nav';
 import PageLanding from './Page-Landing';
 import PageProducts from './Page-Products';
 import PageHustlerStory from './Page-About-HustlerStory';
+import PageWhyHustler from './Page-About-WhyHustler';
+import PageEuropeanDistribution from './Page-About-EuropeanDistribution';
+// import PageFindADistributor from './Page-FindADistributor';
 import PageContactUs from './Page-Contact/Page-ContactUs';
 import NotFound from './Page-NotFound';
 import Footer from './Navigation/Footer';
@@ -27,6 +30,9 @@ export default class App extends Component {
           <Route exact path="/" component={PageLanding} />
           <Route path="/products" component={PageProducts} />
           <Route path="/hustler-story" component={PageHustlerStory} />
+          <Route path="/why-hustler" component={PageWhyHustler} />
+          <Route path="/distribution" component={PageEuropeanDistribution} />
+          {/* <Route path="/find-a-distributor" component={PageFindADistributor} /> */}
           <Route path="/contact-us" component={PageContactUs} />
           <Route component={NotFound} />
         </Switch>

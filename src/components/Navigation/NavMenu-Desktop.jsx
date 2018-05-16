@@ -125,8 +125,8 @@ export default class NavMenuDesktop extends Component {
           >
             <ul className="dropdown">
               <Link to="/hustler-story"><li>Hustler’s Story</li></Link>
-              <Link to="/"><li>Why Hustler’s a Better Mower</li></Link>
-              <Link to="/"><li>European Distribution</li></Link>
+              <Link to="/why-hustler"><li>Why Hustler’s a Better Mower</li></Link>
+              <Link to="/distribution"><li>European Distribution</li></Link>
             </ul>
           </CSSTransition>
         </li>

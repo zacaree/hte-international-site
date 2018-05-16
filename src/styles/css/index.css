@@ -25,18 +25,18 @@ h1, h2, h3 {
 
 h1 {
   margin: 0;
-  font-size: 3.998rem;
-  line-height: 3.998rem; }
+  font-size: 3.815rem;
+  line-height: 3.815rem; }
 
 h2 {
   margin: 0;
-  font-size: 2.827rem;
-  line-height: 2.827rem; }
+  font-size: 2.441rem;
+  line-height: 2.441rem; }
 
 h3 {
   margin: 0;
-  font-size: 1.496rem;
-  line-height: 1.496rem; }
+  font-size: 1.563rem;
+  line-height: 1.563rem; }
 
 h4 {
   color: #303030;
@@ -136,10 +136,11 @@ button {
   border: none; }
 
 .btn {
-  padding: 1rem 3rem;
+  padding: 1.2rem 3rem;
   color: #303030;
   cursor: pointer;
   text-transform: uppercase;
+  text-align: center;
   transition: 0.2s; }
 
 .btn-gold {
@@ -149,7 +150,8 @@ button {
   font-weight: normal; }
 
 .btn-lg {
-  font-size: 1.496rem; }
+  font-size: 1.563rem;
+  line-height: 1.563rem; }
 
 .btn-sm {
   font-family: 'Roboto', sans-serif;
@@ -690,7 +692,9 @@ footer {
     width: 360px;
     padding: 50px 30px; }
     .ctr-productsPage .productModal .ctr-productInfo h2 {
-      color: #FFFFFF; }
+      color: #FFFFFF;
+      font-size: 3rem;
+      line-height: 3rem; }
     .ctr-productsPage .productModal .ctr-productInfo p {
       margin-bottom: 20px;
       color: #FFFFFF; }
@@ -725,7 +729,6 @@ footer {
       color: #AAAAAA;
       font-size: 0.8rem; }
   .ctr-productsPage .productModal .btn {
-    text-align: center;
     margin: 20px 30px; }
 
 @media (max-width: 420px) {
@@ -745,5 +748,44 @@ footer {
   flex: 2;
   margin: 0 1rem 0 4rem; }
   .page-hustlerStory .ctr-right img {
+    width: 100%;
+    box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.3); }
+
+.page-whyHustler .row-offset-1rem {
+  margin-top: 4rem; }
+
+.page-whyHustler .ctr-left {
+  flex: 1;
+  margin: 0 1rem; }
+  .page-whyHustler .ctr-left h2 {
+    margin-bottom: 0.6rem; }
+  .page-whyHustler .ctr-left p {
+    margin-bottom: 3rem; }
+  .page-whyHustler .ctr-left sup {
+    position: relative;
+    top: 10px; }
+
+.page-whyHustler .ctr-right {
+  flex: 2;
+  margin: 0 1rem 0 4rem; }
+  .page-whyHustler .ctr-right img {
+    width: 100%;
+    box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.3); }
+
+.page-europeanDistribution .row-offset-1rem {
+  margin-top: 4rem; }
+
+.page-europeanDistribution .ctr-left {
+  flex: 1;
+  margin: 0 1rem; }
+
+.page-europeanDistribution .btn {
+  margin-top: 2rem;
+  display: inline-block; }
+
+.page-europeanDistribution .ctr-right {
+  flex: 2;
+  margin: 0 1rem 0 4rem; }
+  .page-europeanDistribution .ctr-right img {
     width: 100%;
     box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.3); }
