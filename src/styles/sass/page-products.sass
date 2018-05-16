@@ -1,4 +1,12 @@
+
 .ctr-productsPage
+
+
+
+
+  // *************
+  // Products Grid
+  // *************
 
   .ctr-productsGrid
     padding: 0 30px
@@ -13,7 +21,7 @@
       flex-direction: column
       position: relative
       width: calc(33.33% - 30px)
-      margin: 300px 15px 0
+      margin: 220px 15px 80px
 
       @media (max-width: 960px)
         width: calc(50% - 30px)
@@ -24,6 +32,7 @@
       +size(100%, 100%)
       display: flex
       flex-direction: column
+      cursor: pointer
       
       &:hover .ctr-productImg
         transform: translateY(3px)
@@ -49,10 +58,10 @@
       padding: 0 24px
       height: 70px
       border-top: 1px solid $border
-      cursor: pointer
 
       svg
         fill: $d4
+
 
 
 
@@ -83,7 +92,7 @@
       margin-left: 6px
 
 
-    
+
 
 
   // *************
@@ -103,7 +112,7 @@
 
 
   .ctr-productModal
-    position: absolute
+    position: fixed
     top: 0
     left: 0
     +size(100%, 100%)
@@ -111,6 +120,7 @@
     align-items: center
     justify-content: center
     z-index: $z-productModal
+    pointer-events: none
 
   .productModal
     position: relative
@@ -118,6 +128,7 @@
     width: 100%
     max-width: 700px
     background-color: $l1
+    pointer-events: auto
     
 
 
@@ -155,11 +166,12 @@
     .ctr-productInfo
       position: absolute
       top: 0
-      width: 310px
+      width: 360px
       padding: 50px 30px
 
       h2
         font-size: 50px
+        line-height: 48px
         color: $l1
 
       p
@@ -175,7 +187,7 @@
     .ctr-productImg
       position: absolute
       bottom: -120px
-      right: 0px
+      right: 10px
       width: 380px
 
       img
@@ -214,3 +226,14 @@
     .btn
       text-align: center
       margin: 20px 30px
+
+
+
+
+  // *************
+  // Media Queries
+  // *************
+
+  @media (max-width: 420px)
+    .productModal
+      margin: 20px

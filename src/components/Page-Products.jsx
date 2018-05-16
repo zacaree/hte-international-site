@@ -1,9 +1,7 @@
 /* eslint react/prefer-stateless-function: 0 */
 
 import React, { Component } from 'react';
-// import { CSSTransition } from 'react-transition-group';
-import ProductCard from './ProductCard';
-import ProductModal from './ProductModal';
+import Product from './Product';
 import IconHome from './../img/IconHome';
 import IconWrench from './../img/IconWrench';
 import Raptor from './../img/products/Raptor_10x9ratio.png';
@@ -16,6 +14,9 @@ import SuperZ from './../img/products/SuperZ_10x9ratio.png';
 import HustlerZDiesel from './../img/products/HustlerZDiesel_10x9ratio.png';
 import Trimstar from './../img/products/Trimstar_10x9ratio.png';
 import RaptorBg from './../img/products/RaptorBg_700x360ratio.jpg';
+import FastrakBg from './../img/products/FastrakBg_700x360ratio.jpg';
+import XONEBg from './../img/products/XONEBg_700x360ratio.jpg';
+import CommercialBg from './../img/products/CommercialBg_700x360ratio.jpg';
 
 
 export default class PageProducts extends Component {
@@ -23,7 +24,6 @@ export default class PageProducts extends Component {
     super(props);
 
     this.state = {
-
       products: [
         {
           name: 'Raptor',
@@ -98,7 +98,7 @@ export default class PageProducts extends Component {
         {
           name: 'FasTrak',
           img: Fastrak,
-          bgImg: RaptorBg,
+          bgImg: FastrakBg,
           description: 'Top-of-the-line residential zero-turn with most rugged frame, forks and deck in the industry.',
           idealIcon: <IconHome />,
           idealText: 'Ideal for three to six acre estates',
@@ -123,7 +123,7 @@ export default class PageProducts extends Component {
         {
           name: 'FasTrak SDX',
           img: FastrakSDX,
-          bgImg: RaptorBg,
+          bgImg: FastrakBg,
           description: 'Stronger, faster, tougher, with commercial-grade transmissions, upgraded custom seat and more.',
           idealIcon: '',
           idealText: '',
@@ -153,7 +153,7 @@ export default class PageProducts extends Component {
         {
           name: 'X-ONE',
           img: XONE,
-          bgImg: RaptorBg,
+          bgImg: XONEBg,
           description: 'Commercial zero-turn mower built for all-day, every day performance.',
           idealIcon: '',
           idealText: '',
@@ -173,7 +173,7 @@ export default class PageProducts extends Component {
         {
           name: 'Super Z',
           img: SuperZ,
-          bgImg: RaptorBg,
+          bgImg: CommercialBg,
           description: 'High-performance zero-turn with unsurpassed strength, reliability, speed, productivity, and a warranty to match.',
           idealIcon: '',
           idealText: '',
@@ -193,7 +193,7 @@ export default class PageProducts extends Component {
         {
           name: 'Hustler Z Diesel',
           img: HustlerZDiesel,
-          bgImg: RaptorBg,
+          bgImg: CommercialBg,
           description: 'The power and precision of a Hustler, the stamina of a diesel.',
           idealIcon: '',
           idealText: '',
@@ -223,8 +223,8 @@ export default class PageProducts extends Component {
         {
           name: 'TrimStar',
           img: Trimstar,
-          bgImg: RaptorBg,
-          description: 'Innovative and easy-to-use walk-behind featuring Patented H-Bar<sup>&reg;</sup> steering.',
+          bgImg: CommercialBg,
+          description: 'Innovative and easy-to-use walk-behind featuring Patented H-Bar steering.',
           idealIcon: '',
           idealText: '',
           models: [
@@ -246,18 +246,8 @@ export default class PageProducts extends Component {
           ],
         },
       ],
-
-      // showOverlay: false,
-
     };
   }
-
-
-  // toggleOverlay = () => {
-  //   this.setState({
-  //     showOverlay: !this.state.showOverlay,
-  //   });
-  // }
 
 
   render() {
@@ -274,32 +264,14 @@ export default class PageProducts extends Component {
             <div className="row-offset-15">
 
               {this.state.products.map(product => (
-                <ProductCard
+                <Product
                   key={product.name}
                   product={product}
-                  // clickHandlerA={this.toggleOverlay}
-                  // showDropdown={this.state.showDropdown}
-                  // clickHandler={this.toggleDropdown}
                 />
               ))}
 
             </div>
           </div>
-
-          <div className="modalBackground" />
-
-          <ProductModal product={this.state.products[0]} />
-
-
-          {/* <CSSTransition
-            in={this.state.showOverlay}
-            timeout={300}
-            classNames="fadeIn"
-            unmountOnExit
-          >
-            <ProductModal clickHandler={this.toggleOverlay} />
-          </CSSTransition> */}
-
 
         </div>
       </div>
