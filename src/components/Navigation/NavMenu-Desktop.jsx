@@ -124,7 +124,7 @@ export default class NavMenuDesktop extends Component {
             unmountOnExit
           >
             <ul className="dropdown">
-              <li>Hustler’s Story</li>
+              <Link to="/hustler-story"><li>Hustler’s Story</li></Link>
               <li>Why Hustler’s a Better Mower</li>
               <li>European Distribution</li>
             </ul>
