@@ -3,7 +3,7 @@ In the project directory, you can run:
 
 ### `npm install`
 
-Installs all of the necessary dependencies.
+Installs all of the necessary dependencies.<br>
 Then run:
 
 ### `npm start`
@@ -15,7 +15,9 @@ The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
 
-
+---
+End of Zac's Notes.
+---
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
