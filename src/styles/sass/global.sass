@@ -60,17 +60,23 @@ h1, h2, h3
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
+// ***************************************************
+// Global font sizes are based on a 1:√2 modular scale
+
 h1 // Page headlines
-  font-size: 3.75rem
   margin: 0
+  font-size: 3.998rem
+  line-height: 3.998rem
 
 h2
   margin: 0
-  font-size: 2.4rem
+  font-size: 2.827rem
+  line-height: 2.827rem
 
 h3  // Learn more text buttons
   margin: 0
-  font-size: 1.4rem
+  font-size: 1.496rem
+  line-height: 1.496rem
 
 h4  // Hero subtitle
   color: $d4
@@ -183,7 +189,8 @@ button
   font-family: "bebas-neue", 'Roboto', sans-serif
   font-weight: normal
 .btn-lg
-  font-size: 1.4rem
+  // Font size based on a 1:√2 modular scale
+  font-size: 1.496rem
 .btn-sm
   font-family: 'Roboto', sans-serif
   font-size: 0.8rem

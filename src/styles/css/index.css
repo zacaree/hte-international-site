@@ -24,16 +24,19 @@ h1, h2, h3 {
   -moz-osx-font-smoothing: grayscale; }
 
 h1 {
-  font-size: 3.75rem;
-  margin: 0; }
+  margin: 0;
+  font-size: 3.998rem;
+  line-height: 3.998rem; }
 
 h2 {
   margin: 0;
-  font-size: 2.4rem; }
+  font-size: 2.827rem;
+  line-height: 2.827rem; }
 
 h3 {
   margin: 0;
-  font-size: 1.4rem; }
+  font-size: 1.496rem;
+  line-height: 1.496rem; }
 
 h4 {
   color: #303030;
@@ -138,7 +141,7 @@ button {
   font-weight: normal; }
 
 .btn-lg {
-  font-size: 1.4rem; }
+  font-size: 1.496rem; }
 
 .btn-sm {
   font-family: 'Roboto', sans-serif;
@@ -504,9 +507,7 @@ footer {
   background-position: center;
   background-size: cover; }
   .ctr-hero h1 {
-    font-size: 3.75rem;
     margin: 0;
-    line-height: 3.75rem;
     text-align: center;
     color: #FFC324; }
   .ctr-hero h4 {
@@ -691,8 +692,6 @@ footer {
     width: 360px;
     padding: 50px 30px; }
     .ctr-productsPage .productModal .ctr-productInfo h2 {
-      font-size: 50px;
-      line-height: 48px;
       color: #FFFFFF; }
     .ctr-productsPage .productModal .ctr-productInfo p {
       margin-bottom: 20px;
@@ -711,8 +710,7 @@ footer {
   .ctr-productsPage .productModal .ctr-productModalBottom {
     margin-top: 100px; }
   .ctr-productsPage .productModal h3 {
-    margin: 10px 30px;
-    font-size: 24px; }
+    margin: 12px 30px; }
   .ctr-productsPage .productModal .ctr-model {
     position: relative;
     border-top: 1px solid #DDDDDD;
