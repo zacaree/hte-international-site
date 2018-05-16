@@ -318,16 +318,18 @@ nav {
     box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.1);
     white-space: nowrap;
     transition: 0.3s ease-in-out; }
+    .navMenu-desktop .dropdown a {
+      display: flex;
+      padding: 0.8rem 1.8rem; }
+      .navMenu-desktop .dropdown a:first-of-type {
+        padding-top: 1.4rem; }
+      .navMenu-desktop .dropdown a:last-of-type {
+        padding-bottom: 1.4rem; }
+      .navMenu-desktop .dropdown a:hover {
+        background-color: #EAEAEA; }
     .navMenu-desktop .dropdown li {
       display: flex;
-      align-items: center;
-      padding: 0.8rem 1.8rem; }
-      .navMenu-desktop .dropdown li:first-of-type {
-        padding-top: 1.4rem; }
-      .navMenu-desktop .dropdown li:last-of-type {
-        padding-bottom: 1.4rem; }
-      .navMenu-desktop .dropdown li:hover {
-        background-color: #EAEAEA; }
+      align-items: center; }
     .navMenu-desktop .dropdown img {
       width: 21px;
       height: 15px; }

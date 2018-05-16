@@ -139,9 +139,8 @@ nav
     white-space: nowrap
     transition: 0.3s ease-in-out
 
-    li
+    a
       display: flex
-      align-items: center
       padding: 0.8rem 1.8rem
 
       &:first-of-type
@@ -150,6 +149,10 @@ nav
         padding-bottom: 1.4rem
       &:hover
         background-color: $l3
+
+    li
+      display: flex
+      align-items: center
 
     img
       +size(21px, 15px)

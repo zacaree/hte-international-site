@@ -125,8 +125,8 @@ export default class NavMenuDesktop extends Component {
           >
             <ul className="dropdown">
               <Link to="/hustler-story"><li>Hustler’s Story</li></Link>
-              <li>Why Hustler’s a Better Mower</li>
-              <li>European Distribution</li>
+              <Link to="/"><li>Why Hustler’s a Better Mower</li></Link>
+              <Link to="/"><li>European Distribution</li></Link>
             </ul>
           </CSSTransition>
         </li>
@@ -149,8 +149,8 @@ export default class NavMenuDesktop extends Component {
             unmountOnExit
           >
             <ul className="dropdown">
-              <li>FAQ</li>
-              <li>Contact Us</li>
+              <Link to="/"><li>FAQ</li></Link>
+              <Link to="/"><li>Contact Us</li></Link>
             </ul>
           </CSSTransition>
         </li>
@@ -166,17 +166,19 @@ export default class NavMenuDesktop extends Component {
             unmountOnExit
           >
             <ul className="dropdown">
-              <li><img src={denmark} alt="denmark" /><span>Danish</span></li>
-              <li><img src={netherlands} alt="netherlands" /><span>Dutch</span></li>
-              <li><img src={uk} alt="uk" /><span>English</span></li>
-              <li><img src={belgium} alt="belgium" /><span>Flemish</span></li>
-              <li><img src={france} alt="france" /><span>French</span></li>
-              <li><img src={germany} alt="germany" /><span>German</span></li>
-              <li><img src={portugal} alt="portugal" /><span>Portugese</span></li>
-              <li><img src={spain} alt="spain" /><span>Spanish</span></li>
-              <li><img src={sweden} alt="sweden" /><span>Swedish</span></li>
+              <Link to="/"><li><img src={denmark} alt="denmark" /><span>Danish</span></li></Link>
+              <Link to="/"><li><img src={netherlands} alt="netherlands" /><span>Dutch</span></li></Link>
+              <Link to="/"><li><img src={uk} alt="uk" /><span>English</span></li></Link>
+              <Link to="/"><li><img src={belgium} alt="belgium" /><span>Flemish</span></li></Link>
+              <Link to="/"><li><img src={france} alt="france" /><span>French</span></li></Link>
+              <Link to="/"><li><img src={germany} alt="germany" /><span>German</span></li></Link>
+              <Link to="/"><li><img src={portugal} alt="portugal" /><span>Portugese</span></li></Link>
+              <Link to="/"><li><img src={spain} alt="spain" /><span>Spanish</span></li></Link>
+              <Link to="/"><li><img src={sweden} alt="sweden" /><span>Swedish</span></li></Link>
               <hr />
-              <a href="https://www.hustlerturf.com/"><li><img src={usa} alt="USA" /><span>HustlerTurf.com</span></li></a>
+              <div>
+                <a href="https://www.hustlerturf.com/"><li><img src={usa} alt="USA" /><span>HustlerTurf.com</span></li></a>
+              </div>
             </ul>
           </CSSTransition>
         </li>
