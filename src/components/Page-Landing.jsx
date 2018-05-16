@@ -13,7 +13,7 @@ const PageLanding = () => (
     </div>
 
     <section className="section-cta wrap">
-      <div className="row-offset-15">
+      <div className="row-offset-1rem">
         <div className="cta">
           <Link to="/hustler-story" className="bgImg bgImg-1 aspectRatio" />
           <h2>Hustler&#39;s Story</h2>

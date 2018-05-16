@@ -4,12 +4,10 @@ import HistoryImg from '../img/early-excel.jpg';
 
 const HustlerStory = () => (
   <div className="pageWrap page-hustlerStory">
-    <section className="wrap">
+    <div className="wrap">
       <h1>Hustler's Story</h1>
       <div className="accentBar" />
-    </section>
 
-    <section className="wrap">
       <div className="ctr-left">
         <h2>We make the best…</h2>
         <h2>then, we make it better</h2>
@@ -19,7 +17,7 @@ const HustlerStory = () => (
       <div className="ctr-right">
         <img src={HistoryImg} alt="" className="aspectRatio" />
       </div>
-    </section>
+    </div>
   </div>
 );
 

@@ -252,28 +252,22 @@ export default class PageProducts extends Component {
 
   render() {
     return (
-      <div>
-        <div className="pageWrap ctr-productsPage">
+      <div className="pageWrap ctr-productsPage">
 
-          <section className="productsHead wrap">
-            <h1>All Products - Europe</h1>
-            <div className="accentBar" />
-          </section>
+        <div className="wrap">
+          <h1>All Products - Europe</h1>
+          <div className="accentBar" />
 
-          <div className="ctr-productsGrid wrap">
-            <div className="row-offset-15">
-
-              {this.state.products.map(product => (
-                <Product
-                  key={product.name}
-                  product={product}
-                />
-              ))}
-
-            </div>
+          <div className="row-offset-1rem">
+            {this.state.products.map(product => (
+              <Product
+                key={product.name}
+                product={product}
+              />
+            ))}
           </div>
-
         </div>
+
       </div>
     );
   }
