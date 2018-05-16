@@ -16,8 +16,6 @@ You will also see any lint errors in the console.
 
 
 ---
-End of Zac's Notes.
----
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
