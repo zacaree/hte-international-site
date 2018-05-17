@@ -1,0 +1,36 @@
+.hoverImg
+  position: relative
+  margin-bottom: 4rem
+
+  &:hover
+    .goldenShard
+      background-position: right center
+    
+  .bgImg
+    +aspectRatio(50%)
+    background-position: center
+    background-size: cover
+
+  .ctr-label
+    position: absolute
+    bottom: -25px
+    right: 10%
+    height: 50px
+    width: 300px
+
+  .goldenShard
+    height: 100%
+    width: 100%
+    background-color: $p1
+    background-image: linear-gradient(to right, $p1, $p2, $p1)
+    background-size: 200% auto
+    box-shadow: 0 14px 30px -8px transparentize($p1-darker, 0.5)
+    transform: skewX(-23deg)
+    transition: 0.5s
+
+  h3
+    position: absolute
+    width: 100%
+    text-align: center
+    top: 50%
+    transform: translateY(-50%)

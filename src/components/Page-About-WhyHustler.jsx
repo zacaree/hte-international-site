@@ -1,6 +1,9 @@
 
 import React from 'react';
-import HistoryImg from '../img/early-excel.jpg';
+import HoverImg from './HoverImg';
+import SmoothtrakImg from '../img/smoothtrak.jpg';
+import ParkBrakeImg from '../img/parkBrake.jpg';
+import HeavyDutyDeckImg from '../img/heavyDutyDeck.jpg';
 
 const WhyHustler = () => (
   <div className="pageWrap page-whyHustler">
@@ -26,13 +29,9 @@ const WhyHustler = () => (
         </div>
 
         <div className="ctr-right">
-          <div className="ctr-img">
-            <div className="bgImg" />
-            <div className="ctr-label">
-              <div className="goldenShard" />
-              <h3>SmoothTrak<sup>&trade;</sup> Steering</h3>
-            </div>
-          </div>
+          <HoverImg img={SmoothtrakImg} text="SmoothTrak Steering" />
+          <HoverImg img={ParkBrakeImg} text="Patented park brake" />
+          <HoverImg img={HeavyDutyDeckImg} text="Heavy-duty deck" />
         </div>
 
       </div>

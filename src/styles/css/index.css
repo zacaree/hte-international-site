@@ -130,7 +130,7 @@ section {
   height: 6px;
   margin: 1rem 0;
   background-color: #FFC324;
-  background-image: linear-gradient(to right, #FFB714 0%, #FFE579 100%); }
+  background-image: linear-gradient(to right, #FFC324 0%, #FEE86B 100%); }
 
 button {
   border: none; }
@@ -145,7 +145,7 @@ button {
 
 .btn-gold {
   background-color: #FFC324;
-  background-image: linear-gradient(to right, #FFB714 0%, #FFE579 100%);
+  background-image: linear-gradient(to right, #FFC324 0%, #FEE86B 100%);
   font-family: "bebas-neue", 'Roboto', sans-serif;
   font-weight: normal; }
 
@@ -160,11 +160,6 @@ button {
 
 .btn:hover, .btn:focus {
   transform: translateY(2px); }
-
-.aspectRatio {
-  width: 100%;
-  height: auto;
-  padding: 62% 0 0 0; }
 
 .card {
   background-color: #FFFFFF;
@@ -528,6 +523,9 @@ footer {
   .section-cta .bgImg {
     display: block;
     position: relative;
+    width: 100%;
+    height: auto;
+    padding: 62% 0 0 0;
     margin-bottom: 2.4rem;
     background-color: #EAEAEA;
     background-position: center;
@@ -756,22 +754,18 @@ footer {
   margin-top: 4rem; }
 
 .page-whyHustler .ctr-left {
-  flex: 1;
+  flex: 1.2;
   margin: 0 1rem; }
   .page-whyHustler .ctr-left h2 {
     margin-bottom: 0.6rem; }
   .page-whyHustler .ctr-left p {
     margin-bottom: 3rem; }
   .page-whyHustler .ctr-left sup {
-    position: relative;
-    top: 10px; }
+    font-size: 1.2rem; }
 
 .page-whyHustler .ctr-right {
   flex: 2;
   margin: 0 1rem 0 4rem; }
-  .page-whyHustler .ctr-right img {
-    width: 100%;
-    box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.3); }
 
 .page-europeanDistribution .row-offset-1rem {
   margin-top: 4rem; }
@@ -790,3 +784,36 @@ footer {
   .page-europeanDistribution .ctr-right img {
     width: 100%;
     box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.3); }
+
+.hoverImg {
+  position: relative;
+  margin-bottom: 4rem; }
+  .hoverImg:hover .goldenShard {
+    background-position: right center; }
+  .hoverImg .bgImg {
+    width: 100%;
+    height: auto;
+    padding: 50% 0 0 0;
+    background-position: center;
+    background-size: cover; }
+  .hoverImg .ctr-label {
+    position: absolute;
+    bottom: -25px;
+    right: 10%;
+    height: 50px;
+    width: 300px; }
+  .hoverImg .goldenShard {
+    height: 100%;
+    width: 100%;
+    background-color: #FFC324;
+    background-image: linear-gradient(to right, #FFC324, #FEE86B, #FFC324);
+    background-size: 200% auto;
+    box-shadow: 0 14px 30px -8px rgba(215, 156, 0, 0.5);
+    transform: skewX(-23deg);
+    transition: 0.5s; }
+  .hoverImg h3 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%); }
