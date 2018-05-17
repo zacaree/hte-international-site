@@ -500,7 +500,6 @@ footer {
   width: 100%;
   height: 710px;
   background-color: #F8F8F8;
-  background-image: url(./../../img/hero-bg.jpg);
   background-position: center;
   background-size: cover; }
   .ctr-hero h1 {
@@ -534,12 +533,6 @@ footer {
     box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.3); }
     .section-cta .bgImg:hover {
       transform: translateY(2px); }
-  .section-cta .bgImg-1 {
-    background-image: url(./../../img/cta_hustlerStory.jpg); }
-  .section-cta .bgImg-2 {
-    background-image: url(./../../img/cta_whyHustler.jpg); }
-  .section-cta .bgImg-3 {
-    background-image: url(./../../img/cta_dealerPhoto.jpg); }
   .section-cta h2 {
     font-family: "bebas-neue", 'Roboto', sans-serif;
     font-weight: normal;

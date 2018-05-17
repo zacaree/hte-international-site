@@ -5,7 +5,7 @@ import SmoothtrakImg from '../img/smoothtrak.jpg';
 import ParkBrakeImg from '../img/parkBrake.jpg';
 import HeavyDutyDeckImg from '../img/heavyDutyDeck.jpg';
 
-const WhyHustler = () => (
+const PageWhyHustler = () => (
   <div className="pageWrap page-whyHustler">
     <div className="wrap">
       <h1>Why Hustler’s a better mower</h1>
@@ -39,4 +39,4 @@ const WhyHustler = () => (
   </div>
 );
 
-export default WhyHustler;
+export default PageWhyHustler;

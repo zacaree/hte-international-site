@@ -2,7 +2,7 @@
 import React from 'react';
 import HistoryImg from '../img/early-excel.jpg';
 
-const HustlerStory = () => (
+const PageHustlerStory = () => (
   <div className="pageWrap page-hustlerStory">
     <div className="wrap">
       <h1>Hustler's Story</h1>
@@ -23,4 +23,4 @@ const HustlerStory = () => (
   </div>
 );
 
-export default HustlerStory;
+export default PageHustlerStory;

@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import EuropeanDistributionImg from '../img/euroDistribution.jpg';
 
-const EuropeanDistribution = () => (
+const PageEuropeanDistribution = () => (
   <div className="pageWrap page-europeanDistribution">
     <div className="wrap">
       <h1>European Distribution</h1>
@@ -23,4 +23,4 @@ const EuropeanDistribution = () => (
   </div>
 );
 
-export default EuropeanDistribution;
+export default PageEuropeanDistribution;
