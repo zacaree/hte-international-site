@@ -15,7 +15,7 @@ const PageLanding = () => (
     <section className="section-cta wrap">
       <div className="row-offset-1rem">
         <div className="cta">
-          <Link to="/hustler-story" className="bgImg bgImg-1 aspectRatio" />
+          <Link to="/hustler-story" className="bgImg bgImg-1" />
           <h2>Hustler&#39;s Story</h2>
           <p>First, we make the best. Then, we make it better. Hustler® Turf introduced the world’s first zero-turn mower in 1964…</p>
           <Link to="/hustler-story" className="textBtn">
@@ -25,7 +25,7 @@ const PageLanding = () => (
         </div>
 
         <div className="cta">
-          <Link to="/why-hustler" className="bgImg bgImg-2 aspectRatio" />
+          <Link to="/why-hustler" className="bgImg bgImg-2" />
           <h2>Why Hustler?</h2>
           <p>From our simple design to commercial grade materials, find out why Hustler makes a better product.</p>
           <Link to="/why-hustler" className="textBtn">
@@ -35,7 +35,7 @@ const PageLanding = () => (
         </div>
 
         <div className="cta">
-          <Link to="/distribution" className="bgImg bgImg-3 aspectRatio" />
+          <Link to="/distribution" className="bgImg bgImg-3" />
           <h2>European Distribution</h2>
           <p>Hustler products are available in several European countries. Learn more about European availability and offerings.</p>
           <Link to="/distribution" className="textBtn">

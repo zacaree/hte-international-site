@@ -1,21 +1,23 @@
 
 // Global Variables
 
-$p1:                        #FFC324    // Hustler Yellow
-$l1:                        #FFFFFF    // for cards/boxes that'll stand off the l2
-$l2:                        #F8F8F8    // Site background color
-$l3:                        #EAEAEA    // For inputs and such that sit over the l2 color
-$border:                    #DDDDDD    // For borders over white
-$d1:                        #AAAAAA    // Light or inactive text - also on footer
-$d2:                        #888888    // Nav text
-$d3:                        #555555    // Primarily for body copy
-$d4:                        #303030    // Main headline and btn color
+$p1:                        #FFC324             // Hustler Yellow
+$p2:                        #FEE86B             // Lighter yellow used in gradients
+$p1-darker:                 darken($p1, 15%)    // Used in golden shadows
+$l1:                        #FFFFFF             // for cards/boxes that'll stand off the l2
+$l2:                        #F8F8F8             // Site background color
+$l3:                        #EAEAEA             // For inputs and such that sit over the l2 color
+$border:                    #DDDDDD             // For borders over white
+$d1:                        #AAAAAA             // Light or inactive text - also on footer
+$d2:                        #888888             // Nav text
+$d3:                        #555555             // Primarily for body copy
+$d4:                        #303030             // Main headline and btn color
 
-$gradientX:                 linear-gradient(to right, #FFB714 0%, #FFE579 100%)
-$gradientY:                 linear-gradient(to bottom, #FFB714 0%, #FFE579 100%)
+$gradientX:                 linear-gradient(to right, $p1 0%, $p2 100%)
+$gradientY:                 linear-gradient(to bottom, $p1 0%, $p2 100%)
 $shadow:                    0 12px 30px -6px hsla(0, 0%, 0%, 0.1)
 $deepShadow:                0 12px 30px -6px hsla(0, 0%, 0%, 0.3)
-$btnShadow:                 0 6px 30px -2px hsla(196.2, 100%, 60%, 0.34)
+$goldenShadow:              0 14px 30px -8px transparentize($p1-darker, 0.5)
 
 // z-index values for all indexed elements on site
 $z-nav:                     100
@@ -31,6 +33,12 @@ $z-productModalClose:       310
 =size($x, $y)
   width: $x
   height: $y
+
+
+=aspectRatio($percentage)
+  width: 100%
+  height: auto
+  padding: $percentage 0 0 0  // 34.37% = 100 / (w / h) = 100 / (640 / 220)
 
 
 // *************
@@ -211,12 +219,6 @@ button
 .btn:hover, .btn:focus
   transform: translateY(2px)
 
-.aspectRatio
-  // Maintain aspect ratio
-  width: 100%
-  height: auto
-  padding: 62% 0 0 0  // 34.37% = 100 / (w / h) = 100 / (640 / 220)
-
 .card
   background-color: $l1
   box-shadow: $shadow
@@ -265,46 +267,6 @@ button
   opacity: 0
 
 
-// .reveal-enter
-//   z-index: 1001
-//   max-height: 0
-//   overflow: hidden
-//   transition: 300ms ease-in-out
-//   opacity: 0
-// .reveal-enter-active
-//   max-height: 400px
-//   opacity: 1
-// .reveal-exit
-//   max-height: 400px
-//   opacity: 1
-// .reveal-exit-active
-//   overflow: hidden
-//   transition: 300ms ease-in-out
-//   max-height: 0
-//   z-index: 1001
-//   opacity: 0
-
-
-
-
-
-
-// ********** 
-// Animations 
-// ********** 
-
-// .pageTransition-enter
-//   z-index: 1
-//   opacity: 0
-//   transform: perspective(1000px) translate3d(0, 0, 20px)
-//   transform-origin: top
-//   transition: all 600ms ease-in-out
-
-// .pageTransition-enter.pageTransition-enter-active
-//   opacity: 1
-//   transform: perspective(1000px) translate3d(0, 0, 0)
-//   transform-origin: top
-//   transition: all 600ms ease-in-out
 
 
 
