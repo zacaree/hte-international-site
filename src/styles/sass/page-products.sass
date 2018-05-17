@@ -63,7 +63,8 @@
 
 
 
-  // ctr-productInfo styles are shared between cards and modals 
+  // ctr-productInfo styles are shared between cards ↑ and modals ↓
+  // **************************************************************
 
   .ctr-productInfo
     padding: 0 24px 30px
@@ -88,6 +89,9 @@
     span
       margin-left: 6px
 
+  // End of shared styles 
+  // **************************************************************
+
 
 
 
@@ -104,28 +108,33 @@
     bottom: 0
     background-color: hsla(0, 0%, 0%, 0.8)
     z-index: $z-modalBackground
+  
 
 
 
 
-  .ctr-productModal
+  .ctr-productModal--fixed
     position: fixed
     top: 0
     left: 0
+    right: 0
+    bottom: 0
+    z-index: $z-ctr-Modal--fixed
+
+  .ctr-productModal--scroll
     +size(100%, 100%)
-    display: flex
-    align-items: center
-    justify-content: center
-    z-index: $z-productModal
-    pointer-events: none
+    padding: 0 1rem
+    overflow-y: auto
+    z-index: $z-ctr-Modal--scroll
 
   .productModal
     position: relative
-    margin: 30px
-    width: 100%
-    max-width: 700px
+    margin: 3rem auto
+    width: 700px
+    max-width: 100%
     background-color: $l1
-    pointer-events: auto
+    z-index: $z-productModal
+
     
 
 
@@ -135,6 +144,7 @@
 
     .close
       position: absolute
+      z-index: $z-productModalClose
       top: 10px
       right: 10px
       width: 40px
@@ -196,6 +206,8 @@
 
     .ctr-productModalBottom
       margin-top: 100px
+      // Keeps button margin from collapsing
+      overflow: hidden
 
     h3
       margin: 12px 30px
@@ -229,7 +241,3 @@
   // *************
   // Media Queries
   // *************
-
-  @media (max-width: 420px)
-    .productModal
-      margin: 20px

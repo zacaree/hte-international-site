@@ -67,7 +67,7 @@ export default class Product extends Component {
           classNames="fadeIn"
           unmountOnExit
         >
-          <div className="modalBackground" onClick={this.toggleModal} />
+          <div className="modalBackground" />
         </CSSTransition>
 
 
@@ -79,7 +79,7 @@ export default class Product extends Component {
         >
           <ProductModal
             product={this.props.product}
-            clickHandler={this.toggleModal}
+            toggleModal={this.toggleModal}
           />
         </CSSTransition>
 
