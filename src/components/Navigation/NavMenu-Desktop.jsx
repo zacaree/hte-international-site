@@ -149,7 +149,7 @@ export default class NavMenuDesktop extends Component {
             unmountOnExit
           >
             <ul className="dropdown">
-              <Link to="/"><li>FAQ</li></Link>
+              <Link to="/faq"><li>FAQ</li></Link>
               <Link to="/"><li>Contact Us</li></Link>
             </ul>
           </CSSTransition>

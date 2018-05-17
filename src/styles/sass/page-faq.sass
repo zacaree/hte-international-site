@@ -1,0 +1,39 @@
+
+.page-FAQ
+
+  .row-offset-1rem
+    margin-top: 100px
+    flex-wrap: wrap
+    justify-content: flex-start
+    // align-items: flex-start    
+      
+  .card
+    display: flex
+    flex-direction: column
+    position: relative
+    width: calc(33.33% - 30px)
+    margin: 0 15px 80px
+    cursor: pointer
+
+    @media (max-width: 960px)
+      width: calc(50% - 30px)
+    @media (max-width: 600px)
+      width: calc(100% - 30px)
+
+  .ctr-question
+    flex: 1
+    padding: 24px
+
+    h2
+      margin-bottom: 8px
+
+  .txtBtn
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0 24px
+    height: 70px
+    border-top: 1px solid $border
+
+    svg
+      fill: $d4

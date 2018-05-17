@@ -13,6 +13,7 @@ import PageHustlerStory from './Page-About-HustlerStory';
 import PageWhyHustler from './Page-About-WhyHustler';
 import PageEuropeanDistribution from './Page-About-EuropeanDistribution';
 // import PageFindADistributor from './Page-FindADistributor';
+import PageFAQ from './Page-FAQ';
 import PageContactUs from './Page-Contact/Page-ContactUs';
 import NotFound from './Page-NotFound';
 import Footer from './Navigation/Footer';
@@ -33,6 +34,7 @@ export default class App extends Component {
           <Route path="/why-hustler" component={PageWhyHustler} />
           <Route path="/distribution" component={PageEuropeanDistribution} />
           {/* <Route path="/find-a-distributor" component={PageFindADistributor} /> */}
+          <Route path="/faq" component={PageFAQ} />
           <Route path="/contact-us" component={PageContactUs} />
           <Route component={NotFound} />
         </Switch>

@@ -204,11 +204,9 @@ button {
   opacity: 0; }
 
 @media (max-width: 420px) {
-  .wrap {
-    padding: 6rem 20px 0; }
   h1 {
-    margin-bottom: 1.4rem;
-    font-size: 2.8rem; } }
+    font-size: 2.8rem;
+    line-height: 2.8rem; } }
 
 nav {
   top: 0;
@@ -777,6 +775,41 @@ footer {
   .page-europeanDistribution .ctr-right img {
     width: 100%;
     box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.3); }
+
+.page-FAQ .row-offset-1rem {
+  margin-top: 100px;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+
+.page-FAQ .card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: calc(33.33% - 30px);
+  margin: 0 15px 80px;
+  cursor: pointer; }
+  @media (max-width: 960px) {
+    .page-FAQ .card {
+      width: calc(50% - 30px); } }
+  @media (max-width: 600px) {
+    .page-FAQ .card {
+      width: calc(100% - 30px); } }
+
+.page-FAQ .ctr-question {
+  flex: 1;
+  padding: 24px; }
+  .page-FAQ .ctr-question h2 {
+    margin-bottom: 8px; }
+
+.page-FAQ .txtBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 70px;
+  border-top: 1px solid #DDDDDD; }
+  .page-FAQ .txtBtn svg {
+    fill: #303030; }
 
 .hoverImg {
   position: relative;
