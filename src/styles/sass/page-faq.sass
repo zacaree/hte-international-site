@@ -5,7 +5,7 @@
     margin-top: 100px
     flex-wrap: wrap
     justify-content: flex-start
-    // align-items: flex-start    
+    align-items: flex-start
       
   .card
     display: flex
@@ -13,16 +13,26 @@
     position: relative
     width: calc(33.33% - 30px)
     margin: 0 15px 80px
-    cursor: pointer
 
     @media (max-width: 960px)
       width: calc(50% - 30px)
     @media (max-width: 600px)
       width: calc(100% - 30px)
 
+  .accent
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    height: 4px
+    background-color: $p1
+    background-image: $gradientX
+    transition: 0.3s ease-in-out
+
   .ctr-question
     flex: 1
     padding: 24px
+    min-height: 174px
 
     h2
       margin-bottom: 8px
@@ -34,6 +44,52 @@
     padding: 0 24px
     height: 70px
     border-top: 1px solid $border
+    cursor: pointer
 
     svg
       fill: $d4
+
+    &:hover
+      svg
+        animation: 
+          name: arrowBounce
+          duration: 0.3s
+          fill-mode: forwards
+          timing-function: ease-in-out
+          
+
+  .ctr-dropdown
+    position: relative
+
+  .dropdown
+    position: relative
+    top: 0
+    width: 100%
+    padding: 0 24px
+    background-color: $l1
+    box-shadow: $shadow
+    // for animation
+    overflow: hidden
+    transition: height 0.3s ease-in-out
+
+  .ctr-models
+    padding-bottom: 1.4rem
+
+    p
+      margin: 0
+
+
+
+// *********
+// Animation
+// *********
+
+@keyframes arrowBounce
+  0%
+    transform: translateY(0)
+
+  50%
+    transform: translateY(4px)
+
+  100%
+    transform: translateY(0)

@@ -779,15 +779,15 @@ footer {
 .page-FAQ .row-offset-1rem {
   margin-top: 100px;
   flex-wrap: wrap;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  align-items: flex-start; }
 
 .page-FAQ .card {
   display: flex;
   flex-direction: column;
   position: relative;
   width: calc(33.33% - 30px);
-  margin: 0 15px 80px;
-  cursor: pointer; }
+  margin: 0 15px 80px; }
   @media (max-width: 960px) {
     .page-FAQ .card {
       width: calc(50% - 30px); } }
@@ -795,9 +795,20 @@ footer {
     .page-FAQ .card {
       width: calc(100% - 30px); } }
 
+.page-FAQ .accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #FFC324;
+  background-image: linear-gradient(to right, #FFC324 0%, #FEE86B 100%);
+  transition: 0.3s ease-in-out; }
+
 .page-FAQ .ctr-question {
   flex: 1;
-  padding: 24px; }
+  padding: 24px;
+  min-height: 174px; }
   .page-FAQ .ctr-question h2 {
     margin-bottom: 8px; }
 
@@ -807,9 +818,41 @@ footer {
   justify-content: space-between;
   padding: 0 24px;
   height: 70px;
-  border-top: 1px solid #DDDDDD; }
+  border-top: 1px solid #DDDDDD;
+  cursor: pointer; }
   .page-FAQ .txtBtn svg {
     fill: #303030; }
+  .page-FAQ .txtBtn:hover svg {
+    animation-name: arrowBounce;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out; }
+
+.page-FAQ .ctr-dropdown {
+  position: relative; }
+
+.page-FAQ .dropdown {
+  position: relative;
+  top: 0;
+  width: 100%;
+  padding: 0 24px;
+  background-color: #FFFFFF;
+  box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: height 0.3s ease-in-out; }
+
+.page-FAQ .ctr-models {
+  padding-bottom: 1.4rem; }
+  .page-FAQ .ctr-models p {
+    margin: 0; }
+
+@keyframes arrowBounce {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(4px); }
+  100% {
+    transform: translateY(0); } }
 
 .hoverImg {
   position: relative;
