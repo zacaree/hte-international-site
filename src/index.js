@@ -4,13 +4,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 import App from './components/App';
+import ScrollToTop from './components/ScrollToTop';
 import registerServiceWorker from './registerServiceWorker';
 import './styles/css/index.css';
 
 ReactDOM.render((
   <BrowserRouter>
     <Route render={({ location }) => (
-      <App location={location} />
+      <ScrollToTop>
+        <App location={location} />
+      </ScrollToTop>
     )}
     />
   </BrowserRouter>
