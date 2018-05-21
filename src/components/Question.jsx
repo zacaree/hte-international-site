@@ -1,6 +1,8 @@
 /* eslint react/prop-types: 0 */
+/* eslint object-curly-newline: 0 */
 
 import React, { Component } from 'react';
+import Answer from './Answer';
 import DropdownArrow from './../img/DropdownArrow';
 
 export default class Question extends Component {
@@ -22,30 +24,31 @@ export default class Question extends Component {
 
 
   render() {
-    const { question, answer } = this.props.faq;
+    const { question } = this.props.faq;
     const { showDropdown, height } = this.state;
     const currentHeight = showDropdown ? height : 0;
     const itemZIndex = 90 - this.props.i;
     const accentVisible = this.state.showDropdown ? 1 : 0;
 
+
     return (
-      <div className="card" style={{ zIndex: itemZIndex }}>
+      <div className="card" style={{ zIndex: itemZIndex }} onClick={this.toggleDropdown} >
         <div className="accent" style={{ opacity: accentVisible }} />
         <div className="ctr-question">
           <h2>Question</h2>
           <p>{question}</p>
         </div>
-        <div className="txtBtn" onClick={this.toggleDropdown} >
+        <div className="txtBtn" >
           <h3>Answer</h3>
           <DropdownArrow />
         </div>
         <div className="ctr-dropdown">
           <div className="dropdown" style={{ height: `${currentHeight}px` }} >
+            <div className="ctr-answer" ref={this.grabHeight}>
 
-            <div className="ctr-models" ref={this.grabHeight}>
-              <p>{answer}</p>
+              <Answer faq={this.props.faq} />
+
             </div>
-
           </div>
         </div>
       </div>
@@ -53,4 +56,3 @@ export default class Question extends Component {
   }
 }
 
-// export default Question;

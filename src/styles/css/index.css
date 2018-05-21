@@ -89,15 +89,17 @@ input, select, textarea, a {
   margin-bottom: 1rem; }
 
 .linkInBodyCopy {
-  padding: 3px 8px;
+  padding: 3px 4px;
+  margin: 0 4px;
+  color: #555555;
   background-color: #F8F8F8;
   border-radius: 3px;
   border: 1px solid #DDDDDD;
   transition: 0.1s ease-in-out; }
   .linkInBodyCopy:hover {
-    background-color: #fff;
-    border: 1px solid #fff;
-    color: #FFC324; }
+    background-color: #FFFFFF;
+    border: 1px solid #FFC324;
+    color: #d79c00; }
 
 .bold {
   font-weight: 900; }
@@ -139,6 +141,8 @@ button {
   padding: 1.2rem 3rem;
   display: inline-block;
   color: #303030;
+  cursor: pointer;
+  text-transform: uppercase;
   text-align: center;
   transition: 0.2s; }
 
@@ -839,10 +843,18 @@ footer {
   overflow: hidden;
   transition: height 0.3s ease-in-out; }
 
-.page-FAQ .ctr-models {
+.page-FAQ .ctr-answer {
   padding-bottom: 1.4rem; }
-  .page-FAQ .ctr-models p {
-    margin: 0; }
+  .page-FAQ .ctr-answer span {
+    margin: 0;
+    line-height: 1.7rem; }
+  .page-FAQ .ctr-answer ul {
+    margin: 1rem 20px;
+    list-style: disc; }
+  .page-FAQ .ctr-answer li {
+    padding: 8px 0;
+    color: #555555;
+    line-height: 1.3rem; }
 
 @keyframes arrowBounce {
   0% {
