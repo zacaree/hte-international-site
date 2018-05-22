@@ -7,7 +7,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ProductModel from './ProductModel';
-import Close from './../img/Close';
+import Close from './../../img/Close';
 
 
 export default class ProductModal extends Component {

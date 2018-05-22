@@ -7,7 +7,7 @@
 
 import React, { Component } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import ArrowRight from './../img/ArrowRight';
+import ArrowRight from './../../img/ArrowRight';
 import ProductModal from './ProductModal';
 
 

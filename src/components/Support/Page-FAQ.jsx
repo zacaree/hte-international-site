@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react';
 import Question from './Question';
-// import ArrowRight from './../img/ArrowRight';
 
 export default class PageFAQ extends Component {
   state = {

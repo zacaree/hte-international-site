@@ -2,21 +2,21 @@
 
 import React, { Component } from 'react';
 import Product from './Product';
-import IconHome from './../img/IconHome';
-import IconWrench from './../img/IconWrench';
-import Raptor from './../img/products/Raptor_10x9ratio.png';
-import RaptorSD from './../img/products/RaptorSD_10x9ratio.png';
-import RaptorFlipUp from './../img/products/RaptorFlipUp_10x9ratio.png';
-import Fastrak from './../img/products/Fastrak_10x9ratio.png';
-import FastrakSDX from './../img/products/FastrakSDX_10x9ratio.png';
-import XONE from './../img/products/XONE_10x9ratio.png';
-import SuperZ from './../img/products/SuperZ_10x9ratio.png';
-import HustlerZDiesel from './../img/products/HustlerZDiesel_10x9ratio.png';
-import Trimstar from './../img/products/Trimstar_10x9ratio.png';
-import RaptorBg from './../img/products/RaptorBg_700x360ratio.jpg';
-import FastrakBg from './../img/products/FastrakBg_700x360ratio.jpg';
-import XONEBg from './../img/products/XONEBg_700x360ratio.jpg';
-import CommercialBg from './../img/products/CommercialBg_700x360ratio.jpg';
+import IconHome from './../../img/IconHome';
+import IconWrench from './../../img/IconWrench';
+import Raptor from './../../img/products/Raptor_10x9ratio.png';
+import RaptorSD from './../../img/products/RaptorSD_10x9ratio.png';
+import RaptorFlipUp from './../../img/products/RaptorFlipUp_10x9ratio.png';
+import Fastrak from './../../img/products/Fastrak_10x9ratio.png';
+import FastrakSDX from './../../img/products/FastrakSDX_10x9ratio.png';
+import XONE from './../../img/products/XONE_10x9ratio.png';
+import SuperZ from './../../img/products/SuperZ_10x9ratio.png';
+import HustlerZDiesel from './../../img/products/HustlerZDiesel_10x9ratio.png';
+import Trimstar from './../../img/products/Trimstar_10x9ratio.png';
+import RaptorBg from './../../img/products/RaptorBg_700x360ratio.jpg';
+import FastrakBg from './../../img/products/FastrakBg_700x360ratio.jpg';
+import XONEBg from './../../img/products/XONEBg_700x360ratio.jpg';
+import CommercialBg from './../../img/products/CommercialBg_700x360ratio.jpg';
 
 
 export default class PageProducts extends Component {

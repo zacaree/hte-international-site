@@ -1,6 +1,6 @@
 
 import React from 'react';
-import HistoryImg from '../img/early-excel.jpg';
+import HistoryImg from './../../img/early-excel.jpg';
 
 const PageHustlerStory = () => (
   <div className="pageWrap page-hustlerStory">

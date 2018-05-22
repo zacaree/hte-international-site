@@ -3,7 +3,7 @@
 
 import React, { Component } from 'react';
 import Answer from './Answer';
-import DropdownArrow from './../img/DropdownArrow';
+import DropdownArrow from './../../img/DropdownArrow';
 
 export default class Question extends Component {
   state = {

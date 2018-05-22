@@ -8,13 +8,13 @@ import PropTypes from 'prop-types';
 
 import Nav from './Navigation/Nav';
 import PageLanding from './Page-Landing';
-import PageProducts from './Page-Products';
-import PageHustlerStory from './Page-About-HustlerStory';
-import PageWhyHustler from './Page-About-WhyHustler';
-import PageEuropeanDistribution from './Page-About-EuropeanDistribution';
+import PageProducts from './Products/Page-Products';
+import PageHustlerStory from './AboutUs/Page-About-HustlerStory';
+import PageWhyHustler from './AboutUs/Page-About-WhyHustler';
+import PageEuropeanDistribution from './AboutUs/Page-About-EuropeanDistribution';
 // import PageFindADistributor from './Page-FindADistributor';
-import PageFAQ from './Page-FAQ';
-import PageContactUs from './Page-Contact/Page-ContactUs';
+import PageFAQ from './Support/Page-FAQ';
+import PageContactUs from './Support/Page-ContactUs';
 import NotFound from './Page-NotFound';
 import Footer from './Navigation/Footer';
 

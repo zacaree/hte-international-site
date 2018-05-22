@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import EuropeanDistributionImg from '../img/euroDistribution.jpg';
-import Btn from './Btn';
+import EuropeanDistributionImg from './../../img/euroDistribution.jpg';
+import Btn from './../Btn';
 
 const PageEuropeanDistribution = () => (
   <div className="pageWrap page-europeanDistribution">

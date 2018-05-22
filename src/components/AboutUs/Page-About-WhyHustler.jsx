@@ -1,9 +1,9 @@
 
 import React from 'react';
 import HoverImg from './HoverImg';
-import SmoothtrakImg from '../img/smoothtrak.jpg';
-import ParkBrakeImg from '../img/parkBrake.jpg';
-import HeavyDutyDeckImg from '../img/heavyDutyDeck.jpg';
+import SmoothtrakImg from './../../img/smoothtrak.jpg';
+import ParkBrakeImg from './../../img/parkBrake.jpg';
+import HeavyDutyDeckImg from './../../img/heavyDutyDeck.jpg';
 
 const PageWhyHustler = () => (
   <div className="pageWrap page-whyHustler">
