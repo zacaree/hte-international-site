@@ -1,0 +1,47 @@
+.page-findADistributor
+
+  .row-offset-1rem
+    margin-top: 4rem
+
+  .ctr-left
+    flex: 1
+    margin: 0 1rem
+
+    .ctr-input
+      position: relative
+
+    p
+      margin-bottom: 2rem
+
+    select
+      +size(100%, 60px)
+      padding-left: 18px
+      background-color: $l1
+      border: 1px solid $border
+      border-radius: 0
+      color: $d2
+      // removes default select styling
+      -webkit-appearance: button
+      -moz-appearance: button
+      appearance: button
+
+      & ~ svg
+        position: absolute
+        top: 50%
+        right: 0.8rem
+        transform: translateY(-48%)
+        fill: $d2
+        pointer-events: none
+      
+
+  .ctr-right
+    flex: 2
+    margin: 0 1rem 0 4rem
+
+    img
+      width: 100%
+      box-shadow: $deepShadow
+
+    #map
+      height: 100%
+      background-color: $l3

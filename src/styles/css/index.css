@@ -779,6 +779,45 @@ footer {
     width: 100%;
     box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.3); }
 
+.page-findADistributor .row-offset-1rem {
+  margin-top: 4rem; }
+
+.page-findADistributor .ctr-left {
+  flex: 1;
+  margin: 0 1rem; }
+  .page-findADistributor .ctr-left .ctr-input {
+    position: relative; }
+  .page-findADistributor .ctr-left p {
+    margin-bottom: 2rem; }
+  .page-findADistributor .ctr-left select {
+    width: 100%;
+    height: 60px;
+    padding-left: 18px;
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 0;
+    color: #888888;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button; }
+    .page-findADistributor .ctr-left select ~ svg {
+      position: absolute;
+      top: 50%;
+      right: 0.8rem;
+      transform: translateY(-48%);
+      fill: #888888;
+      pointer-events: none; }
+
+.page-findADistributor .ctr-right {
+  flex: 2;
+  margin: 0 1rem 0 4rem; }
+  .page-findADistributor .ctr-right img {
+    width: 100%;
+    box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.3); }
+  .page-findADistributor .ctr-right #map {
+    height: 100%;
+    background-color: #EAEAEA; }
+
 .page-FAQ .row-offset-1rem {
   margin-top: 100px;
   flex-wrap: wrap;
