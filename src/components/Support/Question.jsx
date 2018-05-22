@@ -32,7 +32,11 @@ export default class Question extends Component {
 
 
     return (
-      <div className="card" style={{ zIndex: itemZIndex }} onClick={this.toggleDropdown} >
+      <div
+        className="card"
+        style={{ zIndex: itemZIndex }}
+        onClick={this.toggleDropdown}
+      >
         <div className="accent" style={{ opacity: accentVisible }} />
         <div className="ctr-question">
           <h2>Question</h2>

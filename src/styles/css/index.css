@@ -810,13 +810,12 @@ footer {
 
 .page-findADistributor .ctr-right {
   flex: 2;
+  height: 470px;
   margin: 0 1rem 0 4rem; }
-  .page-findADistributor .ctr-right img {
-    width: 100%;
-    box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.3); }
   .page-findADistributor .ctr-right #map {
     height: 100%;
-    background-color: #EAEAEA; }
+    background-color: #EAEAEA;
+    box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.3); }
 
 .page-FAQ .row-offset-1rem {
   margin-top: 100px;

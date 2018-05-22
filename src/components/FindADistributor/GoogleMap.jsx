@@ -4,10 +4,16 @@ import React, { Component } from 'react';
 
 export default class GoogleMap extends Component {
   componentDidMount() {
-    this.map = new GoogleMap.maps.Map(this.refs.map, {
+    const google = window.google;
+    this.map = new google.maps.Map(this.mapElement.current, {
       center: { lat: this.props.lat, lng: this.props.lng },
       zoom: 8,
     });
+  }
+
+
+  componentWillReceiveProps(nextProps) {
+    this.map.panTo({ lat: nextProps.lat, lng: nextProps.lng });
   }
 
 
@@ -16,9 +22,12 @@ export default class GoogleMap extends Component {
   }
 
 
+  mapElement = React.createRef();
+
+
   render() {
     return (
-      <div id="map" ref="map" />
+      <div id="map" ref={this.mapElement} />
     );
   }
 }
