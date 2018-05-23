@@ -43,6 +43,24 @@ export default class countrySelect extends Component {
     this.props.handleClick(belguimInfo);
   }
 
+  denmark = () => {
+    const denmarkInfo = {
+      name: 'ZTR APS/Fenger',
+      street: 'Ndr Borremosevej 16',
+      address: '9600 Aars',
+      country: 'Denmark',
+      location: {
+        lat: 56.796677,
+        lng: 9.571506,
+      },
+      phone: '011 45 40595250',
+      url: 'https://www.ztr.dk/',
+      email: 'mail@fengersystem.com',
+      zoom: 9,
+    };
+    this.props.handleClick(denmarkInfo);
+  }
+
 
   render() {
     const { dropdownVisible } = this.state;
@@ -69,7 +87,7 @@ export default class countrySelect extends Component {
             <div className="dropdown">
               <ul>
                 <li onClick={this.belgium}>Belgium</li>
-                <li>Denmark</li>
+                <li onClick={this.denmark}>Denmark</li>
                 <li>Estonia</li>
                 <li>France</li>
                 <li>Germany</li>
