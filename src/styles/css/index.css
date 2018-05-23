@@ -107,6 +107,9 @@ input, select, textarea, a {
 .italic {
   font-style: italic; }
 
+.relative {
+  position: relative; }
+
 .pageWrap {
   min-height: 100vh;
   min-height: calc(100vh - 550px); }
@@ -335,7 +338,7 @@ nav {
       width: 21px;
       height: 15px; }
     .navMenu-desktop .dropdown span {
-      margin: 1px 0 0 8px; }
+      margin: 1px 0 0 10px; }
     .navMenu-desktop .dropdown hr {
       margin: 6px 0; }
 
@@ -785,28 +788,54 @@ footer {
 .page-findADistributor .ctr-left {
   flex: 1;
   margin: 0 1rem; }
-  .page-findADistributor .ctr-left .ctr-input {
-    position: relative; }
-  .page-findADistributor .ctr-left p {
+  .page-findADistributor .ctr-left > p {
     margin-bottom: 2rem; }
-  .page-findADistributor .ctr-left select {
+  .page-findADistributor .ctr-left .ctr-countrySelect {
+    margin-bottom: 2rem; }
+  .page-findADistributor .ctr-left .countrySelect {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 60px;
-    padding-left: 18px;
+    padding: 0 14px 0 18px;
     background-color: #FFFFFF;
     border: 1px solid #DDDDDD;
-    border-radius: 0;
-    color: #888888;
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button; }
-    .page-findADistributor .ctr-left select ~ svg {
-      position: absolute;
-      top: 50%;
-      right: 0.8rem;
-      transform: translateY(-48%);
-      fill: #888888;
-      pointer-events: none; }
+    cursor: pointer; }
+    .page-findADistributor .ctr-left .countrySelect p {
+      color: #888888;
+      line-height: 1rem; }
+    .page-findADistributor .ctr-left .countrySelect svg {
+      fill: #888888; }
+  .page-findADistributor .ctr-left .dropdown {
+    position: absolute;
+    width: 100%;
+    padding: 6px;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-top: none; }
+    .page-findADistributor .ctr-left .dropdown li {
+      padding: 6px 16px;
+      color: #555555; }
+      .page-findADistributor .ctr-left .dropdown li:first-of-type {
+        padding-top: 14px; }
+      .page-findADistributor .ctr-left .dropdown li:last-of-type {
+        padding-bottom: 14px; }
+      .page-findADistributor .ctr-left .dropdown li:hover {
+        background-color: #EAEAEA; }
+
+.page-findADistributor .distributorCard {
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.1); }
+  .page-findADistributor .distributorCard .ctr-top {
+    padding: 2rem 24px; }
+  .page-findADistributor .distributorCard h3 {
+    margin-bottom: 1rem; }
+  .page-findADistributor .distributorCard .ctr-bottom {
+    padding: 24px; }
 
 .page-findADistributor .ctr-right {
   flex: 2;
@@ -815,7 +844,7 @@ footer {
   .page-findADistributor .ctr-right #map {
     height: 100%;
     background-color: #EAEAEA;
-    box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.3); }
+    border: 1px solid #DDDDDD; }
 
 .page-FAQ .row-offset-1rem {
   margin-top: 100px;

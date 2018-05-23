@@ -1,3 +1,4 @@
+
 .page-findADistributor
 
   .row-offset-1rem
@@ -7,32 +8,72 @@
     flex: 1
     margin: 0 1rem
 
-    .ctr-input
-      position: relative
-
-    p
+    & > p
       margin-bottom: 2rem
 
-    select
+    .ctr-countrySelect
+      margin-bottom: 2rem
+
+    .countrySelect
+      display: flex
+      justify-content: space-between
+      align-items: center
       +size(100%, 60px)
-      padding-left: 18px
+      padding: 0 14px 0 18px
       background-color: $l1
       border: 1px solid $border
-      border-radius: 0
-      color: $d2
-      // removes default select styling
-      -webkit-appearance: button
-      -moz-appearance: button
-      appearance: button
+      cursor: pointer
 
-      & ~ svg
-        position: absolute
-        top: 50%
-        right: 0.8rem
-        transform: translateY(-48%)
+      p
+        color: $d2
+        line-height: 1rem
+
+      svg
         fill: $d2
-        pointer-events: none
+
+
+
+    .dropdown
+      position: absolute
+      width: 100%
+      padding: 6px
+      max-height: 300px
+      overflow-y: auto
+      background-color: $l1
+      border: 1px solid $border
+      border-top: none
+
+      li
+        padding: 6px 16px
+        color: $d3
+
+        &:first-of-type
+          padding-top: 14px
+        &:last-of-type
+          padding-bottom: 14px
+        &:hover
+          background-color: $l3
       
+
+
+  .distributorCard
+    width: 100%
+    background-color: $l1
+    box-shadow: $shadow
+
+    .ctr-top
+      padding: 2rem 24px
+      
+    h3
+      margin-bottom: 1rem
+
+    .ctr-bottom
+      padding: 24px
+
+
+
+
+
 
   .ctr-right
     flex: 2
@@ -42,4 +83,4 @@
     #map
       height: 100%
       background-color: $l3
-      box-shadow: $deepShadow
+      border: 1px solid $border

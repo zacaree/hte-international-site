@@ -1,26 +1,31 @@
 
+/* eslint jsx-a11y/click-events-have-key-events: 0 */
+/* eslint jsx-a11y/no-noninteractive-element-interactions: 0 */
+/* eslint jsx-a11y/no-static-element-interactions: 0 */
+/* eslint object-curly-newline: 0 */
+
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
+import CountrySelect from './CountrySelect';
 import GoogleMap from './GoogleMap';
-import Btn from './../Btn';
-import ArrowSelectBox from './../../img/ArrowSelectBox';
+
 
 export default class PageFindADistributor extends Component {
   state = {
-    lat: -34.397,
-    lng: 150.644,
+    country: 'Select your country',
+    location: {
+      lat: 48.137513,
+      lng: 11.574840,
+    },
+    zoom: 4,
   }
 
 
-  handleClick = () => {
-    this.setState({
-      lat: 40.7128,
-      lng: -74.005,
-    });
-  }
+  handleClick = (distributorInfo) => { this.setState(distributorInfo); }
 
 
   render() {
+    const { name, street, address, country, location, phone, url, email, zoom } = this.state;
     return (
       <div className="pageWrap page-findADistributor">
         <div className="wrap">
@@ -30,32 +35,31 @@ export default class PageFindADistributor extends Component {
           <div className="row-offset-1rem">
             <div className="ctr-left">
               <p className="bodyCopy">Make a selection to find distributor information for your country.</p>
-              <div className="ctr-input">
-                <select>
-                  <option value="">Select your country</option>
-                  <option value="RI">Belgium</option>
-                  <option value="SC">Denmark</option>
-                  <option value="SD">Estonia</option>
-                  <option value="TN">France</option>
-                  <option value="TX">Germany</option>
-                  <option value="UT">Ireland</option>
-                  <option value="VT">Italy</option>
-                  <option value="VA">Latvia</option>
-                  <option value="WA">Lithuania</option>
-                  <option value="WV">Netherlands</option>
-                  <option value="WI">Poland</option>
-                  <option value="WY">Portugal</option>
-                  <option value="WY">Slovakia</option>
-                  <option value="WY">Spain</option>
-                  <option value="WY">United Kingdom</option>
-                </select>
-                {/* <label>Select your country</label> */}
-                <ArrowSelectBox />
-              </div>
+
+
+              <CountrySelect country={country} handleClick={this.handleClick} />
+
+
+              {name && (
+                <div className="distributorCard">
+                  <div className="ctr-top">
+                    <h3>{name}</h3>
+                    <p>{street}</p>
+                    <p>{address}</p>
+                    <p>{country}</p>
+                  </div>
+                  <hr />
+                  <div className="ctr-bottom">
+                    <p>{phone}</p>
+                    <p>{url}</p>
+                    <p>{email}</p>
+                  </div>
+                </div>
+              )}
+
             </div>
             <div className="ctr-right">
-              <Btn onClick={this.handleClick} />
-              <GoogleMap lat={this.state.lat} lng={this.state.lng} />
+              <GoogleMap location={location} zoom={zoom} />
             </div>
           </div>
         </div>

@@ -1,9 +1,5 @@
-/* eslint no-param-reassign: 0 */
-/* eslint jsx-a11y/label-has-for: 0 */
 /* eslint no-return-assign: 0 */
-/* eslint react/prefer-stateless-function: 0 */
 /* eslint prefer-destructuring: 0 */
-
 /* eslint class-methods-use-this: 0 */
 
 import React, { Component } from 'react';
@@ -13,17 +9,13 @@ import FormService from './FormService';
 import FormSales from './FormSales';
 import ArrowSelectBox from './../../img/ArrowSelectBox';
 
-
 export default class PageContactUs extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    contactWho: '',
+  };
 
-    this.state = {
-      contactWho: '',
-    };
 
-    this.handleInputChange = this.handleInputChange.bind(this);
-  }
+  // ******************** This block handles the labels movement up and down
 
 
   // Helper function - Allows the selection of more than one sibling
@@ -57,7 +49,10 @@ export default class PageContactUs extends Component {
   };
 
 
-  handleInputChange(event) {
+  // ********************
+
+
+  handleInputChange = (event) => {
     const target = event.target;
     const value = target.value;
     const name = target.name;
@@ -97,6 +92,8 @@ export default class PageContactUs extends Component {
 
             <div className="row topInput">
               <div className="flex-1 ctr-input">
+
+                {/* Whatever is selected from the dropdown, that value goes into state */}
                 <select
                   name="contactWho"
                   value={this.state.contactWho}
@@ -113,35 +110,40 @@ export default class PageContactUs extends Component {
                 <label className="screenLarge">Please let us know what you&#39;re contacting us about*</label>
                 <label className="screenSmall">Type of inquiry*</label>
                 <ArrowSelectBox />
+
               </div>
             </div>
+
 
             <CSSTransition
               in={this.state.contactWho === 'hr'}
               timeout={300}
-              classNames="fadeIn"
+              classNames="globalFadeInTransition"
               unmountOnExit
             >
               <FormHR />
             </CSSTransition>
 
+
             <CSSTransition
               in={this.state.contactWho === 'service'}
               timeout={300}
-              classNames="fadeIn"
+              classNames="globalFadeInTransition"
               unmountOnExit
             >
               <FormService />
             </CSSTransition>
 
+
             <CSSTransition
               in={this.state.contactWho === 'sales'}
               timeout={300}
-              classNames="fadeIn"
+              classNames="globalFadeInTransition"
               unmountOnExit
             >
               <FormSales />
             </CSSTransition>
+
 
           </div>
         </section>
