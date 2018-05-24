@@ -8,6 +8,9 @@ import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import CountrySelect from './CountrySelect';
 import GoogleMap from './GoogleMap';
+import IconPhone from './../../img/IconPhone';
+import IconWeb from './../../img/IconWeb';
+import IconEmail from './../../img/IconEmail';
 
 
 export default class PageFindADistributor extends Component {
@@ -42,6 +45,7 @@ export default class PageFindADistributor extends Component {
 
               {name && (
                 <div className="distributorCard">
+                  <div className="accent" />
                   <div className="ctr-top">
                     <h3>{name}</h3>
                     <p>{street}</p>
@@ -50,9 +54,15 @@ export default class PageFindADistributor extends Component {
                   </div>
                   <hr />
                   <div className="ctr-bottom">
-                    <p>{phone}</p>
-                    <p>{url}</p>
-                    <p>{email}</p>
+                    <div className="alignItems">
+                      <IconPhone /><p>{phone}</p>
+                    </div>
+                    <a href={url} target="_blank" className="alignItems">
+                      <IconWeb /><p>{url}</p>
+                    </a>
+                    <div className="alignItems">
+                      <IconEmail /><p>{email}</p>
+                    </div>
                   </div>
                 </div>
               )}

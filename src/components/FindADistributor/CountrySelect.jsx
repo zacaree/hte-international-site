@@ -36,7 +36,7 @@ export default class countrySelect extends Component {
         lng: 4.550743,
       },
       phone: '+ 32 (0) 2 686 10 20',
-      url: 'http://www.vegemac.be',
+      url: 'https://www.vegemac.be',
       email: 'admin@vegemac.be',
       zoom: 9,
     };

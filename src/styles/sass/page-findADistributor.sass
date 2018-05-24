@@ -35,6 +35,7 @@
 
     .dropdown
       position: absolute
+      z-index: 2
       width: 100%
       padding: 6px
       max-height: 300px
@@ -57,6 +58,7 @@
 
 
   .distributorCard
+    position: relative
     width: 100%
     background-color: $l1
     box-shadow: $shadow
@@ -68,7 +70,24 @@
       margin-bottom: 1rem
 
     .ctr-bottom
-      padding: 24px
+      padding: 6px
+
+    .alignItems
+      padding: 8px 0 8px 18px
+      transition: 0.6s $zease
+      
+      &:hover 
+        background-color: $l3
+      &:first-child
+        padding-top: 24px
+      &:last-child
+        padding-bottom: 24px
+
+      svg
+        fill: $d2
+
+      p
+        margin-left: 6px
 
 
 
@@ -77,8 +96,8 @@
 
   .ctr-right
     flex: 2
-    height: 470px
-    margin: 0 1rem 0 4rem
+    min-height: 470px
+    margin: 0 1rem 0 2rem
 
     #map
       height: 100%

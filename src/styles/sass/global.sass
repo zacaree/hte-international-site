@@ -19,6 +19,8 @@ $shadow:                    0 12px 30px -6px hsla(0, 0%, 0%, 0.1)
 $deepShadow:                0 12px 30px -6px hsla(0, 0%, 0%, 0.3)
 $goldenShadow:              0 14px 30px -8px transparentize($p1-darker, 0.5)
 
+$zease:                     cubic-bezier(0.165, 0.84, 0.44, 1)
+
 // z-index values for all indexed elements on site
 $z-nav:                     100
 $z-modalBackground:         200
@@ -161,6 +163,10 @@ input, select, textarea, a
 .relative
   position: relative
 
+.alignItems
+  display: flex
+  align-items: center
+
 
 
 
@@ -195,6 +201,16 @@ section
   margin: 1rem 0
   background-color: $p1
   background-image: $gradientX
+
+.accent
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    height: 4px
+    background-color: $p1
+    background-image: $gradientX
+    transition: 0.3s ease-in-out
 
 button
   border: none
