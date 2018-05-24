@@ -20,8 +20,10 @@ $deepShadow:                0 12px 30px -6px hsla(0, 0%, 0%, 0.3)
 $goldenShadow:              0 14px 30px -8px transparentize($p1-darker, 0.5)
 
 $zease:                     cubic-bezier(0.165, 0.84, 0.44, 1)
+$easeOutBack:               cubic-bezier(0.175, 0.885, 0.32, 1.275)
 
 // z-index values for all indexed elements on site
+$z-tooltip:                 90
 $z-nav:                     100
 $z-modalBackground:         200
 $z-ctr-Modal--fixed:        210
@@ -267,11 +269,11 @@ button
 .fadeInUp-enter-active
   transform: translateY(0px)
   opacity: 1
-  transition: 300ms ease-in-out
+  transition: 300ms $zease
 .fadeInUp-exit
   transform: translateY(0px)
   opacity: 1
-  transition: 300ms ease-in-out
+  transition: 300ms $zease
 .fadeInUp-exit-active
   transform: translateY(16px)
   opacity: 0
@@ -289,6 +291,18 @@ button
   opacity: 0
 
 
+.tooltipIn-enter
+  opacity: 0
+  transform: translateX(24px)
+.tooltipIn-enter-active
+  opacity: 1
+  transform: translateX(0px)
+  transition: 250ms $easeOutBack
+.tooltipIn-exit
+  opacity: 1
+  transition: 250ms ease-in
+.tooltipIn-exit-active
+  opacity: 0
 
 
 

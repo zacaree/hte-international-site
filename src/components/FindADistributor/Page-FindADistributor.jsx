@@ -8,9 +8,7 @@ import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import CountrySelect from './CountrySelect';
 import GoogleMap from './GoogleMap';
-import IconPhone from './../../img/IconPhone';
-import IconWeb from './../../img/IconWeb';
-import IconEmail from './../../img/IconEmail';
+import DistributorInfoCard from './DistributorInfoCard';
 
 
 export default class PageFindADistributor extends Component {
@@ -28,7 +26,7 @@ export default class PageFindADistributor extends Component {
 
 
   render() {
-    const { name, street, address, country, location, phone, url, email, zoom } = this.state;
+    const { name, street, address, country, phone, url, email, location, zoom } = this.state;
     return (
       <div className="pageWrap page-findADistributor">
         <div className="wrap">
@@ -44,27 +42,7 @@ export default class PageFindADistributor extends Component {
 
 
               {name && (
-                <div className="distributorCard">
-                  <div className="accent" />
-                  <div className="ctr-top">
-                    <h3>{name}</h3>
-                    <p>{street}</p>
-                    <p>{address}</p>
-                    <p>{country}</p>
-                  </div>
-                  <hr />
-                  <div className="ctr-bottom">
-                    <div className="alignItems">
-                      <IconPhone /><p>{phone}</p>
-                    </div>
-                    <a href={url} target="_blank" className="alignItems">
-                      <IconWeb /><p>{url}</p>
-                    </a>
-                    <div className="alignItems">
-                      <IconEmail /><p>{email}</p>
-                    </div>
-                  </div>
-                </div>
+                <DistributorInfoCard distributorInfo={{ name, street, address, country, phone, url, email }} />
               )}
 
             </div>
