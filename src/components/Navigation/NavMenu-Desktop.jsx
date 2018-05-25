@@ -150,7 +150,7 @@ export default class NavMenuDesktop extends Component {
           >
             <ul className="dropdown">
               <Link to="/faq"><li>FAQ</li></Link>
-              <Link to="/"><li>Contact Us</li></Link>
+              <Link to="/contact-us"><li>Contact Us</li></Link>
             </ul>
           </CSSTransition>
         </li>
