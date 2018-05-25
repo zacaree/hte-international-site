@@ -77,9 +77,9 @@ export default class PageContactUs extends Component {
             </div>
           </div> */}
 
-          <div className="row-offset-1rem">
-            <ContactForm />
-          </div>
+
+          <ContactForm />
+
 
         </div>
       </div>

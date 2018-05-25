@@ -1007,6 +1007,31 @@ footer {
   100% {
     transform: translateY(0); } }
 
+.page-contactUs .row-offset-8 {
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+  .page-contactUs .row-offset-8 .ctr-input {
+    display: flex;
+    flex-direction: column;
+    width: calc(33.33% - 1rem);
+    margin: 0 8px 30px; }
+    @media (max-width: 960px) {
+      .page-contactUs .row-offset-8 .ctr-input {
+        width: calc(50% - 1rem); } }
+    @media (max-width: 600px) {
+      .page-contactUs .row-offset-8 .ctr-input {
+        width: calc(100% - 1rem); } }
+  .page-contactUs .row-offset-8 input {
+    height: 60px;
+    padding: 1rem;
+    background-color: #EAEAEA;
+    border: 1px solid #EAEAEA;
+    color: #888888;
+    transition: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+    .page-contactUs .row-offset-8 input:focus {
+      background-color: #FFFFFF;
+      border: 1px solid #DDDDDD; }
+
 .hoverImg {
   position: relative;
   margin-bottom: 4rem; }
