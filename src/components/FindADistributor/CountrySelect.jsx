@@ -6,8 +6,23 @@
 /* eslint jsx-a11y/no-noninteractive-element-interactions: 0 */
 
 import React, { Component } from 'react';
-import { CSSTransition } from 'react-transition-group';
 import DropdownArrow from './../../img/DropdownArrow';
+import denmark from './../../img/flags/denmark.svg';
+import netherlands from './../../img/flags/netherlands.svg';
+import uk from './../../img/flags/uk.svg';
+import belgium from './../../img/flags/belgium.svg';
+import france from './../../img/flags/france.svg';
+import germany from './../../img/flags/germany.svg';
+import portugal from './../../img/flags/portugal.svg';
+import spain from './../../img/flags/spain.svg';
+import estonia from './../../img/flags/estonia.svg';
+import ireland from './../../img/flags/ireland.svg';
+import italy from './../../img/flags/italy.svg';
+import latvia from './../../img/flags/latvia.svg';
+import lithuania from './../../img/flags/lithuania.svg';
+import poland from './../../img/flags/poland.svg';
+import slovakia from './../../img/flags/slovakia.svg';
+// import sweden from './../../img/flags/sweden.svg';
 
 
 export default class countrySelect extends Component {
@@ -65,6 +80,11 @@ export default class countrySelect extends Component {
   render() {
     const { dropdownVisible } = this.state;
     const { country } = this.props;
+    const animateDropdown = {
+      height: dropdownVisible ? `${300}px` : 0,
+      padding: dropdownVisible ? `${6}px` : `${0} ${6}px`,
+      borderColor: dropdownVisible ? '#DDD' : '#F8F8F8',
+    };
 
     return (
       <div className="ctr-countrySelect">
@@ -74,86 +94,33 @@ export default class countrySelect extends Component {
           ref={(node) => { this.nodeCountrySelect = node; }}
         >
           <p>{country}</p>
-          <DropdownArrow toggleArrow={dropdownVisible} />
+          <div className="ctr-arrow">
+            <DropdownArrow toggleArrow={dropdownVisible} />
+          </div>
         </div>
 
         <div className="ctr-dropdown relative">
-          <CSSTransition
-            in={dropdownVisible}
-            timeout={300}
-            classNames="fadeInUp"
-            unmountOnExit
-          >
-            <div className="dropdown">
-              <ul>
-                <li onClick={this.belgium}>Belgium</li>
-                <li onClick={this.denmark}>Denmark</li>
-                <li>Estonia</li>
-                <li>France</li>
-                <li>Germany</li>
-                <li>Ireland</li>
-                <li>Italy</li>
-                <li>Latvia</li>
-                <li>Lithuania</li>
-                <li>Netherlands</li>
-                <li>Poland</li>
-                <li>Portugal</li>
-                <li>Slovakia</li>
-                <li>Spain</li>
-                <li>United Kingdom</li>
-              </ul>
-            </div>
-          </CSSTransition>
+          <div className="dropdown" style={animateDropdown}>
+            <ul>
+              <li onClick={this.belgium}><img src={belgium} alt="belgium" /><span>Belgium</span></li>
+              <li onClick={this.denmark}><img src={denmark} alt="denmark" /><span>Denmark</span></li>
+              <li><img src={estonia} alt="estonia" /><span>Estonia</span></li>
+              <li><img src={france} alt="france" /><span>France</span></li>
+              <li><img src={germany} alt="germany" /><span>Germany</span></li>
+              <li><img src={ireland} alt="ireland" /><span>Ireland</span></li>
+              <li><img src={italy} alt="italy" /><span>Italy</span></li>
+              <li><img src={latvia} alt="latvia" /><span>Latvia</span></li>
+              <li><img src={lithuania} alt="lithuania" /><span>Lithuania</span></li>
+              <li><img src={netherlands} alt="netherlands" /><span>Netherlands</span></li>
+              <li><img src={poland} alt="poland" /><span>Poland</span></li>
+              <li><img src={portugal} alt="portugal" /><span>Portugal</span></li>
+              <li><img src={slovakia} alt="slovakia" /><span>Slovakia</span></li>
+              <li><img src={spain} alt="spain" /><span>Spain</span></li>
+              <li><img src={uk} alt="uk" /><span>United Kingdom</span></li>
+            </ul>
+          </div>
         </div>
       </div>
-
-
-      // <div className="ctr-productModal--fixed">
-      //   <div className="ctr-productModal--scroll">
-
-      //     <div className="productModal" ref={(node) => { this.nodeModal = node; }} >
-
-
-      //       <div className="ctr-productModalTop">
-      //         <div className="close" onClick={this.props.toggleModal}><Close /></div>
-      //         <div className="productBgImg" style={{ backgroundImage: `url(${bgImg})` }} />
-
-      //         <div className="ctr-productInfo">
-      //           <h2>{name}</h2>
-      //           <p>{description}</p>
-      //           {idealText && (
-      //             <div className="idealFor">
-      //               {idealIcon}
-      //               <span>{idealText}</span>
-      //             </div>
-      //           )}
-      //         </div>
-
-      //         <div className="ctr-productImg">
-      //           <img src={img} alt='52&quot; Raptor' />
-      //         </div>
-      //       </div>
-
-
-      //       <div className="ctr-productModalBottom">
-      //         <h3>Available Models</h3>
-
-      //         <div className="ctr-models">
-      //           {models.map(model => (
-      //             <ProductModel
-      //               key={model.modelNum}
-      //               model={model}
-      //             />
-      //           ))}
-      //         </div>
-
-      //         <Link to="/find-a-distributor" ><div className="btn btn-lg btn-gold">Find A Distributor</div></Link>
-      //       </div>
-
-
-      //     </div>
-      //   </div>
-      // </div>
     );
   }
 }

@@ -19,7 +19,7 @@
       justify-content: space-between
       align-items: center
       +size(100%, 60px)
-      padding: 0 14px 0 18px
+      padding: 0 0 0 18px
       background-color: $l1
       border: 1px solid $border
       cursor: pointer
@@ -27,6 +27,14 @@
       p
         color: $d2
         line-height: 1rem
+
+      .ctr-arrow
+        display: flex
+        align-items: center
+        justify-content: center
+        +size(40px, 80%)
+        margin-right: 3px
+        border-left: 1px solid $border
 
       svg
         fill: $d2
@@ -43,18 +51,30 @@
       background-color: $l1
       border: 1px solid $border
       border-top: none
+      transition: 0.3s $zease
+      box-shadow: $shadow
 
       li
+        display: flex
+        align-items: center
         padding: 6px 16px
         color: $d3
 
         &:first-of-type
-          padding-top: 14px
+          padding-top: 22px
         &:last-of-type
-          padding-bottom: 14px
+          padding-bottom: 22px
         &:hover
           background-color: $l3
-      
+
+      img
+        +size(21px, 15px)
+
+      span
+        margin: 1px 0 0 10px
+
+
+
 
 
   .distributorCard
@@ -88,7 +108,7 @@
         fill: $d2
 
       p
-        margin-left: 6px
+        margin-left: 14px
 
     .tooltip
       position: absolute

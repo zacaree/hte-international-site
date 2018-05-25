@@ -45,6 +45,7 @@ export default class PageFindADistributor extends Component {
                 <DistributorInfoCard distributorInfo={{ name, street, address, country, phone, url, email }} />
               )}
 
+
             </div>
             <div className="ctr-right">
               <GoogleMap location={location} zoom={zoom} />

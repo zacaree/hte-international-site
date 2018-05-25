@@ -1,12 +1,12 @@
-
 /* eslint jsx-a11y/click-events-have-key-events: 0 */
 /* eslint jsx-a11y/no-noninteractive-element-interactions: 0 */
 /* eslint jsx-a11y/no-static-element-interactions: 0 */
 /* eslint object-curly-newline: 0 */
 /* eslint react/prop-types: 0 */
 
+// https://developers.google.com/web/fundamentals/native-hardware/click-to-call/
+
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Tooltip from './../Tooltip';
