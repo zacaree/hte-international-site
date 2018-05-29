@@ -139,20 +139,10 @@ export default class NavMenuDesktop extends Component {
         </li>
 
 
-        <li className="navItem" onClick={this.handleClickSupport} ref={(node) => { this.nodeSupport = node; }} >
-          <span>Support</span>
-          <DropdownArrow toggleArrow={this.state.supportOpen} />
-          <CSSTransition
-            in={this.state.supportOpen}
-            timeout={300}
-            classNames="fadeInUp"
-            unmountOnExit
-          >
-            <ul className="dropdown">
-              <Link to="/faq"><li>FAQ</li></Link>
-              <Link to="/contact-us"><li>Contact Us</li></Link>
-            </ul>
-          </CSSTransition>
+        <li>
+          <Link to="/contact-us" className="navItem">
+            <span>Contact Us</span>
+          </Link>
         </li>
 
 

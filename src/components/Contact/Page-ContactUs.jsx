@@ -68,6 +68,7 @@ export default class PageContactUs extends Component {
           <h1>Contact Us</h1>
           <div className="accentBar" />
           <p className="bodyCopy">We would be happy to hear from you! If you have a question about one of our Hustler products your quickest answer is likely to be found on our <Link to="/faq" className="linkInBodyCopy">Hustler&nbsp;FAQ&nbsp;page</Link> as several commonly asked questions (with answers) are readily available for you. Otherwise please complete the form below and we’ll get back to you as soon as possible. <i>(You may expect to receive a response between the hours of 8:00 AM and 5:00 PM, Monday through Friday)</i></p>
+
           {/* <div className="ctr ctr-2">
             <div className="ctr-address card">
               <div className="accentBar" />
