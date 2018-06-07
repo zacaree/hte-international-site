@@ -12,6 +12,7 @@ import uk from './../../img/flags/uk.svg';
 import belgium from './../../img/flags/belgium.svg';
 import france from './../../img/flags/france.svg';
 import germany from './../../img/flags/germany.svg';
+import italy from './../../img/flags/italy.svg';
 import portugal from './../../img/flags/portugal.svg';
 import spain from './../../img/flags/spain.svg';
 import sweden from './../../img/flags/sweden.svg';
@@ -148,7 +149,8 @@ export default class NavMenuDesktop extends Component {
 
         <li className="navItem" onClick={this.handleClickLanguage} ref={(node) => { this.nodeLanguage = node; }} >
           <span>Language</span>
-          <DropdownArrow toggleArrow={this.state.languageOpen} />
+          <img src={uk} alt="uk" />
+          {/* <DropdownArrow toggleArrow={this.state.languageOpen} /> */}
           <CSSTransition
             in={this.state.languageOpen}
             timeout={300}
@@ -162,6 +164,7 @@ export default class NavMenuDesktop extends Component {
               <Link to="/"><li><img src={belgium} alt="belgium" /><span>Flemish</span></li></Link>
               <Link to="/"><li><img src={france} alt="france" /><span>French</span></li></Link>
               <Link to="/"><li><img src={germany} alt="germany" /><span>German</span></li></Link>
+              <Link to="/"><li><img src={italy} alt="italy" /><span>Italian</span></li></Link>
               <Link to="/"><li><img src={portugal} alt="portugal" /><span>Portugese</span></li></Link>
               <Link to="/"><li><img src={spain} alt="spain" /><span>Spanish</span></li></Link>
               <Link to="/"><li><img src={sweden} alt="sweden" /><span>Swedish</span></li></Link>

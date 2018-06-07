@@ -118,6 +118,10 @@ nav
       font-weight: 700
       font-size: 0.8rem
       text-transform: uppercase
+    
+    & img
+      +size(21px, 15px)
+      margin: -1px 0 0 10px
 
     &:hover
       background-color: $l3
@@ -133,6 +137,8 @@ nav
     top: 76px
     right: 0
     min-width: 260px
+    max-height: 80vh
+    overflow-y: auto
     padding: 6px
     background-color: $l1
     box-shadow: $shadow
