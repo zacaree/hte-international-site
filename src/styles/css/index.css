@@ -931,9 +931,10 @@ footer {
 
 .page-findADistributor .ctr-right {
   flex: 2;
+  position: relative;
   min-height: 470px;
   margin: 0 1rem 0 2rem; }
-  .page-findADistributor .ctr-right #map {
+  .page-findADistributor .ctr-right .map {
     height: 100%;
     background-color: #EAEAEA;
     border: 1px solid #DDDDDD; }

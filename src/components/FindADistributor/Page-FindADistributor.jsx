@@ -7,17 +7,14 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import CountrySelect from './CountrySelect';
-import GoogleMap from './GoogleMap';
+import GoogleMapContainer from './GoogleMapContainer';
 import DistributorInfoCard from './DistributorInfoCard';
 
 
 export default class PageFindADistributor extends Component {
   state = {
     country: 'Select your country',
-    location: {
-      lat: 48.137513,
-      lng: 11.574840,
-    },
+    location: null,
     zoom: 4,
   }
 
@@ -37,19 +34,23 @@ export default class PageFindADistributor extends Component {
             <div className="ctr-left">
               <p className="bodyCopy">Make a selection to find distributor information for your country.</p>
 
-
               <CountrySelect country={country} handleClick={this.handleClick} />
 
-
               {name && (
-                <DistributorInfoCard distributorInfo={{ name, street, address, country, phone, url, email }} />
+                <DistributorInfoCard
+                  distributorInfo={{ name, street, address, country, phone, url, email }}
+                />
               )}
 
+            </div>
 
-            </div>
             <div className="ctr-right">
-              <GoogleMap location={location} zoom={zoom} />
+              <GoogleMapContainer
+                location={location}
+                zoom={zoom}
+              />
             </div>
+
           </div>
         </div>
       </div>
