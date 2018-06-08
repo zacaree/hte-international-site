@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Headroom from 'react-headroom';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import Nav from './Navigation/Nav';
 import PageLanding from './Page-Landing';
@@ -44,9 +44,9 @@ export default class App extends Component {
 }
 
 
-App.propTypes = {
-  location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired,
-    key: PropTypes.string.isRequired,
-  }).isRequired,
-};
+// App.propTypes = {
+//   location: PropTypes.shape({
+//     pathname: PropTypes.string.isRequired,
+//     key: PropTypes.string.isRequired,
+//   }).isRequired,
+// };

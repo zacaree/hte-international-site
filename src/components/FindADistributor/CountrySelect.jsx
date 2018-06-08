@@ -23,6 +23,7 @@ import lithuania from './../../img/flags/lithuania.svg';
 import poland from './../../img/flags/poland.svg';
 import slovakia from './../../img/flags/slovakia.svg';
 // import sweden from './../../img/flags/sweden.svg';
+import distributorInfo from './../../locations-europe.json';
 
 
 export default class countrySelect extends Component {
@@ -78,6 +79,7 @@ export default class countrySelect extends Component {
 
 
   render() {
+    console.log(distributorInfo);
     const { dropdownVisible } = this.state;
     const { country } = this.props;
     const animateDropdown = {
