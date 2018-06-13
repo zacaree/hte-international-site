@@ -9,7 +9,7 @@ import React, { Component } from 'react';
 import CountrySelect from './CountrySelect';
 import GoogleMapContainer from './GoogleMapContainer';
 import DistributorInfoCard from './DistributorInfoCard';
-
+// import salesForceDataRaw from './../../locations-europe.json';
 
 export default class PageFindADistributor extends Component {
   state = {
@@ -19,11 +19,17 @@ export default class PageFindADistributor extends Component {
   }
 
 
-  handleClick = (distributorInfo) => { this.setState(distributorInfo); }
+  handleClick = (distributorInfo) => {
+    console.log(distributorInfo[0]);
+    const stateInjection = { ...this.state, ...distributorInfo[0], zoom: 8 };
+    this.setState(stateInjection);
+  }
 
 
   render() {
-    const { name, street, address, country, phone, url, email, location, zoom } = this.state;
+    console.log('Parent state is:', this.state);
+
+    const { name, city, address, country, phone, url, email, location, zoom } = this.state;
     return (
       <div className="pageWrap page-findADistributor">
         <div className="wrap">
@@ -38,7 +44,7 @@ export default class PageFindADistributor extends Component {
 
               {name && (
                 <DistributorInfoCard
-                  distributorInfo={{ name, street, address, country, phone, url, email }}
+                  distributorInfo={{ name, city, address, country, phone, url, email }}
                 />
               )}
 
@@ -57,5 +63,6 @@ export default class PageFindADistributor extends Component {
     );
   }
 }
+
 
 // export default PageFindADistributor;

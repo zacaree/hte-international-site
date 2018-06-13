@@ -26,24 +26,30 @@ export default class DistributorInfoCard extends Component {
   };
 
   render() {
-    const { name, street, address, country, phone, url, email } = this.props.distributorInfo;
+    const { name, city, address, country, phone, url, email } = this.props.distributorInfo;
     return (
       <div className="distributorCard">
         <div className="accent" />
         <div className="ctr-top">
           <h3>{name}</h3>
-          <p>{street}</p>
           <p>{address}</p>
-          <p>{country}</p>
+          <p>{`${city}, ${country}`}</p>
         </div>
         <hr />
+
+
         <div className="ctr-bottom">
+          {phone &&
           <a href={`tel:${phone}`} className="alignItems">
             <IconPhone /><p>{phone}</p>
-          </a>
+          </a>}
+
+          {url &&
           <a href={url} target="_blank" className="alignItems">
             <IconWeb /><p>{url}</p>
-          </a>
+          </a>}
+
+          {email &&
           <CopyToClipboard onCopy={this.onCopy} text={email}>
             <div className="alignItems">
               <IconEmail />
@@ -59,7 +65,7 @@ export default class DistributorInfoCard extends Component {
                 </CSSTransition>
               </div>
             </div>
-          </CopyToClipboard>
+          </CopyToClipboard>}
         </div>
       </div>
     );
