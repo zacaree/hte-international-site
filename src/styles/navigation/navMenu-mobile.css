@@ -111,7 +111,7 @@
 /* Media Queries */
 /* ************* */
 
-@media (min-width: 961px) {
+@media (min-width: 901px) {
   .ctr-navMenu-mobile {
     display: none;
   }

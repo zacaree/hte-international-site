@@ -28,10 +28,6 @@ const Footer = () => (
             <Link to="/distribution"><li>European Distribution</li></Link>
           </ul>
 
-          <ul>
-            <h5>Support</h5>
-            <Link to="/contact-us"><li>Contact Us</li></Link>
-          </ul>
         </div>
 
         <div className="ctr-about">

@@ -104,7 +104,6 @@ export default class NavMenuMobile extends Component {
               </CSSTransition> */}
 
             </div>
-            <Link to="/dev/contact-us"><li>Contact Us</li></Link>
           </ul>
         </CSSTransition>
 

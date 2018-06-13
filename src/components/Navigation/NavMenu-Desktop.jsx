@@ -140,13 +140,6 @@ export default class NavMenuDesktop extends Component {
         </li>
 
 
-        <li>
-          <Link to="/contact-us" className="navItem">
-            <span>Contact Us</span>
-          </Link>
-        </li>
-
-
         <li className="navItem" onClick={this.handleClickLanguage} ref={(node) => { this.nodeLanguage = node; }} >
           <span>Language</span>
           <img src={uk} alt="uk" />

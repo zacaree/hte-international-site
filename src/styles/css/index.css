@@ -311,7 +311,7 @@ nav {
     display: none;
     justify-content: center;
     align-items: center;
-    width: 68px;
+    width: 58px;
     height: calc(100% - 12px);
     margin: 6px;
     cursor: pointer;
@@ -383,11 +383,11 @@ nav {
 /* ************* */
 /* Media Queries */
 /* ************* */
-@media (max-width: 960px) {
+@media (max-width: 900px) {
   .navMenu-desktop {
     display: none; } }
 
-@media (max-width: 960px) {
+@media (max-width: 900px) {
   nav .wrap-nav {
     padding-right: 0; }
   nav .menuBtn {
@@ -938,121 +938,6 @@ footer {
     height: 100%;
     background-color: #EAEAEA;
     border: 1px solid #DDDDDD; }
-
-.page-FAQ .row-offset-1rem {
-  margin-top: 100px;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start; }
-
-.page-FAQ .card {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: calc(33.33% - 30px);
-  margin: 0 15px 80px; }
-  @media (max-width: 960px) {
-    .page-FAQ .card {
-      width: calc(50% - 30px); } }
-  @media (max-width: 600px) {
-    .page-FAQ .card {
-      width: calc(100% - 30px); } }
-
-.page-FAQ .ctr-question {
-  padding: 24px;
-  min-height: 174px; }
-  .page-FAQ .ctr-question h2 {
-    margin-bottom: 8px; }
-
-.page-FAQ .txtBtn {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 24px;
-  height: 70px;
-  border-top: 1px solid #DDDDDD;
-  cursor: pointer; }
-  .page-FAQ .txtBtn svg {
-    fill: #303030; }
-  .page-FAQ .txtBtn:hover svg {
-    animation-name: arrowBounce;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out; }
-
-.page-FAQ .ctr-dropdown {
-  position: relative; }
-
-.page-FAQ .dropdown {
-  position: relative;
-  top: 0;
-  width: 100%;
-  padding: 0 24px;
-  background-color: #FFFFFF;
-  box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: height 0.3s ease-in-out; }
-
-.page-FAQ .ctr-answer {
-  padding-bottom: 1.4rem; }
-  .page-FAQ .ctr-answer span {
-    margin: 0;
-    line-height: 1.7rem; }
-  .page-FAQ .ctr-answer ul {
-    margin: 1rem 20px;
-    list-style: disc; }
-  .page-FAQ .ctr-answer li {
-    padding: 8px 0;
-    color: #555555;
-    line-height: 1.3rem; }
-
-@keyframes arrowBounce {
-  0% {
-    transform: translateY(0); }
-  50% {
-    transform: translateY(4px); }
-  100% {
-    transform: translateY(0); } }
-
-.page-contactUs .accentBar + p {
-  margin: 4rem 0 0 0; }
-
-.page-contactUs .row-offset-8 {
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-top: 1.5rem; }
-  .page-contactUs .row-offset-8 .ctr-input {
-    display: flex;
-    flex-direction: column;
-    width: calc(33.33% - 1rem);
-    margin: 0 8px 30px; }
-    @media (max-width: 960px) {
-      .page-contactUs .row-offset-8 .ctr-input {
-        width: calc(50% - 1rem); } }
-    @media (max-width: 600px) {
-      .page-contactUs .row-offset-8 .ctr-input {
-        width: calc(100% - 1rem); } }
-  .page-contactUs .row-offset-8 .ctr-textarea {
-    width: 100%;
-    margin: 0 8px 30px; }
-  .page-contactUs .row-offset-8 input, .page-contactUs .row-offset-8 textarea {
-    width: 100%;
-    padding: 1rem;
-    background-color: #EAEAEA;
-    border: 1px solid #EAEAEA;
-    color: #888888;
-    transition: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
-    .page-contactUs .row-offset-8 input:focus, .page-contactUs .row-offset-8 textarea:focus {
-      background-color: #FFFFFF;
-      border: 1px solid #DDDDDD; }
-  .page-contactUs .row-offset-8 input {
-    height: 60px; }
-  .page-contactUs .row-offset-8 .caption {
-    text-align: right; }
-  .page-contactUs .row-offset-8 .ctr-submit {
-    margin: 0 8px 30px; }
-  .page-contactUs .row-offset-8 .btn {
-    padding: 1.2rem 6rem; }
 
 .hoverImg {
   position: relative;
