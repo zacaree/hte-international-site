@@ -7,11 +7,10 @@ export default class CountryLi extends Component {
   }
 
   render() {
-    const country = this.props.country[0].toUpperCase() + this.props.country.slice(1);
     return (
       <li onClick={this.handleClick}>
         <img src={this.props.flag} alt={this.props.country} />
-        <span>{country}</span>
+        <span>{this.props.country}</span>
       </li>
     );
   }

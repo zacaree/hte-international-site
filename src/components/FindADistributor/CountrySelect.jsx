@@ -9,9 +9,10 @@
 import React, { Component } from 'react';
 import DropdownArrow from './../../img/DropdownArrow';
 import CountryLi from './CountryLi';
+import czechRepublic from './../../img/flags/czechRepublic.svg';
 import denmark from './../../img/flags/denmark.svg';
 import netherlands from './../../img/flags/netherlands.svg';
-// import uk from './../../img/flags/uk.svg';
+import uk from './../../img/flags/uk.svg';
 import belgium from './../../img/flags/belgium.svg';
 import france from './../../img/flags/france.svg';
 import germany from './../../img/flags/germany.svg';
@@ -43,11 +44,12 @@ export default class countrySelect extends Component {
   }
 
 
-  onCountrySelect = (country) => {
-    const selectedCountry = country[0].toUpperCase() + country.slice(1);
+  onCountrySelect = (selectedCountry) => {
     // eslint-disable-next-line
     const findClickedDistributor = this.transformSFData().filter((distributor) => {
       if (distributor.country === 'Latvia' && selectedCountry === 'Estonia') { // this is beacuse Latvia and Estonia share a distributor.
+        return distributor;
+      } else if (distributor.country === 'Ireland' && selectedCountry === 'United Kingdom') { // this is beacuse Ireland and UK share a distributor.
         return distributor;
       } else if (distributor.country === selectedCountry) {
         return distributor;
@@ -58,6 +60,7 @@ export default class countrySelect extends Component {
   }
 
 
+  // This all runs on component mount before anything is clicked
   transformSFData = () => {
     // reformat data for better readability
     function simplifyKeys(dist) {
@@ -91,7 +94,7 @@ export default class countrySelect extends Component {
       if (dist.ShippingCountry === 'ES') { dist.ShippingCountry = 'Spain'; }
       if (dist.ShippingCountry === 'FR') { dist.ShippingCountry = 'France'; }
       if (dist.ShippingCountry === 'DK') { dist.ShippingCountry = 'Denmark'; }
-      // if (dist.ShippingCountry === 'GB') { dist.ShippingCountry = 'United Kingdom'; }
+      if (dist.ShippingCountry === 'GB') { dist.ShippingCountry = 'United Kingdom'; }
       // if (dist.ShippingCountry === 'SK') { dist.ShippingCountry = 'Slovakia'; }
       // if (dist.ShippingCountry === 'PL') { dist.ShippingCountry = 'Poland'; }
       // if (dist.ShippingCountry === 'SE') { dist.ShippingCountry = 'Sweden'; }
@@ -151,21 +154,22 @@ export default class countrySelect extends Component {
         <div className="ctr-dropdown relative">
           <div className="dropdown" style={animateDropdown}>
             <ul>
-              <CountryLi flag={belgium} country="belgium" onCountrySelect={this.onCountrySelect} />
-              <CountryLi flag={denmark} country="denmark" onCountrySelect={this.onCountrySelect} />
-              <CountryLi flag={estonia} country="estonia" onCountrySelect={this.onCountrySelect} />
-              <CountryLi flag={france} country="france" onCountrySelect={this.onCountrySelect} />
-              <CountryLi flag={germany} country="germany" onCountrySelect={this.onCountrySelect} />
-              <CountryLi flag={ireland} country="ireland" onCountrySelect={this.onCountrySelect} />
-              <CountryLi flag={italy} country="italy" onCountrySelect={this.onCountrySelect} />
-              <CountryLi flag={latvia} country="latvia" onCountrySelect={this.onCountrySelect} />
-              <CountryLi flag={lithuania} country="lithuania" onCountrySelect={this.onCountrySelect} />
-              <CountryLi flag={netherlands} country="netherlands" onCountrySelect={this.onCountrySelect} />
+              <CountryLi flag={belgium} country="Belgium" onCountrySelect={this.onCountrySelect} />
+              <CountryLi flag={czechRepublic} country="Czech Republic" onCountrySelect={this.onCountrySelect} />
+              <CountryLi flag={denmark} country="Denmark" onCountrySelect={this.onCountrySelect} />
+              <CountryLi flag={estonia} country="Estonia" onCountrySelect={this.onCountrySelect} />
+              <CountryLi flag={france} country="France" onCountrySelect={this.onCountrySelect} />
+              <CountryLi flag={germany} country="Germany" onCountrySelect={this.onCountrySelect} />
+              <CountryLi flag={ireland} country="Ireland" onCountrySelect={this.onCountrySelect} />
+              <CountryLi flag={italy} country="Italy" onCountrySelect={this.onCountrySelect} />
+              <CountryLi flag={latvia} country="Latvia" onCountrySelect={this.onCountrySelect} />
+              <CountryLi flag={lithuania} country="Lithuania" onCountrySelect={this.onCountrySelect} />
+              <CountryLi flag={netherlands} country="Netherlands" onCountrySelect={this.onCountrySelect} />
               {/* <CountryLi flag={poland} country="poland" onCountrySelect={this.onCountrySelect} /> */}
-              <CountryLi flag={portugal} country="portugal" onCountrySelect={this.onCountrySelect} />
+              <CountryLi flag={portugal} country="Portugal" onCountrySelect={this.onCountrySelect} />
               {/* <CountryLi flag={slovakia} country="slovakia" onCountrySelect={this.onCountrySelect} /> */}
-              <CountryLi flag={spain} country="spain" onCountrySelect={this.onCountrySelect} />
-              {/* <CountryLi flag={uk} country="United Kingdom" onCountrySelect={this.onCountrySelect} /> */}
+              <CountryLi flag={spain} country="Spain" onCountrySelect={this.onCountrySelect} />
+              <CountryLi flag={uk} country="United Kingdom" onCountrySelect={this.onCountrySelect} />
             </ul>
           </div>
         </div>

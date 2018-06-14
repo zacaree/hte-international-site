@@ -28,7 +28,6 @@ export default class NavMenuDesktop extends Component {
 
     this.state = {
       aboutOpen: false,
-      supportOpen: false,
       languageOpen: false,
     };
   }
@@ -53,28 +52,6 @@ export default class NavMenuDesktop extends Component {
       return;
     }
     this.handleClickAbout();
-  }
-
-
-  //
-
-
-  handleClickSupport = () => {
-    if (!this.state.supportOpen) {
-      document.addEventListener('click', this.handleOutsideClickSupport, false);
-    } else {
-      document.removeEventListener('click', this.handleOutsideClickSupport, false);
-    }
-    this.setState({
-      supportOpen: !this.state.supportOpen,
-    });
-  }
-
-  handleOutsideClickSupport = (e) => {
-    if (this.nodeSupport.contains(e.target)) {
-      return;
-    }
-    this.handleClickSupport();
   }
 
 

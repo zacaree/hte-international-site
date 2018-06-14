@@ -29,7 +29,7 @@ export default class PageProducts extends Component {
           name: 'Raptor',
           img: Raptor,
           bgImg: RaptorBg,
-          description: 'Legendary Hustler performance and engineering in an entry-level zero-turn mower.',
+          description: 'Legendary Hustler performance and engineering in an entry-level zero-turn mower.',
           idealIcon: <IconHome />,
           idealText: 'Ideal for yards up to one acre',
           models: [
@@ -54,7 +54,7 @@ export default class PageProducts extends Component {
           name: 'Raptor SD',
           img: RaptorSD,
           bgImg: RaptorBg,
-          description: 'More features, more muscle, makes small work out of big jobs.',
+          description: 'More features, more muscle, makes small work out of big jobs.',
           idealIcon: <IconHome />,
           idealText: 'Ideal for yards up to three acres',
           models: [
@@ -99,9 +99,9 @@ export default class PageProducts extends Component {
           name: 'FasTrak',
           img: Fastrak,
           bgImg: FastrakBg,
-          description: 'Top-of-the-line residential zero-turn with most rugged frame, forks and deck in the industry.',
+          description: 'Hustler’s top-of-the-line residential zero-turn that offers commercial-grade productivity.',
           idealIcon: <IconHome />,
-          idealText: 'Ideal for three to six acre estates',
+          idealText: 'Ideal for residential estates',
           models: [
             {
               modelNum: '933424CE',
@@ -124,7 +124,7 @@ export default class PageProducts extends Component {
           name: 'FasTrak SDX',
           img: FastrakSDX,
           bgImg: FastrakBg,
-          description: 'Stronger, faster, tougher, with commercial-grade transmissions, upgraded custom seat and more.',
+          description: 'Stronger, faster, tougher, with commercial-grade transmissions, upgraded custom seat and more.',
           idealIcon: '',
           idealText: '',
           models: [
@@ -154,7 +154,7 @@ export default class PageProducts extends Component {
           name: 'X-ONE',
           img: XONE,
           bgImg: XONEBg,
-          description: 'Commercial zero-turn mower built for all-day, every day performance.',
+          description: 'Commercial zero-turn mower built for all-day, every day performance.',
           idealIcon: '',
           idealText: '',
           models: [
@@ -174,7 +174,7 @@ export default class PageProducts extends Component {
           name: 'Super Z',
           img: SuperZ,
           bgImg: CommercialBg,
-          description: 'High-performance zero-turn with unsurpassed strength, reliability, speed, productivity, and a warranty to match.',
+          description: 'High-performance zero-turn with unsurpassed strength, reliability, speed, productivity, and a warranty to match.',
           idealIcon: '',
           idealText: '',
           models: [
@@ -194,7 +194,7 @@ export default class PageProducts extends Component {
           name: 'Hustler Z Diesel',
           img: HustlerZDiesel,
           bgImg: CommercialBg,
-          description: 'The power and precision of a Hustler, the stamina of a diesel.',
+          description: 'The power and precision of a Hustler, the stamina of a diesel.',
           idealIcon: '',
           idealText: '',
           models: [
@@ -224,7 +224,7 @@ export default class PageProducts extends Component {
           name: 'TrimStar',
           img: Trimstar,
           bgImg: CommercialBg,
-          description: 'Innovative and easy-to-use walk-behind featuring Patented H-Bar steering.',
+          description: 'Innovative and easy-to-use walk-behind featuring patented H-Bar steering.',
           idealIcon: '',
           idealText: '',
           models: [

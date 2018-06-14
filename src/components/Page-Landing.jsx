@@ -24,7 +24,7 @@ const PageLanding = () => (
         <div className="cta">
           <Link to="/hustler-story" className="bgImg" style={{ backgroundImage: `url(${CTAImg1})` }} />
           <h2>Hustler&#39;s Story</h2>
-          <p>First, we make the best. Then, we make it better. Hustler® Turf introduced the world’s first zero-turn mower in 1964…</p>
+          <p>We make the best. Then, we make it better. In 1964, we introduced the Hustler, the world’s first zero-turn mower…</p>
           <Link to="/hustler-story" className="textBtn">
             <h3>Learn More</h3>
             <KeyboardArrowRight />

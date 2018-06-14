@@ -18,7 +18,8 @@ const Footer = () => (
         <div className="ctr-pageListings">
           <ul>
             <h5>Products</h5>
-            <Link to="/products"><li>All Products</li></Link>
+            <Link to="/products"><li>View Products</li></Link>
+            <Link to="/find-a-distributor"><li>Find a Distributor</li></Link>
           </ul>
 
           <ul>
@@ -33,7 +34,7 @@ const Footer = () => (
         <div className="ctr-about">
           <h5>Hustler Turf Equipment</h5>
           <p>Hustler manufactures zero-turn mowers for the residential and commercial mower markets. Our strength, innovation and performance set the standard for the industry.</p>
-          <p>Hustler – Engineering Performance.</p>
+          <p>Hustler Turf – Engineering Performance.</p>
           <div className="ctr-social">
             <h5>Follow Us</h5>
             <a href="http://www.youtube.com/HustlerTurfEquip"><FontAwesomeIcon icon={faYoutube} size="lg" /></a>

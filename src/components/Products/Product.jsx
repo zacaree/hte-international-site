@@ -27,7 +27,7 @@ export default class Product extends Component {
     });
   }
 
-  trimstarDescription = () => ({ __html: '<p>Innovative and easy-to-use walk-behind featuring Patented H-Bar<sup>&reg;</sup> steering.</p>' })
+  trimstarDescription = () => ({ __html: '<p>Innovative and easy-to-use walk-behind featuring patented H-Bar<sup>&reg;</sup> steering.</p>' })
 
 
   render() {

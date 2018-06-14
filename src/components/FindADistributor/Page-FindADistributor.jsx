@@ -20,15 +20,12 @@ export default class PageFindADistributor extends Component {
 
 
   handleClick = (distributorInfo) => {
-    console.log(distributorInfo[0]);
     const stateInjection = { ...this.state, ...distributorInfo[0], zoom: 8 };
     this.setState(stateInjection);
   }
 
 
   render() {
-    console.log('Parent state is:', this.state);
-
     const { name, city, address, country, phone, url, email, location, zoom } = this.state;
     return (
       <div className="pageWrap page-findADistributor">
@@ -38,7 +35,7 @@ export default class PageFindADistributor extends Component {
 
           <div className="row-offset-1rem">
             <div className="ctr-left">
-              <p className="bodyCopy">Make a selection to find distributor information for your country.</p>
+              <p className="bodyCopy">Make a selection to find information on the distributor nearest you.</p>
 
               <CountrySelect country={country} handleClick={this.handleClick} />
 

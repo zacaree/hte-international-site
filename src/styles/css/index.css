@@ -307,17 +307,6 @@ nav {
     transform: translateX(-120%); }
   100% {
     transform: translateX(0); } }
-  nav .menuBtn {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 58px;
-    height: calc(100% - 12px);
-    margin: 6px;
-    cursor: pointer;
-    transition: 0.3s; }
-  nav .menuBtn:hover {
-    background-color: #EFF3F5; }
 
 .navMenu-desktop {
   position: relative;
@@ -380,18 +369,69 @@ nav {
     .navMenu-desktop .dropdown hr {
       margin: 6px 0; }
 
-/* ************* */
-/* Media Queries */
-/* ************* */
-@media (max-width: 900px) {
-  .navMenu-desktop {
+.navMenu-mobile .menuBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  height: calc(100% - 12px);
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.3s; }
+  .navMenu-mobile .menuBtn:hover {
+    background-color: #EFF3F5; }
+
+.navMenu-mobile .mobileList {
+  position: absolute;
+  top: 76px;
+  right: 6px;
+  min-width: 260px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 6px;
+  background-color: #FFFFFF;
+  box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  transition: 0.3s ease-in-out; }
+
+.navMenu-mobile .navItem {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.8rem 1.8rem; }
+  .navMenu-mobile .navItem span, .navMenu-mobile .navItem li {
+    color: #555555;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase; }
+  .navMenu-mobile .navItem:first-child {
+    padding-top: 1.4rem; }
+  .navMenu-mobile .navItem:last-child {
+    padding-bottom: 1.4rem; }
+  .navMenu-mobile .navItem:hover {
+    background-color: #EAEAEA; }
+  .navMenu-mobile .navItem svg {
+    width: 18px;
+    height: 18px;
+    fill: #555555;
+    margin: 0 -4px -1px 3px;
+    transition: 0.3s; }
+  .navMenu-mobile .navItem img {
+    width: 21px;
+    height: 15px;
+    margin: -1px 0 0 10px; }
+  .navMenu-mobile .navItem hr {
+    margin: 6px 0; }
+
+@media (min-width: 901px) {
+  .navMenu-mobile {
     display: none; } }
 
 @media (max-width: 900px) {
   nav .wrap-nav {
     padding-right: 0; }
-  nav .menuBtn {
-    display: flex; } }
+  .navMenu-desktop {
+    display: none; } }
 
 @media (max-width: 640px) {
   nav {
@@ -401,8 +441,11 @@ nav {
       nav .ctr-logo img {
         width: 170px;
         height: 30px; }
-    nav .menuBtn {
-      width: 48px; } }
+  .navMenu-mobile .mobileList {
+    top: 66px;
+    left: 6px; }
+  .navMenu-mobile .menuBtn {
+    width: 48px; } }
 
 footer {
   margin-top: 120px;
