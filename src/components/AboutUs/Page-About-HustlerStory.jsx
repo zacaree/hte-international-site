@@ -5,7 +5,7 @@ import HistoryImg from './../../img/early-excel.jpg';
 const PageHustlerStory = () => (
   <div className="pageWrap page-hustlerStory">
     <div className="wrap">
-      <h1>Hustler's Story</h1>
+      <h1>Hustler&#39;s Story</h1>
       <div className="accentBar" />
 
       <div className="row-offset-1rem">

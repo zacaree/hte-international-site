@@ -165,6 +165,7 @@ input, select, textarea, a
 .relative
   position: relative
 
+// Great for wrapping items that I want on a line side by side
 .alignItems
   display: flex
   align-items: center
@@ -196,6 +197,7 @@ section
 .row-offset-1rem
   display: flex
   margin: 0 -1rem
+  margin-top: 4rem
 
 .accentBar
   width: 80px
@@ -318,7 +320,12 @@ button
 // Media Queries 
 // ************* 
 
-@media (max-width: 420px)
+@media (max-width: 520px)
+  .wrap
+    padding-top: 5rem
+
+  .row-offset-1rem
+    margin-top: 3rem
 
   h1
     // margin-bottom: 1.4rem

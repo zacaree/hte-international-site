@@ -1,9 +1,6 @@
 
 .page-hustlerStory
 
-  .row-offset-1rem
-    margin-top: 4rem
-
   .ctr-left
     flex: 1
     margin: 0 1rem
@@ -19,40 +16,57 @@
       width: 100%
       box-shadow: $deepShadow
 
+  @media (max-width: 768px)
+    .row-offset-1rem
+      flex-direction: column-reverse
 
+    .ctr-right
+      margin: 0 1rem 3rem
 
 
 
 .page-whyHustler
 
-  .row-offset-1rem
-    margin-top: 4rem
+  h2
+    margin-bottom: 0.6rem
 
-  .ctr-left
-    flex: 1.2
-    margin: 0 1rem
+  p
+    margin-bottom: 3rem
 
-    h2
-      margin-bottom: 0.6rem
+  sup
+    font-size: 1.2rem
 
-    p
-      margin-bottom: 3rem
+  
+  @media (max-width: 859px)
+    .ctr-contentLg
+      display: none
 
-    sup
-      font-size: 1.2rem
+    .ctr-contentSm
+      flex-direction: column
+      margin-left: auto
+      margin-right: auto
+      max-width: 500px
 
-  .ctr-right
-    flex: 2
-    margin: 0 1rem 0 4rem
 
+
+  @media (min-width: 860px)
+    .ctr-contentSm
+      display: none
+
+    .ctr-contentLg
+
+      .ctr-left
+        flex: 1.2
+        margin: 0 1rem
+
+      .ctr-right
+        flex: 2
+        margin: 0 1rem 0 4rem
 
 
 
 
 .page-europeanDistribution
-
-  .row-offset-1rem
-    margin-top: 4rem
 
   .ctr-left
     flex: 1
@@ -68,3 +82,14 @@
     img
       width: 100%
       box-shadow: $deepShadow
+  
+  @media (max-width: 768px)
+    .row-offset-1rem
+      flex-direction: column-reverse
+
+    .ctr-right
+      margin: 0 1rem 3rem
+
+  @media (max-width: 420px)
+    .btn
+      width: 100%

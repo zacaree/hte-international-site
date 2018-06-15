@@ -9,7 +9,7 @@ import KeyboardArrowRight from './../img/KeyboardArrowRight';
 
 
 const PageLanding = () => (
-  <div className="pageWrap">
+  <div className="pageWrap pageLanding">
     <div className="ctr-hero" style={{ backgroundImage: `url(${HeroImg})` }} >
       <h1>Maneuver around life’s</h1>
       <h1>most difficult obstacle…time.</h1>
@@ -19,7 +19,7 @@ const PageLanding = () => (
       </Link>
     </div>
 
-    <section className="section-cta wrap">
+    <div className="section-cta wrap">
       <div className="row-offset-1rem">
         <div className="cta">
           <Link to="/hustler-story" className="bgImg" style={{ backgroundImage: `url(${CTAImg1})` }} />
@@ -51,7 +51,7 @@ const PageLanding = () => (
           </Link>
         </div>
       </div>
-    </section>
+    </div>
 
 
   </div>
