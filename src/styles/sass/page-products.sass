@@ -1,8 +1,5 @@
 
-.ctr-productsPage
-
-
-
+.page-products
 
   // *************
   // Products Grid
@@ -32,10 +29,10 @@
       flex-direction: column
       cursor: pointer
       
-      &:hover .ctr-productImg
+      &:hover .ctr-productImg--grid
         transform: translateY(3px)
 
-    .ctr-productImg
+    .ctr-productImg--grid
       pointer-events: none
       position: relative
       bottom: -16px
@@ -174,7 +171,7 @@
     .ctr-productInfo
       position: absolute
       top: 0
-      width: 360px
+      max-width: 345px
       padding: 50px 30px
 
       h2
@@ -193,11 +190,12 @@
       span
         color: $l1
 
-    .ctr-productImg
+    .ctr-productImg--modal
       position: absolute
       bottom: -120px
       right: 10px
-      width: 380px
+      width: 100%
+      max-width: 380px
 
       img
         width: 100%
@@ -240,6 +238,23 @@
 
 
 
+
+
   // *************
   // Media Queries
   // *************
+
+  @media (max-width: 500px)
+    .productModal
+
+      .productBgImg
+        height: 380px
+
+      .ctr-productImg--modal
+        right: 50%
+        transform: translateX(50%)
+      
+
+  @media (max-width: 400px)
+    .row-offset-1rem .ctr-card
+      margin-top: 150px

@@ -23,27 +23,29 @@ import usa from './../../img/flags/usa.svg';
 export default class NavMenuMobile extends Component {
   state = {
     navMenuVisible: false,
-    // brandDropdownVisible: false,
   };
 
 
   handleClickNav = () => {
-    // if (!this.state.navMenuVisible) {
-    //   document.addEventListener('click', this.handleClickOutsideNav, false);
-    // } else {
-    //   document.removeEventListener('click', this.handleClickOutsideNav, false);
-    // }
+    if (!this.state.navMenuVisible) {
+      document.addEventListener('click', this.handleClickOutsideNav, false);
+    } else {
+      document.removeEventListener('click', this.handleClickOutsideNav, false);
+    }
     this.setState({
       navMenuVisible: !this.state.navMenuVisible,
     });
   }
 
-  // handleClickOutsideNav(e) {
-  //   if (this.node.contains(e.target)) {
-  //     return;
-  //   }
-  //   this.handleClickNav();
-  // }
+  handleClickOutsideNav = (e) => {
+    if (this.nodeAbout.contains(e.target) || this.nodeLanguage.contains(e.target)) {
+      return;
+    }
+    this.handleClickNav();
+  }
+
+
+  //
 
 
   handleClickAbout = () => {
@@ -89,9 +91,9 @@ export default class NavMenuMobile extends Component {
 
   render() {
     return (
-      <div className="navMenu-mobile">
+      <div className="navMenu-mobile" >
 
-        <div className="menuBtn" onClick={this.handleClickNav} >
+        <div className="menuBtn" onClick={this.handleClickNav}>
           <MenuIcon
             isOpen={this.state.navMenuVisible}
             width={20}

@@ -12,6 +12,7 @@ import FastrakSDX from './../../img/products/FastrakSDX_10x9ratio.png';
 import XONE from './../../img/products/XONE_10x9ratio.png';
 import SuperZ from './../../img/products/SuperZ_10x9ratio.png';
 import HustlerZDiesel from './../../img/products/HustlerZDiesel_10x9ratio.png';
+import SuperS from './../../img/products/SuperS_10x9ratio.png';
 import Trimstar from './../../img/products/Trimstar_10x9ratio.png';
 import RaptorBg from './../../img/products/RaptorBg_700x360ratio.jpg';
 import FastrakBg from './../../img/products/FastrakBg_700x360ratio.jpg';
@@ -31,22 +32,22 @@ export default class PageProducts extends Component {
           bgImg: RaptorBg,
           description: 'Legendary Hustler performance and engineering in an entry-level zero-turn mower.',
           idealIcon: <IconHome />,
-          idealText: 'Ideal for yards up to one acre',
+          idealText: 'Ideal for yards up to half a hectare (1 acre)',
           models: [
             {
               modelNum: '938316CE',
-              deck: '36” Side Discharge',
-              engine: '15hp Kawasaki FR541',
+              deck: '91cm (36in) Side Discharge',
+              engine: '11.2kW (15hp) Kawasaki',
             },
             {
               modelNum: '938324CE',
-              deck: '42” Side Discharge',
-              engine: '21.5hp Kawasaki FR651',
+              deck: '107cm (42in) Side Discharge',
+              engine: '16kW (21.5hp) Kawasaki',
             },
             {
               modelNum: '938274CE',
-              deck: '52” Side Discharge',
-              engine: '23hp Kawasaki FR691',
+              deck: '132cm (52in) Side Discharge',
+              engine: '17.2kW (23hp) Kawasaki',
             },
           ],
         },
@@ -56,22 +57,22 @@ export default class PageProducts extends Component {
           bgImg: RaptorBg,
           description: 'More features, more muscle, makes small work out of big jobs.',
           idealIcon: <IconHome />,
-          idealText: 'Ideal for yards up to three acres',
+          idealText: 'Ideal for yards up to 1 1/2 hectares (3 acres)',
           models: [
             {
               modelNum: '938357CE',
-              deck: '36” Side Discharge',
-              engine: '21.5 Kawasaki FR651',
+              deck: '91cm (36in) Side Discharge',
+              engine: '16kW (21.5hp) Kawasaki',
             },
             {
               modelNum: '938373CE',
-              deck: '42” Side Discharge',
-              engine: '21.5hp Kawasaki FR651',
+              deck: '107cm (42in) Side Discharge',
+              engine: '16kW (21.5hp) Kawasaki',
             },
             {
               modelNum: '938340CE',
-              deck: '48” Side Discharge',
-              engine: '23hp Kawasaki FR691',
+              deck: '122cm (48in) Side Discharge',
+              engine: '17.2kW (23hp) Kawasaki',
             },
           ],
         },
@@ -85,13 +86,13 @@ export default class PageProducts extends Component {
           models: [
             {
               modelNum: '938415CE',
-              deck: '48” Side Discharge',
-              engine: '23hp Kawasaki FR691',
+              deck: '122cm (48in) Side Discharge',
+              engine: '17.2kW (23hp) Kawasaki',
             },
             {
               modelNum: '935452CE',
-              deck: '48” Rear Discharge',
-              engine: '23hp Kawasaki FR691',
+              deck: '122cm (48in) Rear Discharge',
+              engine: '17.2kW (23hp) Kawasaki',
             },
           ],
         },
@@ -105,18 +106,18 @@ export default class PageProducts extends Component {
           models: [
             {
               modelNum: '933424CE',
-              deck: '48” Side Discharge',
-              engine: '23hp Kawasaki FR691',
+              deck: '122cm (48in) Side Discharge',
+              engine: '17.2kW (23hp) Kawasaki',
             },
             {
               modelNum: '934851CE',
-              deck: '48” Rear Discharge',
-              engine: '23hp Kawasaki FR691',
+              deck: '122cm (48in) Rear Discharge',
+              engine: '17.2kW (23hp) Kawasaki',
             },
             {
               modelNum: '933432CE',
-              deck: '54” Side Discharge',
-              engine: '23hp Kawasaki FR691',
+              deck: '137cm (54in) Side Discharge',
+              engine: '17.2kW (23hp) Kawasaki',
             },
           ],
         },
@@ -130,23 +131,23 @@ export default class PageProducts extends Component {
           models: [
             {
               modelNum: '933945CE',
-              deck: '48” Side Discharge',
-              engine: '22hp Kawasaki FX691',
+              deck: '122cm (48in) Side Discharge',
+              engine: '16.4kW (22hp) Kawasaki',
             },
             {
               modelNum: '934869CE',
-              deck: '48” Rear Discharge',
-              engine: '22hp Kawasaki FX691',
+              deck: '122cm (48in) Rear Discharge',
+              engine: '16.4kW (22hp) Kawasaki',
             },
             {
               modelNum: '933952CE',
-              deck: '54” Side Discharge',
-              engine: '22hp Kawasaki FX691',
+              deck: '137cm (54in) Side Discharge',
+              engine: '16.4kW (22hp) Kawasaki',
             },
             {
               modelNum: '933960CE',
-              deck: '60” Side Discharge',
-              engine: '23.5hp Kawasaki FX730',
+              deck: '152cm (60in) Side Discharge',
+              engine: '17.5kW (23.5hp) Kawasaki',
             },
           ],
         },
@@ -160,13 +161,13 @@ export default class PageProducts extends Component {
           models: [
             {
               modelNum: '936237CE',
-              deck: '52” Side Discharge',
-              engine: '27hp Kawasaki FX850',
+              deck: '132cm (52in) Side Discharge',
+              engine: '20.1kW (27hp) Kawasaki',
             },
             {
               modelNum: '936401CE',
-              deck: '54” Rear Discharge',
-              engine: '27hp Kawasaki FX850',
+              deck: '137cm (54in) Rear Discharge',
+              engine: '20.1kW (27hp) Kawasaki',
             },
           ],
         },
@@ -180,13 +181,13 @@ export default class PageProducts extends Component {
           models: [
             {
               modelNum: '935148CE',
-              deck: '60” Side Discharge',
-              engine: '27hp Kawasaki FX850',
+              deck: '152cm (60in) Side Discharge',
+              engine: '20.1kW (27hp) Kawasaki',
             },
             {
               modelNum: '935130CE',
-              deck: '60” Rear Discharge',
-              engine: '27hp Kawasaki FX850',
+              deck: '152cm (60in) Rear Discharge',
+              engine: '20.1kW (27hp) Kawasaki',
             },
           ],
         },
@@ -200,23 +201,43 @@ export default class PageProducts extends Component {
           models: [
             {
               modelNum: '938175CE',
-              deck: '54” Side Discharge',
-              engine: '25hp Shibaura',
+              deck: '137cm (54in) Side Discharge',
+              engine: '18.6kW (25hp) Shibaura',
             },
             {
               modelNum: '938183CE',
-              deck: '60” Side Discharge',
-              engine: '25hp Shibaura',
+              deck: '152cm (60in) Side Discharge',
+              engine: '18.6kW (25hp) Shibaura',
             },
             {
               modelNum: '938191CE',
-              deck: '60” Rear Discharge',
-              engine: '25hp Shibaura',
+              deck: '152cm (60in) Rear Discharge',
+              engine: '18.6kW (25hp) Shibaura',
             },
             {
               modelNum: '938217CE',
-              deck: '72” Rear Discharge',
-              engine: '25hp Shibaura',
+              deck: '183cm (72in) Rear Discharge',
+              engine: '18.6kW (25hp) Shibaura',
+            },
+          ],
+        },
+        {
+          name: 'Super S',
+          img: SuperS,
+          bgImg: CommercialBg,
+          description: 'Stand-on with exceptional compact stance for tight spaces and trailering.',
+          idealIcon: '',
+          idealText: '',
+          models: [
+            {
+              modelNum: '',
+              deck: '91cm (36in) Side Discharge',
+              engine: '11.2kW (15hp) Kawasaki',
+            },
+            {
+              modelNum: '',
+              deck: '122cm (48in) Side Discharge',
+              engine: '16.4kW (22hp) Kawasaki',
             },
           ],
         },
@@ -230,18 +251,18 @@ export default class PageProducts extends Component {
           models: [
             {
               modelNum: '930388CE',
-              deck: '36” Side Discharge',
-              engine: '14.5hp Kawasaki FS481',
+              deck: '91cm (36in) Side Discharge',
+              engine: '10.8kW (14.5hp) Kawasaki',
             },
             {
               modelNum: '930396CE',
-              deck: '48” Side Discharge',
-              engine: '15hp Kawasaki FS541',
+              deck: '122cm (48in) Side Discharge',
+              engine: '11.2kW (15hp) Kawasaki',
             },
             {
               modelNum: '930644CE',
-              deck: '48” Rear Discharge',
-              engine: '15hp Kawasaki FS541',
+              deck: '122cm (48in) Rear Discharge',
+              engine: '11.2kW (15hp) Kawasaki',
             },
           ],
         },
@@ -252,7 +273,7 @@ export default class PageProducts extends Component {
 
   render() {
     return (
-      <div className="pageWrap ctr-productsPage">
+      <div className="pageWrap page-products">
 
         <div className="wrap">
           <h1>All Products - Europe</h1>

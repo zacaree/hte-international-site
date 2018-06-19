@@ -27,7 +27,7 @@ export default class Product extends Component {
     });
   }
 
-  trimstarDescription = () => ({ __html: '<p>Innovative and easy-to-use walk-behind featuring patented H-Bar<sup>&reg;</sup> steering.</p>' })
+  trimstarDescription = () => ({ __html: '<p>Innovative and easy-to-use walk-behind featuring patented H-Bar<sup>&reg;</sup> steering.</p>' })
 
 
   render() {
@@ -37,7 +37,7 @@ export default class Product extends Component {
       <React.Fragment>
         <div className="ctr-card">
           <div className="card" onClick={this.toggleModal} >
-            <div className="ctr-productImg">
+            <div className="ctr-productImg--grid">
               <img src={img} alt='52&quot; Raptor' />
             </div>
             <div className="ctr-productInfo">

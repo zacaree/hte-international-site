@@ -55,7 +55,7 @@ export default class ProductModal extends Component {
                 )}
               </div>
 
-              <div className="ctr-productImg">
+              <div className="ctr-productImg--modal">
                 <img src={img} alt='52&quot; Raptor' />
               </div>
             </div>

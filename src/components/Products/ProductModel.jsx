@@ -7,15 +7,15 @@ import React from 'react';
 
 
 const ProductModel = (props) => {
-  const { modelNum, deck, engine } = props.model;
+  const { deck, engine } = props.model;
 
 
   return (
     <div className="ctr-model">
-      <p className="modelNum">
+      {/* <p className="modelNum">
         <span className="bold">Model: </span>
         <span>{modelNum}</span>
-      </p>
+      </p> */}
       <p>
         <span className="bold">Deck: </span>
         <span>{deck}</span>
