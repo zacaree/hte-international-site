@@ -16,7 +16,6 @@ const PageLanding = () => (
       <div className="pageWrap pageLanding">
         <div className="ctr-hero" style={{ backgroundImage: `url(${HeroImg})` }} >
           <TextHero language={context.language} />
-          <p>im inside {context.language}</p>
           <Link to="/products">
             <Btn text="See the Lineup" />
           </Link>

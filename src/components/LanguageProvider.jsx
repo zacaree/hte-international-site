@@ -16,6 +16,12 @@ export default class LanguageProvider extends Component {
           toLatin: () => this.setState({
             language: 'Latin',
           }),
+          toFrench: () => this.setState({
+            language: 'French',
+          }),
+          toEnglish: () => this.setState({
+            language: 'English',
+          }),
         }}
       >
         {this.props.children}

@@ -4,9 +4,8 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Headroom from 'react-headroom';
-// import PropTypes from 'prop-types';
 import LanguageProvider from './LanguageProvider';
-
+// import PropTypes from 'prop-types';
 import Nav from './Navigation/Nav';
 import PageLanding from './LandingPage/Page-Landing';
 import PageProducts from './Products/Page-Products';

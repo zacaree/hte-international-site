@@ -325,7 +325,7 @@ nav {
     padding: 0 14px;
     cursor: pointer;
     transition: 0.3s; }
-    .navMenu-desktop .navItem span, .navMenu-desktop .navItem li {
+    .navMenu-desktop .navItem span, .navMenu-desktop .navItem .dropdownItem {
       color: #555555;
       font-weight: 700;
       font-size: 0.8rem;
@@ -354,18 +354,16 @@ nav {
     box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.1);
     white-space: nowrap;
     transition: 0.3s ease-in-out; }
-    .navMenu-desktop .dropdown a {
+    .navMenu-desktop .dropdown .dropdownItem {
       display: flex;
+      align-items: center;
       padding: 0.8rem 1.8rem; }
-      .navMenu-desktop .dropdown a:first-of-type {
+      .navMenu-desktop .dropdown .dropdownItem:first-of-type {
         padding-top: 1.4rem; }
-      .navMenu-desktop .dropdown a:last-of-type {
+      .navMenu-desktop .dropdown .dropdownItem:last-of-type {
         padding-bottom: 1.4rem; }
-      .navMenu-desktop .dropdown a:hover {
+      .navMenu-desktop .dropdown .dropdownItem:hover {
         background-color: #EAEAEA; }
-    .navMenu-desktop .dropdown li {
-      display: flex;
-      align-items: center; }
     .navMenu-desktop .dropdown img {
       width: 21px;
       height: 15px; }

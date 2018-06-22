@@ -83,43 +83,43 @@ export default class NavMenuDesktop extends Component {
 
   render() {
     return (
-      <ul className="navMenu-desktop">
+      <LanguageContext.Consumer>
+        {context => (
+          <ul className="navMenu-desktop">
 
 
-        <li>
-          <Link to="/products" className="navItem">
-            <span>Products</span>
-          </Link>
-        </li>
+            <li>
+              <Link to="/products" className="navItem">
+                <span>Products</span>
+              </Link>
+            </li>
 
 
-        <li className="navItem" onClick={this.handleClickAbout} ref={(node) => { this.nodeAbout = node; }} >
-          <span>About Us</span>
-          <DropdownArrow toggleArrow={this.state.aboutOpen} />
-          <CSSTransition
-            in={this.state.aboutOpen}
-            timeout={300}
-            classNames="fadeInUp"
-            unmountOnExit
-          >
-            <ul className="dropdown">
-              <Link to="/hustler-story"><li>Hustler’s Story</li></Link>
-              <Link to="/why-hustler"><li>Why Hustler’s a Better Mower</li></Link>
-              <Link to="/distribution"><li>European Distribution</li></Link>
-            </ul>
-          </CSSTransition>
-        </li>
+            <li className="navItem" onClick={this.handleClickAbout} ref={(node) => { this.nodeAbout = node; }} >
+              <span>About Us</span>
+              <DropdownArrow toggleArrow={this.state.aboutOpen} />
+              <CSSTransition
+                in={this.state.aboutOpen}
+                timeout={300}
+                classNames="fadeInUp"
+                unmountOnExit
+              >
+                <ul className="dropdown">
+                  <Link to="/hustler-story" className="dropdownItem">Hustler’s Story</Link>
+                  <Link to="/why-hustler" className="dropdownItem">Why Hustler’s a Better Mower</Link>
+                  <Link to="/distribution" className="dropdownItem">European Distribution</Link>
+                </ul>
+              </CSSTransition>
+            </li>
 
 
-        <li>
-          <Link to="/find-a-distributor" className="navItem">
-            <span>Find A Distributor</span>
-          </Link>
-        </li>
+            <li>
+              <Link to="/find-a-distributor" className="navItem">
+                <span>Find A Distributor</span>
+              </Link>
+            </li>
 
 
-        <LanguageContext.Consumer>
-          {context => (
             <li className="navItem" onClick={this.handleClickLanguage} ref={(node) => { this.nodeLanguage = node; }} >
               <span>Language</span>
               <img src={uk} alt="uk" />
@@ -131,28 +131,28 @@ export default class NavMenuDesktop extends Component {
                 unmountOnExit
               >
                 <ul className="dropdown">
-                  <li onClick={context.toLatin} ><img src={denmark} alt="denmark" /><span>Danish</span></li>
-                  <Link to="/"><li><img src={netherlands} alt="netherlands" /><span>Dutch</span></li></Link>
-                  <Link to="/"><li><img src={uk} alt="uk" /><span>English</span></li></Link>
-                  <Link to="/"><li><img src={belgium} alt="belgium" /><span>Flemish</span></li></Link>
-                  <Link to="/"><li><img src={france} alt="france" /><span>French</span></li></Link>
-                  <Link to="/"><li><img src={germany} alt="germany" /><span>German</span></li></Link>
-                  <Link to="/"><li><img src={italy} alt="italy" /><span>Italian</span></li></Link>
-                  <Link to="/"><li><img src={portugal} alt="portugal" /><span>Portugese</span></li></Link>
-                  <Link to="/"><li><img src={spain} alt="spain" /><span>Spanish</span></li></Link>
-                  <Link to="/"><li><img src={sweden} alt="sweden" /><span>Swedish</span></li></Link>
+                  <li className="dropdownItem" onClick={context.toLatin} ><img src={denmark} alt="denmark" /><span>Danish</span></li>
+                  <li className="dropdownItem"><img src={netherlands} alt="netherlands" /><span>Dutch</span></li>
+                  <li className="dropdownItem" onClick={context.toEnglish}><img src={uk} alt="uk" /><span>English</span></li>
+                  <li className="dropdownItem"><img src={belgium} alt="belgium" /><span>Flemish</span></li>
+                  <li className="dropdownItem" onClick={context.toFrench}><img src={france} alt="france" /><span>French</span></li>
+                  <li className="dropdownItem"><img src={germany} alt="germany" /><span>German</span></li>
+                  <li className="dropdownItem"><img src={italy} alt="italy" /><span>Italian</span></li>
+                  <li className="dropdownItem"><img src={portugal} alt="portugal" /><span>Portugese</span></li>
+                  <li className="dropdownItem"><img src={spain} alt="spain" /><span>Spanish</span></li>
+                  <li className="dropdownItem"><img src={sweden} alt="sweden" /><span>Swedish</span></li>
                   <hr />
                   <div>
-                    <a href="https://www.hustlerturf.com/"><li><img src={usa} alt="USA" /><span>HustlerTurf.com</span></li></a>
+                    <a href="https://www.hustlerturf.com/" className="dropdownItem"><img src={usa} alt="USA" /><span>HustlerTurf.com</span></a>
                   </div>
                 </ul>
               </CSSTransition>
             </li>
+
+
+          </ul>
           )}
-        </LanguageContext.Consumer>
-
-
-      </ul>
+      </LanguageContext.Consumer>
     );
   }
 }
