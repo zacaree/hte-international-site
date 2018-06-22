@@ -5,6 +5,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
+import LanguageContext from './../LanguageContext';
 import DropdownArrow from './../../img/DropdownArrow';
 import denmark from './../../img/flags/denmark.svg';
 import netherlands from './../../img/flags/netherlands.svg';
@@ -117,34 +118,38 @@ export default class NavMenuDesktop extends Component {
         </li>
 
 
-        <li className="navItem" onClick={this.handleClickLanguage} ref={(node) => { this.nodeLanguage = node; }} >
-          <span>Language</span>
-          <img src={uk} alt="uk" />
-          {/* <DropdownArrow toggleArrow={this.state.languageOpen} /> */}
-          <CSSTransition
-            in={this.state.languageOpen}
-            timeout={300}
-            classNames="fadeInUp"
-            unmountOnExit
-          >
-            <ul className="dropdown">
-              <Link to="/"><li><img src={denmark} alt="denmark" /><span>Danish</span></li></Link>
-              <Link to="/"><li><img src={netherlands} alt="netherlands" /><span>Dutch</span></li></Link>
-              <Link to="/"><li><img src={uk} alt="uk" /><span>English</span></li></Link>
-              <Link to="/"><li><img src={belgium} alt="belgium" /><span>Flemish</span></li></Link>
-              <Link to="/"><li><img src={france} alt="france" /><span>French</span></li></Link>
-              <Link to="/"><li><img src={germany} alt="germany" /><span>German</span></li></Link>
-              <Link to="/"><li><img src={italy} alt="italy" /><span>Italian</span></li></Link>
-              <Link to="/"><li><img src={portugal} alt="portugal" /><span>Portugese</span></li></Link>
-              <Link to="/"><li><img src={spain} alt="spain" /><span>Spanish</span></li></Link>
-              <Link to="/"><li><img src={sweden} alt="sweden" /><span>Swedish</span></li></Link>
-              <hr />
-              <div>
-                <a href="https://www.hustlerturf.com/"><li><img src={usa} alt="USA" /><span>HustlerTurf.com</span></li></a>
-              </div>
-            </ul>
-          </CSSTransition>
-        </li>
+        <LanguageContext.Consumer>
+          {context => (
+            <li className="navItem" onClick={this.handleClickLanguage} ref={(node) => { this.nodeLanguage = node; }} >
+              <span>Language</span>
+              <img src={uk} alt="uk" />
+              {/* <DropdownArrow toggleArrow={this.state.languageOpen} /> */}
+              <CSSTransition
+                in={this.state.languageOpen}
+                timeout={300}
+                classNames="fadeInUp"
+                unmountOnExit
+              >
+                <ul className="dropdown">
+                  <li onClick={context.toLatin} ><img src={denmark} alt="denmark" /><span>Danish</span></li>
+                  <Link to="/"><li><img src={netherlands} alt="netherlands" /><span>Dutch</span></li></Link>
+                  <Link to="/"><li><img src={uk} alt="uk" /><span>English</span></li></Link>
+                  <Link to="/"><li><img src={belgium} alt="belgium" /><span>Flemish</span></li></Link>
+                  <Link to="/"><li><img src={france} alt="france" /><span>French</span></li></Link>
+                  <Link to="/"><li><img src={germany} alt="germany" /><span>German</span></li></Link>
+                  <Link to="/"><li><img src={italy} alt="italy" /><span>Italian</span></li></Link>
+                  <Link to="/"><li><img src={portugal} alt="portugal" /><span>Portugese</span></li></Link>
+                  <Link to="/"><li><img src={spain} alt="spain" /><span>Spanish</span></li></Link>
+                  <Link to="/"><li><img src={sweden} alt="sweden" /><span>Swedish</span></li></Link>
+                  <hr />
+                  <div>
+                    <a href="https://www.hustlerturf.com/"><li><img src={usa} alt="USA" /><span>HustlerTurf.com</span></li></a>
+                  </div>
+                </ul>
+              </CSSTransition>
+            </li>
+          )}
+        </LanguageContext.Consumer>
 
 
       </ul>
