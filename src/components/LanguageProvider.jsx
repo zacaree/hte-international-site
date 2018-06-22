@@ -8,20 +8,17 @@ export default class LanguageProvider extends Component {
     language: 'English',
   }
 
+  toLatin = () => this.setState({ language: 'Latin' });
+  toFrench = () => this.setState({ language: 'French' });
+  toEnglish = () => this.setState({ language: 'English' });
+
   render() {
     return (
       <LanguageContext.Provider
         value={{
           language: this.state.language,
-          toLatin: () => this.setState({
-            language: 'Latin',
-          }),
-          toFrench: () => this.setState({
-            language: 'French',
-          }),
-          toEnglish: () => this.setState({
-            language: 'English',
-          }),
+          toLatin: this.toLatin,
+          toEnglish: this.toEnglish,
         }}
       >
         {this.props.children}
