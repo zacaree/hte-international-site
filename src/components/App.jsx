@@ -6,7 +6,7 @@ import { Switch, Route } from 'react-router-dom';
 import Headroom from 'react-headroom';
 import LanguageProvider from './LanguageProvider';
 // import PropTypes from 'prop-types';
-import Nav from './Navigation/Nav';
+import Nav from './Nav/Nav';
 import PageLanding from './LandingPage/Page-Landing';
 import PageProducts from './Products/Page-Products';
 import PageHustlerStory from './AboutUs/Page-About-HustlerStory';
@@ -14,7 +14,7 @@ import PageWhyHustler from './AboutUs/Page-About-WhyHustler';
 import PageEuropeanDistribution from './AboutUs/Page-About-EuropeanDistribution';
 import PageFindADistributor from './FindADistributor/Page-FindADistributor';
 import NotFound from './Page-NotFound';
-import Footer from './Navigation/Footer';
+import Footer from './Footer/Footer';
 
 
 export default class App extends Component {

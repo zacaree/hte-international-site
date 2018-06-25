@@ -67,7 +67,7 @@ var unsupportedBrowserMsg = '<' +
 var incompatibleBrowserMsg = '<' +
   'div id="incompatibleBrowser">' +
     '<div class="ctr-incompatibleBrowser">' +
-      "<h1>You're viewing the Excel Industries site in an unsupported browser.</h1>" +
+      "<h1>You're viewing the Hustler Turf Equipment site in an unsupported browser.</h1>" +
       "<p>Rather than show you a broken page, we're showing you this.<br>The desktop browsers we support are:</p>" +
       '<ul>' +
         '<li>Chrome 23+</li>' +
@@ -77,7 +77,7 @@ var incompatibleBrowserMsg = '<' +
         '<li>Microsoft Edge 12+</li>' +
       '</ul>' +
       "<p>If you're seeing this page, please try one of the browsers listed.</p>" +
-      "<p>The Excel Industries site should work in most full featured mobile browsers. But if there is a known problematic mobile browser, you may see this message as well.</p>" +
+      "<p>The Hustler Turf Equipment site should work in most full featured mobile browsers. But if there is a known problematic mobile browser, you may see this message as well.</p>" +
     '</div>' +
   '</div>';
 

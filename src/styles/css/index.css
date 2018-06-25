@@ -170,10 +170,6 @@ button {
   font-family: "bebas-neue", 'Roboto', sans-serif;
   font-weight: normal; }
 
-.btn-lg {
-  font-size: 1.563rem;
-  line-height: 1.563rem; }
-
 .btn-sm {
   font-family: 'Roboto', sans-serif;
   font-size: 0.8rem;
@@ -678,8 +674,7 @@ footer {
 .pageLanding .section-cta .textBtn {
   display: flex;
   align-items: center;
-  padding: 10px 0;
-  width: 120px; }
+  padding: 10px 0; }
   .pageLanding .section-cta .textBtn:hover svg {
     transform: translateX(3px); }
   .pageLanding .section-cta .textBtn h3 {

@@ -21,17 +21,13 @@ import usa from './../../img/flags/usa.svg';
 
 
 export default class NavMenuDesktop extends Component {
-  constructor(props) {
-    super(props);
+  // Don't need any binding here because our methods are arrow functions.
+  // https://youtu.be/oZbTqEmQpDo?list=WL&t=227
 
-    // Don't need any binding here because our methods are arrow functions.
-    // https://youtu.be/oZbTqEmQpDo?list=WL&t=227
-
-    this.state = {
-      aboutOpen: false,
-      languageOpen: false,
-    };
-  }
+  state = {
+    aboutOpen: false,
+    languageOpen: false,
+  };
 
 
   //
