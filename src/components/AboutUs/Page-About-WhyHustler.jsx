@@ -1,19 +1,20 @@
 
 import React from 'react';
-import WhyHustlerContentLg from './WhyHustler-Content-Lg';
-import WhyHustlerContentSm from './WhyHustler-Content-Sm';
+import LanguageContext from './../LanguageContext';
+import TextWhyHustler from './Text-WhyHustler';
 
 const PageWhyHustler = () => (
-  <div className="pageWrap page-whyHustler">
-    <div className="wrap">
-      <h1>Why Hustler’s a better mower</h1>
-      <div className="accentBar" />
-
-      <WhyHustlerContentLg />
-      <WhyHustlerContentSm />
-
-    </div>
-  </div>
+  <LanguageContext>
+    {context => (
+      <div className="pageWrap page-whyHustler">
+        <div className="wrap">
+          <TextWhyHustler language={context.language} text="h1" />
+          <div className="accentBar" />
+          <TextWhyHustler language={context.language} text="content" />
+        </div>
+      </div>
+    )}
+  </LanguageContext>
 );
 
 export default PageWhyHustler;

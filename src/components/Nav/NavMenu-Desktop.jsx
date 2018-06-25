@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import LanguageContext from './../LanguageContext';
+import TextNavItem from './Text-NavItem';
 import DropdownArrow from './../../img/DropdownArrow';
 import denmark from './../../img/flags/denmark.svg';
 import netherlands from './../../img/flags/netherlands.svg';
@@ -86,13 +87,13 @@ export default class NavMenuDesktop extends Component {
 
             <li>
               <Link to="/products" className="navItem">
-                <span>Products</span>
+                <TextNavItem language={context.language} text="products" />
               </Link>
             </li>
 
 
             <li className="navItem" onClick={this.handleClickAbout} ref={(node) => { this.nodeAbout = node; }} >
-              <span>About Us</span>
+              <TextNavItem language={context.language} text="about" />
               <DropdownArrow toggleArrow={this.state.aboutOpen} />
               <CSSTransition
                 in={this.state.aboutOpen}
@@ -101,9 +102,7 @@ export default class NavMenuDesktop extends Component {
                 unmountOnExit
               >
                 <ul className="dropdown">
-                  <Link to="/hustler-story" className="dropdownItem">Hustler’s Story</Link>
-                  <Link to="/why-hustler" className="dropdownItem">Why Hustler’s a Better Mower</Link>
-                  <Link to="/distribution" className="dropdownItem">European Distribution</Link>
+                  <TextNavItem language={context.language} text="story" />
                 </ul>
               </CSSTransition>
             </li>
@@ -111,15 +110,13 @@ export default class NavMenuDesktop extends Component {
 
             <li>
               <Link to="/find-a-distributor" className="navItem">
-                <span>Find A Distributor</span>
+                <TextNavItem language={context.language} text="find" />
               </Link>
             </li>
 
 
             <li className="navItem" onClick={this.handleClickLanguage} ref={(node) => { this.nodeLanguage = node; }} >
-              <span>Language</span>
-              <img src={uk} alt="uk" />
-              {/* <DropdownArrow toggleArrow={this.state.languageOpen} /> */}
+              <TextNavItem language={context.language} text="lang" />
               <CSSTransition
                 in={this.state.languageOpen}
                 timeout={300}
@@ -147,7 +144,7 @@ export default class NavMenuDesktop extends Component {
 
 
           </ul>
-          )}
+        )}
       </LanguageContext.Consumer>
     );
   }
