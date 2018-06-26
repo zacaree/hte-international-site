@@ -877,9 +877,13 @@ footer {
     .page-products .productModal .modelNum span {
       color: #AAAAAA;
       font-size: 0.8rem; }
+  .page-products .productModal a {
+    display: flex; }
   .page-products .productModal .btn {
-    display: block;
+    flex: 1;
     margin: 20px 30px; }
+    .page-products .productModal .btn h3 {
+      margin: 0; }
 
 @media (max-width: 500px) {
   .page-products .productModal .productBgImg {

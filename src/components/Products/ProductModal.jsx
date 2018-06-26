@@ -72,8 +72,7 @@ export default class ProductModal extends Component {
                   />
                 ))}
               </div>
-
-              <Link to="/find-a-distributor" ><div className="btn btn-lg btn-gold">Find A Distributor</div></Link>
+              <Link to="/find-a-distributor" ><button className="btn btn-gold"><h3>Find a Distributor</h3></button></Link>
             </div>
 
 
